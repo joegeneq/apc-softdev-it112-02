@@ -1,0 +1,19 @@
+We have analyzed your requirements and are in the process of documenting it. We also have identified a general approach to our proposed solution which consists of writing two programs namely:
+
+Program 1: To read a text file produced from a PDF copy of a summary of report attendance (SRA) and extract information from it and write to a database file.
+Program 2: Read the database file output of Program 1 and applying the Civil Service Commission rules and formulas, produce Leave Credit reports.
+
+Briefly stated, we can summarize our proposed approach as follows:
+
+1. Convert a summary report of attendance (SRA) file (PDF) to a text file. This can be achieved through Adobe Reader.
+2. Run Program 1 to read the text file produced in #1 and extract relevant information from the text file and write to a database file.
+3. Run Program 2 to read the database file and produce leave credit reports.
+4. Print leave credit reports.
+
+Unfortunately, we will not have the time to design and implement the programs anymore this trimester. We will be having our final exams next week after which our second trimester will end. I am looking forward to continuing this project with our students in the third trimester.
+
+What we can do at this point is to provide you with a documentation of our requirements analysis so that you may validate our understanding of your problem. We will submit this to you in the latter part of next week.
+
+Once we have agreed on the correctness of our analysis we would like to schedule a next meeting in January for you to walk us through the Civil Service Commission rules that will help us design our programs.
+
+Thank you very much for giving us at APC and our students an opportunity to work on your system requirements and we look forward to be of continuing service to you and your organization.
