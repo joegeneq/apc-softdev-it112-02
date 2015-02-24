@@ -1,0 +1,39 @@
+BIR Document Workflow Tracking System
+
+bir_dwts
+
+User Stories
+
+- New position created
+	- create position record for new position
+
+- New station_desk created
+	- create station_desk record for new station_desk
+
+
+- New employee created
+	- create user for employee
+	- link user to employee
+	- select station_desk that employee belongs to
+	- select current position of employee
+	
+- New employee position created
+	- select employee, position
+	- enter employee_position start_date 
+
+	
+- New document submitted
+	- New customer? 
+		- If yes, add new customer information
+	- Create new document	
+		- select customer, employee, category, piority
+	- Begin document workflow process
+	
+- Document workflow process-transfer station
+	- Release document from current station
+	- Accept document in new station	
+	- select current status of document
+	
+- Document workflow process-in station status
+	- Create status of document
+		
