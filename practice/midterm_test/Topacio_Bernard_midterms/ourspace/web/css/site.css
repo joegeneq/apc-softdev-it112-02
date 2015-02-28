@@ -4,6 +4,9 @@ body {
 }
 
 .wrap {
+    background-color: #fce17e;
+    color:#d6655c;
+    font-family:Calibri;
     min-height: 100%;
     height: auto;
     margin: 0 auto -60px;
@@ -16,7 +19,7 @@ body {
 
 .footer {
     height: 60px;
-    background-color: #f5f5f5;
+    background-color: #d6655c;
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
