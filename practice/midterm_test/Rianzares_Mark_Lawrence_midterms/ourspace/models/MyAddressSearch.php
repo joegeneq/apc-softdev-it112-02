@@ -8,9 +8,9 @@ use yii\data\ActiveDataProvider;
 use app\models\myaddress;
 
 /**
- * MyAddressSearch represents the model behind the search form about `app\models\myaddress`.
+ * myAddressSearch represents the model behind the search form about `app\models\myaddress`.
  */
-class MyAddressSearch extends myaddress
+class myAddressSearch extends myaddress
 {
     /**
      * @inheritdoc
@@ -19,7 +19,7 @@ class MyAddressSearch extends myaddress
     {
         return [
             [['id'], 'integer'],
-            [['firstname', 'middlename', 'lastname', 'gender', 'created_at'], 'safe'],
+            [['firstname', 'middlename', 'lastname', 'gender', 'created_at', 'home_address', 'landline', 'cellphone'], 'safe'],
         ];
     }
 
@@ -63,7 +63,10 @@ class MyAddressSearch extends myaddress
         $query->andFilterWhere(['like', 'firstname', $this->firstname])
             ->andFilterWhere(['like', 'middlename', $this->middlename])
             ->andFilterWhere(['like', 'lastname', $this->lastname])
-            ->andFilterWhere(['like', 'gender', $this->gender]);
+            ->andFilterWhere(['like', 'gender', $this->gender])
+            ->andFilterWhere(['like', 'home_address', $this->home_address])
+            ->andFilterWhere(['like', 'landline', $this->landline])
+            ->andFilterWhere(['like', 'cellphone', $this->cellphone]);
 
         return $dataProvider;
     }

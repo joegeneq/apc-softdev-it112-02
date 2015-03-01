@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\myaddress;
-use app\models\MyAddressSearch;
+use app\models\myAddressSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -32,7 +32,7 @@ class MyAddressController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new MyAddressSearch();
+        $searchModel = new myAddressSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
