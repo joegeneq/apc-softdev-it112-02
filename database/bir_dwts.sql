@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2015 at 12:48 PM
+-- Generation Time: Mar 04, 2015 at 11:39 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.22
 
@@ -125,13 +125,6 @@ CREATE TABLE IF NOT EXISTS `employee` (
   KEY `fk_employee_user1_idx` (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `employee`
---
-
-INSERT INTO `employee` (`id`, `current_position`, `name`, `first_name`, `create_time`, `update_time`, `user_id`) VALUES
-(1, 1, 'bernard topacio', 'bernard', '2015-03-03 05:16:16', '2015-03-02 16:00:00', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -151,13 +144,6 @@ CREATE TABLE IF NOT EXISTS `employee_has_position` (
   KEY `fk_employee_has_position_employee1_idx` (`employee_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `employee_has_position`
---
-
-INSERT INTO `employee_has_position` (`id`, `employee_id`, `position_id`, `employee_position_start_date`, `employee_position_end_date`, `create_time`, `update_time`) VALUES
-(1, 1, 1, '2015-03-03', NULL, '2015-03-02 17:22:00', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -176,12 +162,25 @@ CREATE TABLE IF NOT EXISTS `employee_has_station_desk` (
   KEY `fk_employee_has_station_desk_station_desk_role1_idx` (`station_desk_role_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `employee_has_station_desk`
+-- Table structure for table `migration`
 --
 
-INSERT INTO `employee_has_station_desk` (`id`, `employee_id`, `station_desk_id`, `station_desk_role_id`, `time_created`) VALUES
-(1, 1, 1, 1, '2015-03-03 05:39:00');
+CREATE TABLE IF NOT EXISTS `migration` (
+  `version` varchar(180) NOT NULL,
+  `apply_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `migration`
+--
+
+INSERT INTO `migration` (`version`, `apply_time`) VALUES
+('m000000_000000_base', 1425459770),
+('m130524_201442_init', 1425459773);
 
 -- --------------------------------------------------------
 
@@ -199,13 +198,6 @@ CREATE TABLE IF NOT EXISTS `position` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `position`
---
-
-INSERT INTO `position` (`id`, `position_code`, `position_description`, `position_notes`, `create_time`, `update_time`) VALUES
-(1, 'pst1', 'front', 'first to receive the document', '2015-03-03 05:06:22', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -222,13 +214,6 @@ CREATE TABLE IF NOT EXISTS `station_desk` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `station_desk`
---
-
-INSERT INTO `station_desk` (`id`, `station_desk_code`, `station_desk_name`, `station_desk_notes`, `create_time`, `update_time`) VALUES
-(1, 'desk01', 'desk name 1', 'this desk etc.', '2015-03-03 05:36:18', '2015-03-03 05:36:18');
-
 -- --------------------------------------------------------
 
 --
@@ -244,13 +229,6 @@ CREATE TABLE IF NOT EXISTS `station_desk_role` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `station_desk_role`
---
-
-INSERT INTO `station_desk_role` (`id`, `station_desk_code`, `station_desk_description`, `create_time`, `update_time`) VALUES
-(1, 'station desk cod 1', 'this description ', '2015-03-03 05:38:13', '2015-03-03 05:38:13');
-
 -- --------------------------------------------------------
 
 --
@@ -258,20 +236,24 @@ INSERT INTO `station_desk_role` (`id`, `station_desk_code`, `station_desk_descri
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL,
-  `username` varchar(16) NOT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `password` varchar(32) NOT NULL,
-  `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `auth_key` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+  `password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password_reset_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `status` smallint(6) NOT NULL DEFAULT '10',
+  `created_at` int(11) NOT NULL,
+  `updated_at` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `email`, `password`, `create_time`) VALUES
-(1, 'user1', 'user1@bir.com', '1234', '2015-03-03 02:44:03');
+INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'bptopacio', '-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT', '$2y$13$kUlkIh3yeJgYlirq8RItHu.ZazMW0mp6WEW79KBWlLYdVgyMsqK0.', NULL, 'bptopacio@gmail.com', 10, 1425459827, 1425459827);
 
 --
 -- Constraints for dumped tables
