@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use backend\models\Employee;
+use backend\models\Postion;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\EmployeeHasPosition */
@@ -12,9 +15,15 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'employee_id')->textInput() ?>
+    <?= $form->field($model, 'employee_id')->dropDownList(
+    ArrayHelper::map(Employee::find()->all(),'id','name'),
+        ['prompt'=>'Select myaddress']
+    ) ?>
 
-    <?= $form->field($model, 'position_id')->textInput() ?>
+    <?= $form->field($model, 'position_id')->dropDownList(
+    ArrayHelper::map(Postion::find()->all(),'id','postion_description'),
+        ['prompt'=>'Select myaddress']
+    ) ?>
 
     <?= $form->field($model, 'employee_position_start_date')->textInput() ?>
 
