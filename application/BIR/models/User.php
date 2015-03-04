@@ -8,32 +8,65 @@ use yii\db\ActiveRecord;
 use yii\helpers\Security;
 use yii\web\IdentityInterface;
 
+/**
+ * This is the model class for table "user".
+ *
+ * @property integer $id
+ * @property string $username
+ * @property string $email
+ * @property string $password
+ * @property string $create_time
+ *
+ * @property Employee[] $employees
+ */
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
+    /**
+     * @inheritdoc
+     */
     public $authKey;
     public static function tableName()
     {
         return 'user';
     }
-        public function rules()
-    {
-        return [
-            [['id','username','password'], 'required'],
-            [['username','password'], 'string', 'max' => 100],
-        ];
-    }
-        public function attributeLabels()
-    {
-        return [
-            'id' => 'id',
-            'username' => 'username',
-            'password' => 'password',
-        ];
-    }
-                
+
     /**
      * @inheritdoc
      */
+    public function rules()
+    {
+        return [
+            [['id', 'username', 'password'], 'required'],
+            [['id'], 'integer'],
+            [['create_time'], 'safe'],
+            [['username'], 'string', 'max' => 16],
+            [['email'], 'string', 'max' => 255],
+            [['password'], 'string', 'max' => 32]
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'username' => 'Username',
+            'email' => 'Email',
+            'password' => 'Password',
+            'create_time' => 'Create Time',
+        ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getEmployees()
+    {
+        return $this->hasMany(Employee::className(), ['user_id' => 'id']);
+    }
+
     public static function findIdentity($id)
     {
         return static :: findOne ($id);
@@ -92,7 +125,11 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     {
         return $this->password === $password;
     }
-        
-        
-        
+
+
+
 }
+
+
+
+
