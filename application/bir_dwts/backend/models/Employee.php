@@ -16,7 +16,7 @@ use Yii;
  * @property integer $user_id
  *
  * @property Document[] $documents
- * @property DocumentWokflow[] $documentWokflows
+ * @property DocumentWorkflow[] $documentWorkflows
  * @property Position $currentPosition
  * @property User $user
  * @property EmployeeHasPosition[] $employeeHasPositions
@@ -72,9 +72,9 @@ class Employee extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getDocumentWokflows()
+    public function getDocumentWorkflows()
     {
-        return $this->hasMany(DocumentWokflow::className(), ['employee_id' => 'id']);
+        return $this->hasMany(DocumentWorkflow::className(), ['employee_id' => 'id']);
     }
 
     /**

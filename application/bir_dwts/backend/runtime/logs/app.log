@@ -695,3 +695,1931 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1425476076.011
     'REQUEST_TIME' => 1425476076
 ]
+2015-03-04 14:47:51 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee_has_position".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee_has_po...', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:47:51 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee_has_position'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62166'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee_has_position'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee_has_position'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425476871.233
+    'REQUEST_TIME' => 1425476871
+]
+2015-03-04 14:48:12 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:48:12 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62174'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425476892.127
+    'REQUEST_TIME' => 1425476892
+]
+2015-03-04 14:48:23 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee/index.php".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee/index....', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:48:23 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee/index.php'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62185'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee/index.php'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee/index.php'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425476903.796
+    'REQUEST_TIME' => 1425476903
+]
+2015-03-04 14:48:27 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee/index.php".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee/index....', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:48:27 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee/index.php'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62186'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee/index.php'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee/index.php'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425476907.55
+    'REQUEST_TIME' => 1425476907
+]
+2015-03-04 14:48:28 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee/index.php".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee/index....', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:48:28 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee/index.php'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62185'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee/index.php'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee/index.php'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425476908.258
+    'REQUEST_TIME' => 1425476908
+]
+2015-03-04 14:48:29 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee/index.php".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee/index....', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:48:29 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee/index.php'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62187'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee/index.php'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee/index.php'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425476909.25
+    'REQUEST_TIME' => 1425476909
+]
+2015-03-04 14:48:38 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:48:38 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62203'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425476918.73
+    'REQUEST_TIME' => 1425476918
+]
+2015-03-04 14:55:38 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:55:38 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62304'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477338.46
+    'REQUEST_TIME' => 1425477338
+]
+2015-03-04 14:56:05 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:56:05 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62315'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477365.908
+    'REQUEST_TIME' => 1425477365
+]
+2015-03-04 14:56:32 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "Employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('Employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:56:32 [::1][1][-][info][application] $_GET = [
+    'r' => 'Employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62321'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=Employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=Employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477392.737
+    'REQUEST_TIME' => 1425477392
+]
+2015-03-04 14:58:48 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employeehasposition".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employeehasposi...', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:58:48 [::1][1][-][info][application] $_GET = [
+    'r' => 'employeehasposition'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62348'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employeehasposition'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employeehasposition'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477528.912
+    'REQUEST_TIME' => 1425477528
+]
+2015-03-04 14:59:08 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "user".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('user', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:59:08 [::1][1][-][info][application] $_GET = [
+    'r' => 'user'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62356'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=user'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477548.501
+    'REQUEST_TIME' => 1425477548
+]
+2015-03-04 14:59:36 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "posiotion".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('posiotion', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:59:36 [::1][1][-][info][application] $_GET = [
+    'r' => 'posiotion'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62374'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=posiotion'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=posiotion'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477576.02
+    'REQUEST_TIME' => 1425477576
+]
+2015-03-04 14:59:46 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "position".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('position', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 14:59:46 [::1][1][-][info][application] $_GET = [
+    'r' => 'position'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62380'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=position'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=position'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477586.772
+    'REQUEST_TIME' => 1425477586
+]
+2015-03-04 15:00:20 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:00:20 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62395'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477620.544
+    'REQUEST_TIME' => 1425477620
+]
+2015-03-04 15:01:26 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:01:25 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62407'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477685.975
+    'REQUEST_TIME' => 1425477685
+]
+2015-03-04 15:01:28 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:01:28 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62408'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477688.866
+    'REQUEST_TIME' => 1425477688
+]
+2015-03-04 15:01:50 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:01:50 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62417'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477710.094
+    'REQUEST_TIME' => 1425477710
+]
+2015-03-04 15:01:52 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:01:52 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62418'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477712.729
+    'REQUEST_TIME' => 1425477712
+]
+2015-03-04 15:01:53 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:01:53 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62417'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477713.156
+    'REQUEST_TIME' => 1425477713
+]
+2015-03-04 15:01:53 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:01:53 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62419'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477713.37
+    'REQUEST_TIME' => 1425477713
+]
+2015-03-04 15:02:18 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee_has_position".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee_has_po...', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:02:18 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee_has_position'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62434'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee_has_position'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee_has_position'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477737.064
+    'REQUEST_TIME' => 1425477737
+]
+2015-03-04 15:02:44 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee_has_position".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee_has_po...', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:02:44 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee_has_position'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62442'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee_has_position'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee_has_position'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477764.431
+    'REQUEST_TIME' => 1425477764
+]
+2015-03-04 15:03:06 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:03:06 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62454'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477786.757
+    'REQUEST_TIME' => 1425477786
+]
+2015-03-04 15:03:29 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "position".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('position', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:03:29 [::1][1][-][info][application] $_GET = [
+    'r' => 'position'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62461'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=position'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=position'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425477809.432
+    'REQUEST_TIME' => 1425477809
+]
+2015-03-04 15:07:25 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:07:25 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62565'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425478045.768
+    'REQUEST_TIME' => 1425478045
+]
+2015-03-04 15:12:33 [::1][1][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "employee".' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('employee', Array)
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\Bernard\Desktop\Repo\apc-softdev-it112-02\application\bir_dwts\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-03-04 15:12:33 [::1][1][-][info][application] $_GET = [
+    'r' => 'employee'
+]
+
+$_COOKIE = [
+    '_csrf' => '84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC\";}'
+    'PHPSESSID' => 'tbglgesmoug1r9jh78qj4cb6n7'
+    '_identity' => '1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=84ee97e7982e452ad8ed6cf3217746cc997b59fadf3e7619941439aa942f0181a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qCG7g5z-8lm0z-UTXD29EMzAlGJCFNnC%22%3B%7D; PHPSESSID=tbglgesmoug1r9jh78qj4cb6n7; _identity=1b5d42c5a211ce11bc3973862d1238d7091ab89a48bf3a720cbb6ad1f731e34ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22-R76iQI-C3lCSqdVW1Vy-ycP6NY9c2NT%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/0.9.8y PHP/5.4.22'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/backend/web/index.php'
+    'REMOTE_PORT' => '62636'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=employee'
+    'REQUEST_URI' => '/bir_dwts/backend/web/index.php?r=employee'
+    'SCRIPT_NAME' => '/bir_dwts/backend/web/index.php'
+    'PHP_SELF' => '/bir_dwts/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425478353.844
+    'REQUEST_TIME' => 1425478353
+]
