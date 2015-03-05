@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2015 at 11:39 AM
+-- Generation Time: Mar 05, 2015 at 02:05 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.22
 
@@ -85,10 +85,10 @@ CREATE TABLE IF NOT EXISTS `document` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `document_wokflow`
+-- Table structure for table `document_workflow`
 --
 
-CREATE TABLE IF NOT EXISTS `document_wokflow` (
+CREATE TABLE IF NOT EXISTS `document_workflow` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `document_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -125,6 +125,13 @@ CREATE TABLE IF NOT EXISTS `employee` (
   KEY `fk_employee_user1_idx` (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`id`, `current_position`, `name`, `first_name`, `create_time`, `update_time`, `user_id`) VALUES
+(1, 1, 'bernard topacio', 'bernard', '2015-03-04 23:33:28', '2015-03-04 23:33:28', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -144,6 +151,13 @@ CREATE TABLE IF NOT EXISTS `employee_has_position` (
   KEY `fk_employee_has_position_employee1_idx` (`employee_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
+--
+-- Dumping data for table `employee_has_position`
+--
+
+INSERT INTO `employee_has_position` (`id`, `employee_id`, `position_id`, `employee_position_start_date`, `employee_position_end_date`, `create_time`, `update_time`) VALUES
+(1, 1, 1, '2015-03-05', NULL, '2015-03-04 23:36:00', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -160,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `employee_has_station_desk` (
   KEY `fk_employee_has_station_desk_station_desk1_idx` (`station_desk_id`),
   KEY `fk_employee_has_station_desk_employee_idx` (`employee_id`),
   KEY `fk_employee_has_station_desk_station_desk_role1_idx` (`station_desk_role_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -198,6 +212,13 @@ CREATE TABLE IF NOT EXISTS `position` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
+--
+-- Dumping data for table `position`
+--
+
+INSERT INTO `position` (`id`, `position_code`, `position_description`, `position_notes`, `create_time`, `update_time`) VALUES
+(1, 'positioncode1', 'Head Desk', 'first to take document', '2015-03-04 23:31:43', '2015-03-04 23:32:39');
+
 -- --------------------------------------------------------
 
 --
@@ -212,7 +233,7 @@ CREATE TABLE IF NOT EXISTS `station_desk` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -227,7 +248,7 @@ CREATE TABLE IF NOT EXISTS `station_desk_role` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -274,9 +295,9 @@ ALTER TABLE `document`
   ADD CONSTRAINT `fk_document_employee1` FOREIGN KEY (`encoded_by`) REFERENCES `employee` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `document_wokflow`
+-- Constraints for table `document_workflow`
 --
-ALTER TABLE `document_wokflow`
+ALTER TABLE `document_workflow`
   ADD CONSTRAINT `fk_document_wokflow_document1` FOREIGN KEY (`document_id`) REFERENCES `document` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_document_wokflow_employee1` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_document_wokflow_station_desk1` FOREIGN KEY (`station_desk_id`) REFERENCES `station_desk` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
