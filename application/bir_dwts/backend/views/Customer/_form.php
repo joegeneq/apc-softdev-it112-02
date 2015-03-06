@@ -19,7 +19,7 @@ use backend\models\Company_agency;
     <?= $form->field($model, 'customer_lastname')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'company_agency_id')->dropdownList(
-        ArrayHelper::map(Company_agency::find()->all(),'id','company_agence_full_name'),
+        ArrayHelper::map(Company_agency::find()->all(),'id','company_agency_full_name'),
         ['prompt'=>'Select code'] 
 ) ?>
 
