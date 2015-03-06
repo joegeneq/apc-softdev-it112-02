@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use backend\models\Customer;
+use backend\models\Employee;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\document */
@@ -16,9 +19,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'update_time')->textInput() ?>
 
-    <?= $form->field($model, 'encoded_by')->textInput() ?>
+    <?= $form->field($model, 'encoded_by')->dropdownList(
+        ArrayHelper::map(Employee::find()->all(),'id','name'),
+        ['prompt'=>'Select ID'] 
+) ?>
 
-    <?= $form->field($model, 'customer_id')->textInput() ?>
+    <?= $form->field($model, 'customer_id')->dropdownList(
+        ArrayHelper::map(Customer::find()->all(),'id','name'),
+        ['prompt'=>'Select ID'] 
+) ?>
 
     <?= $form->field($model, 'company_agency_id')->textInput() ?>
 
