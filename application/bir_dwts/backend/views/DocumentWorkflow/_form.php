@@ -2,6 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use backend\models\Employee;
+use backend\models\StationDesk;
+use backend\models\document;
+use yii\helpers\ArrayHelper;
+
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\DocumentWorkflow */
@@ -12,11 +17,20 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'document_id')->textInput() ?>
+    <?= $form->field($model, 'document_id')->dropdownList(
+            ArrayHelper::map(document::find()->all(),'id','document_tracking_number'),
+            ['prompt'=>'Select ID']
+    ) ?>
 
-    <?= $form->field($model, 'employee_id')->textInput() ?>
+    <?= $form->field($model, 'employee_id')->dropdownList(
+            ArrayHelper::map(Employee::find()->all(),'id','name'),
+            ['prompt'=>'Select ID']
+    ) ?>
 
-    <?= $form->field($model, 'station_desk_id')->textInput() ?>
+    <?= $form->field($model, 'station_desk_id')->dropdownList(
+            ArrayHelper::map(StationDesk::find()->all(),'id','station_desk_name'),
+            ['prompt'=>'Select ID']
+    ) ?>
 
     <?= $form->field($model, 'document_wokflow_comments')->textarea(['rows' => 6]) ?>
 
