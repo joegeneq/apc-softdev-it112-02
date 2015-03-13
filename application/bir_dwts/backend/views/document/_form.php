@@ -25,7 +25,7 @@ use backend\models\Employee;
 ) ?>
 
     <?= $form->field($model, 'customer_id')->dropdownList(
-        ArrayHelper::map(Customer::find()->all(),'id','name'),
+        ArrayHelper::map(Customer::find()->all(),'id','customer_name'),
         ['prompt'=>'Select ID'] 
 ) ?>
 
