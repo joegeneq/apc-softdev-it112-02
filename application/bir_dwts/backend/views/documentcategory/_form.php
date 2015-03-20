@@ -4,19 +4,17 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\CompanyAgency */
+/* @var $model backend\models\DocumentCategory */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="company-agency-form">
+<div class="document-category-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'company_agency_code')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'document_category_name')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'company_agency_full_name')->textInput(['maxlength' => 45]) ?>
-
-    <?= $form->field($model, 'company_agency_notes')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'document_category_description')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'create_time')->textInput() ?>
 

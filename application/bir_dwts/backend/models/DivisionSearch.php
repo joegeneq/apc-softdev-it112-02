@@ -5,12 +5,12 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\StationDesk;
+use backend\models\Division;
 
 /**
- * StationDeskSearch represents the model behind the search form about `backend\models\StationDesk`.
+ * DivisionSearch represents the model behind the search form about `backend\models\Division`.
  */
-class StationDeskSearch extends StationDesk
+class DivisionSearch extends Division
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class StationDeskSearch extends StationDesk
     public function rules()
     {
         return [
-            [['id', 'division_id'], 'integer'],
-            [['station_desk_code', 'station_desk_name', 'station_desk_notes', 'create_time', 'update_time'], 'safe'],
+            [['id'], 'integer'],
+            [['division_name', 'division_description', 'create_time', 'update_time'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class StationDeskSearch extends StationDesk
      */
     public function search($params)
     {
-        $query = StationDesk::find();
+        $query = Division::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -59,12 +59,10 @@ class StationDeskSearch extends StationDesk
             'id' => $this->id,
             'create_time' => $this->create_time,
             'update_time' => $this->update_time,
-            'division_id' => $this->division_id,
         ]);
 
-        $query->andFilterWhere(['like', 'station_desk_code', $this->station_desk_code])
-            ->andFilterWhere(['like', 'station_desk_name', $this->station_desk_name])
-            ->andFilterWhere(['like', 'station_desk_notes', $this->station_desk_notes]);
+        $query->andFilterWhere(['like', 'division_name', $this->division_name])
+            ->andFilterWhere(['like', 'division_description', $this->division_description]);
 
         return $dataProvider;
     }

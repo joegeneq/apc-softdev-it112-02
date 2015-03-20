@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\EmployeeSearch */
+/* @var $model backend\models\DocumentCategorySearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="employee-search">
+<div class="document-category-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -17,19 +17,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'current_position') ?>
+    <?= $form->field($model, 'document_category_name') ?>
 
-    <?= $form->field($model, 'last_name') ?>
-
-    <?= $form->field($model, 'first_name') ?>
+    <?= $form->field($model, 'document_category_description') ?>
 
     <?= $form->field($model, 'create_time') ?>
 
-    <?php // echo $form->field($model, 'update_time') ?>
-
-    <?php // echo $form->field($model, 'user_id') ?>
-
-    <?php // echo $form->field($model, 'division_id') ?>
+    <?= $form->field($model, 'update_time') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\StationDeskSearch */
+/* @var $searchModel backend\models\DocumentCategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Station Desks';
+$this->title = 'Document Categories';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="station-desk-index">
+<div class="document-category-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Station Desk', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Document Category', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -26,12 +26,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'station_desk_code',
-            'station_desk_name',
-            'station_desk_notes:ntext',
+            'document_category_name',
+            'document_category_description:ntext',
             'create_time',
-            // 'update_time',
-            // 'division_id',
+            'update_time',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

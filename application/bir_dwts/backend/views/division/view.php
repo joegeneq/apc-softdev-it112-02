@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Document */
+/* @var $model backend\models\Division */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Documents', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Divisions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="document-view">
+<div class="division-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,17 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'encoded_by',
-            'customer_id',
-            'company_agency_id',
-            'document_tracking_number',
-            'document_description',
-            'document_category',
-            'document_priority',
-            'document_target_date',
-            'document_type',
-            'document_notes',
-            'document_image_front_page',
+            'division_name',
+            'division_description',
             'create_time',
             'update_time',
         ],

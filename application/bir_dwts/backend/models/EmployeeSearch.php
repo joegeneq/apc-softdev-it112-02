@@ -18,8 +18,8 @@ class EmployeeSearch extends Employee
     public function rules()
     {
         return [
-            [['id', 'current_position', 'user_id'], 'integer'],
-            [['name', 'first_name', 'create_time', 'update_time'], 'safe'],
+            [['id', 'current_position', 'user_id', 'division_id'], 'integer'],
+            [['last_name', 'first_name', 'create_time', 'update_time'], 'safe'],
         ];
     }
 
@@ -61,9 +61,10 @@ class EmployeeSearch extends Employee
             'create_time' => $this->create_time,
             'update_time' => $this->update_time,
             'user_id' => $this->user_id,
+            'division_id' => $this->division_id,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
+        $query->andFilterWhere(['like', 'last_name', $this->last_name])
             ->andFilterWhere(['like', 'first_name', $this->first_name]);
 
         return $dataProvider;

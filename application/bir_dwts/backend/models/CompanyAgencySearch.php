@@ -19,7 +19,7 @@ class CompanyAgencySearch extends CompanyAgency
     {
         return [
             [['id'], 'integer'],
-            [['create_time', 'update_time', 'company_agency_code', 'company_agency_full_name', 'company_agency_notes'], 'safe'],
+            [['company_agency_code', 'company_agency_full_name', 'company_agency_notes', 'create_time', 'update_time'], 'safe'],
         ];
     }
 

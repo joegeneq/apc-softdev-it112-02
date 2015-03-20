@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use backend\models\Division;
+
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\StationDesk */
@@ -21,6 +24,11 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'create_time')->textInput() ?>
 
     <?= $form->field($model, 'update_time')->textInput() ?>
+
+    <?= $form->field($model, 'division_id')->dropDownList(
+        ArrayHelper::map(Division::find()->all(),'id','division_name'),
+        ['prompt'=>'Select Division']
+    ) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

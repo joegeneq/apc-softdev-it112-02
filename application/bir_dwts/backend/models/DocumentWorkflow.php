@@ -18,10 +18,12 @@ use Yii;
  * @property string $total_time_spent
  * @property string $create_time
  * @property string $update_time
+ * @property integer $next_receiver
  *
  * @property Document $document
  * @property Employee $employee
  * @property StationDesk $stationDesk
+ * @property Employee $nextReceiver
  */
 class DocumentWorkflow extends \yii\db\ActiveRecord
 {
@@ -40,7 +42,7 @@ class DocumentWorkflow extends \yii\db\ActiveRecord
     {
         return [
             [['document_id', 'employee_id', 'station_desk_id'], 'required'],
-            [['document_id', 'employee_id', 'station_desk_id'], 'integer'],
+            [['document_id', 'employee_id', 'station_desk_id', 'next_receiver'], 'integer'],
             [['document_wokflow_comments'], 'string'],
             [['time_accepted', 'time_released', 'total_time_spent', 'create_time', 'update_time'], 'safe'],
             [['document_wokflow_status'], 'string', 'max' => 45]
@@ -64,6 +66,7 @@ class DocumentWorkflow extends \yii\db\ActiveRecord
             'total_time_spent' => 'Total Time Spent',
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
+            'next_receiver' => 'Next Receiver',
         ];
     }
 
@@ -89,5 +92,13 @@ class DocumentWorkflow extends \yii\db\ActiveRecord
     public function getStationDesk()
     {
         return $this->hasOne(StationDesk::className(), ['id' => 'station_desk_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getNextReceiver()
+    {
+        return $this->hasOne(Employee::className(), ['id' => 'next_receiver']);
     }
 }

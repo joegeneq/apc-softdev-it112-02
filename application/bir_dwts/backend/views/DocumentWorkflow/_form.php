@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use backend\models\Employee;
-use backend\models\StationDesk;
-use backend\models\document;
 use yii\helpers\ArrayHelper;
+use backend\models\Employee;
+use backend\models\Document;
+use backend\models\StationDesk;
 
 
 /* @var $this yii\web\View */
@@ -17,19 +17,19 @@ use yii\helpers\ArrayHelper;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'document_id')->dropdownList(
-            ArrayHelper::map(document::find()->all(),'id','document_tracking_number'),
-            ['prompt'=>'Select ID']
+    <?= $form->field($model, 'document_id')->dropDownList(
+        ArrayHelper::map(Document::find()->all(),'id','document_description'),
+        ['prompt'=>'Select Document']
     ) ?>
 
-    <?= $form->field($model, 'employee_id')->dropdownList(
-            ArrayHelper::map(Employee::find()->all(),'id','name'),
-            ['prompt'=>'Select ID']
+    <?= $form->field($model, 'employee_id')->dropDownList(
+        ArrayHelper::map(Employee::find()->all(),'id','last_name'),
+        ['prompt'=>'Select Employee']
     ) ?>
 
-    <?= $form->field($model, 'station_desk_id')->dropdownList(
-            ArrayHelper::map(StationDesk::find()->all(),'id','station_desk_name'),
-            ['prompt'=>'Select ID']
+    <?= $form->field($model, 'station_desk_id')->dropDownList(
+        ArrayHelper::map(StationDesk::find()->all(),'id','station_desk_name'),
+        ['prompt'=>'Select StationDesk']
     ) ?>
 
     <?= $form->field($model, 'document_wokflow_comments')->textarea(['rows' => 6]) ?>
@@ -45,6 +45,11 @@ use yii\helpers\ArrayHelper;
     <?= $form->field($model, 'create_time')->textInput() ?>
 
     <?= $form->field($model, 'update_time')->textInput() ?>
+
+    <?= $form->field($model, 'next_receiver')->dropDownList(
+        ArrayHelper::map(Employee::find()->all(),'id','last_name'),
+        ['prompt'=>'Select Employee']
+    ) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

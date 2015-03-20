@@ -34,6 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'station_desk_notes:ntext',
             'create_time',
             'update_time',
+            'division_id',
         ],
     ]) ?>
 

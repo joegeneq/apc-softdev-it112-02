@@ -39,6 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'total_time_spent',
             'create_time',
             'update_time',
+            'next_receiver',
         ],
     ]) ?>
 

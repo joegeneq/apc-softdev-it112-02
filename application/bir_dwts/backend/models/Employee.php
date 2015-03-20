@@ -9,14 +9,16 @@ use Yii;
  *
  * @property integer $id
  * @property integer $current_position
- * @property string $name
+ * @property string $last_name
  * @property string $first_name
  * @property string $create_time
  * @property string $update_time
  * @property integer $user_id
+ * @property integer $division_id
  *
  * @property Document[] $documents
  * @property DocumentWorkflow[] $documentWorkflows
+ * @property Division $division
  * @property Position $currentPosition
  * @property User $user
  * @property EmployeeHasPosition[] $employeeHasPositions
@@ -39,9 +41,9 @@ class Employee extends \yii\db\ActiveRecord
     {
         return [
             [['current_position'], 'required'],
-            [['current_position', 'user_id'], 'integer'],
+            [['current_position', 'user_id', 'division_id'], 'integer'],
             [['create_time', 'update_time'], 'safe'],
-            [['name', 'first_name'], 'string', 'max' => 45]
+            [['last_name', 'first_name'], 'string', 'max' => 45]
         ];
     }
 
@@ -53,11 +55,12 @@ class Employee extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'current_position' => 'Current Position',
-            'name' => 'Name',
+            'last_name' => 'Last Name',
             'first_name' => 'First Name',
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
             'user_id' => 'User ID',
+            'division_id' => 'Division ID',
         ];
     }
 
@@ -74,7 +77,15 @@ class Employee extends \yii\db\ActiveRecord
      */
     public function getDocumentWorkflows()
     {
-        return $this->hasMany(DocumentWorkflow::className(), ['employee_id' => 'id']);
+        return $this->hasMany(DocumentWorkflow::className(), ['next_receiver' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDivision()
+    {
+        return $this->hasOne(Division::className(), ['id' => 'division_id']);
     }
 
     /**

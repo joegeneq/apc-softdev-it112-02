@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Employee */
 
-$this->title = $model->name;
+$this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Employees', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -30,11 +30,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'current_position',
-            'name',
+            'last_name',
             'first_name',
             'create_time',
             'update_time',
             'user_id',
+            'division_id',
         ],
     ]) ?>
 

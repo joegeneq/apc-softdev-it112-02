@@ -18,7 +18,7 @@ class DocumentWorkflowSearch extends DocumentWorkflow
     public function rules()
     {
         return [
-            [['id', 'document_id', 'employee_id', 'station_desk_id'], 'integer'],
+            [['id', 'document_id', 'employee_id', 'station_desk_id', 'next_receiver'], 'integer'],
             [['document_wokflow_comments', 'document_wokflow_status', 'time_accepted', 'time_released', 'total_time_spent', 'create_time', 'update_time'], 'safe'],
         ];
     }
@@ -65,6 +65,7 @@ class DocumentWorkflowSearch extends DocumentWorkflow
             'total_time_spent' => $this->total_time_spent,
             'create_time' => $this->create_time,
             'update_time' => $this->update_time,
+            'next_receiver' => $this->next_receiver,
         ]);
 
         $query->andFilterWhere(['like', 'document_wokflow_comments', $this->document_wokflow_comments])

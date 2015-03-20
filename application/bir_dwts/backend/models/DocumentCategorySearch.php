@@ -5,12 +5,12 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\StationDesk;
+use backend\models\DocumentCategory;
 
 /**
- * StationDeskSearch represents the model behind the search form about `backend\models\StationDesk`.
+ * DocumentCategorySearch represents the model behind the search form about `backend\models\DocumentCategory`.
  */
-class StationDeskSearch extends StationDesk
+class DocumentCategorySearch extends DocumentCategory
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class StationDeskSearch extends StationDesk
     public function rules()
     {
         return [
-            [['id', 'division_id'], 'integer'],
-            [['station_desk_code', 'station_desk_name', 'station_desk_notes', 'create_time', 'update_time'], 'safe'],
+            [['id'], 'integer'],
+            [['document_category_name', 'document_category_description', 'create_time', 'update_time'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class StationDeskSearch extends StationDesk
      */
     public function search($params)
     {
-        $query = StationDesk::find();
+        $query = DocumentCategory::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -59,12 +59,10 @@ class StationDeskSearch extends StationDesk
             'id' => $this->id,
             'create_time' => $this->create_time,
             'update_time' => $this->update_time,
-            'division_id' => $this->division_id,
         ]);
 
-        $query->andFilterWhere(['like', 'station_desk_code', $this->station_desk_code])
-            ->andFilterWhere(['like', 'station_desk_name', $this->station_desk_name])
-            ->andFilterWhere(['like', 'station_desk_notes', $this->station_desk_notes]);
+        $query->andFilterWhere(['like', 'document_category_name', $this->document_category_name])
+            ->andFilterWhere(['like', 'document_category_description', $this->document_category_description]);
 
         return $dataProvider;
     }

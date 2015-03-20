@@ -37,6 +37,8 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'update_time') ?>
 
+    <?php // echo $form->field($model, 'next_receiver') ?>
+
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>

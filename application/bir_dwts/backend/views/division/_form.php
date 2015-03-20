@@ -4,19 +4,17 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\CompanyAgency */
+/* @var $model backend\models\Division */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="company-agency-form">
+<div class="division-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'company_agency_code')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'division_name')->textInput(['maxlength' => 255]) ?>
 
-    <?= $form->field($model, 'company_agency_full_name')->textInput(['maxlength' => 45]) ?>
-
-    <?= $form->field($model, 'company_agency_notes')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'division_description')->textInput(['maxlength' => 32]) ?>
 
     <?= $form->field($model, 'create_time')->textInput() ?>
 

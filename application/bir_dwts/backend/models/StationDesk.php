@@ -13,9 +13,11 @@ use Yii;
  * @property string $station_desk_notes
  * @property string $create_time
  * @property string $update_time
+ * @property integer $division_id
  *
- * @property DocumentWokflow[] $documentWokflows
+ * @property DocumentWorkflow[] $documentWorkflows
  * @property EmployeeHasStationDesk[] $employeeHasStationDesks
+ * @property Division $division
  */
 class StationDesk extends \yii\db\ActiveRecord
 {
@@ -35,6 +37,7 @@ class StationDesk extends \yii\db\ActiveRecord
         return [
             [['station_desk_notes'], 'string'],
             [['create_time', 'update_time'], 'safe'],
+            [['division_id'], 'integer'],
             [['station_desk_code', 'station_desk_name'], 'string', 'max' => 45]
         ];
     }
@@ -51,15 +54,16 @@ class StationDesk extends \yii\db\ActiveRecord
             'station_desk_notes' => 'Station Desk Notes',
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
+            'division_id' => 'Division ID',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getDocumentWokflows()
+    public function getDocumentWorkflows()
     {
-        return $this->hasMany(DocumentWokflow::className(), ['station_desk_id' => 'id']);
+        return $this->hasMany(DocumentWorkflow::className(), ['station_desk_id' => 'id']);
     }
 
     /**
@@ -68,5 +72,13 @@ class StationDesk extends \yii\db\ActiveRecord
     public function getEmployeeHasStationDesks()
     {
         return $this->hasMany(EmployeeHasStationDesk::className(), ['station_desk_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDivision()
+    {
+        return $this->hasOne(Division::className(), ['id' => 'division_id']);
     }
 }

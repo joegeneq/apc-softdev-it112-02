@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Employee */
+/* @var $model backend\models\DocumentCategory */
 
-$this->title = 'Update Employee: ' . ' ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Employees', 'url' => ['index']];
+$this->title = 'Update Document Category: ' . ' ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Document Categories', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="employee-update">
+<div class="document-category-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

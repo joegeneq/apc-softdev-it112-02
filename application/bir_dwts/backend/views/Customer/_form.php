@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use backend\models\CompanyAgency;
 
+
 /* @var $this yii\web\View */
 /* @var $model backend\models\Customer */
 /* @var $form yii\widgets\ActiveForm */
@@ -18,10 +19,10 @@ use backend\models\CompanyAgency;
 
     <?= $form->field($model, 'customer_lastname')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'company_agency_id')->dropdownList(
+    <?= $form->field($model, 'company_agency_id')->dropDownList(
         ArrayHelper::map(CompanyAgency::find()->all(),'id','company_agency_full_name'),
-        ['prompt'=>'Select code'] 
-) ?>
+        ['prompt'=>'Select CompanyAgency']
+    ) ?>
 
     <?= $form->field($model, 'customer_cell_phone')->textInput(['maxlength' => 45]) ?>
 

@@ -16,12 +16,12 @@ use backend\models\Position;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'employee_id')->dropDownList(
-        ArrayHelper::map(Employee::find()->all(),'id','name'),
+        ArrayHelper::map(Employee::find()->all(),'id','last_name'),
         ['prompt'=>'Select Employee']
     ) ?>
 
     <?= $form->field($model, 'position_id')->dropDownList(
-         ArrayHelper::map(Position::find()->all(),'id','position_description'),
+        ArrayHelper::map(Position::find()->all(),'id','position_description'),
         ['prompt'=>'Select Position']
     ) ?>
 

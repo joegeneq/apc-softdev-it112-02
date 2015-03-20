@@ -17,15 +17,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'create_time') ?>
-
-    <?= $form->field($model, 'update_time') ?>
-
     <?= $form->field($model, 'company_agency_code') ?>
 
     <?= $form->field($model, 'company_agency_full_name') ?>
 
-    <?php // echo $form->field($model, 'company_agency_notes') ?>
+    <?= $form->field($model, 'company_agency_notes') ?>
+
+    <?= $form->field($model, 'create_time') ?>
+
+    <?php // echo $form->field($model, 'update_time') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
