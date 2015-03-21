@@ -29,9 +29,6 @@ use backend\models\Position;
 
     <?= $form->field($model, 'employee_position_end_date')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

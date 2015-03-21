@@ -2,7 +2,11 @@
 
 namespace backend\models;
 
+use yii\db\Expression;
 use Yii;
+use yii\db\ActiveRecord;
+use yii\helpers\Security;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "customer".
@@ -42,6 +46,21 @@ class Customer extends \yii\db\ActiveRecord
             [['customer_name', 'customer_lastname', 'customer_cell_phone', 'customer_email', 'customer_landline'], 'string', 'max' => 45]
         ];
     }
+
+    
+public function behaviors()
+{
+return [
+'timestamp' => [
+'class' => 'yii\behaviors\TimestampBehavior',
+'attributes' => [
+ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'update_time'],
+ActiveRecord::EVENT_BEFORE_UPDATE => ['update_time'],
+],
+'value' => new Expression('NOW()'),
+],
+];
+}
 
     /**
      * @inheritdoc

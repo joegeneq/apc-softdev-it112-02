@@ -3,7 +3,10 @@
 namespace backend\models;
 
 use Yii;
-
+use yii\db\ActiveRecord;
+use yii\helpers\Security;
+use yii\web\IdentityInterface;
+use yii\db\Expression;
 /**
  * This is the model class for table "position".
  *
@@ -34,10 +37,24 @@ class Position extends \yii\db\ActiveRecord
     {
         return [
             [['position_notes'], 'string'],
-            [['create_time', 'update_time'], 'safe'],
+            [['create_time', 'update_time',], 'safe'],
             [['position_code', 'position_description'], 'string', 'max' => 45]
         ];
     }
+
+public function behaviors()
+{
+return [
+'timestamp' => [
+'class' => 'yii\behaviors\TimestampBehavior',
+'attributes' => [
+ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'update_time'],
+ActiveRecord::EVENT_BEFORE_UPDATE => ['update_time'],
+],
+'value' => new Expression('NOW()'),
+],
+];
+}
 
     /**
      * @inheritdoc

@@ -18,9 +18,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'company_agency_notes')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
