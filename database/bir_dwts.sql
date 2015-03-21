@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2015 at 03:37 PM
+-- Generation Time: Mar 21, 2015 at 08:31 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -100,8 +100,8 @@ CREATE TABLE IF NOT EXISTS `document_category` (
 `id` int(11) NOT NULL,
   `document_category_name` varchar(45) DEFAULT NULL,
   `document_category_description` text,
-  `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NULL DEFAULT NULL
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -202,8 +202,8 @@ CREATE TABLE IF NOT EXISTS `position` (
   `position_code` varchar(45) DEFAULT NULL,
   `position_description` varchar(45) DEFAULT NULL,
   `position_notes` text,
-  `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NULL DEFAULT NULL
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

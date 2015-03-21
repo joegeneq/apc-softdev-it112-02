@@ -19,7 +19,7 @@ class EmployeeHasStationDeskSearch extends EmployeeHasStationDesk
     {
         return [
             [['id', 'employee_id', 'station_desk_id', 'station_desk_role_id'], 'integer'],
-            [['time_created'], 'safe'],
+            [['create_time'], 'safe'],
         ];
     }
 
@@ -60,7 +60,7 @@ class EmployeeHasStationDeskSearch extends EmployeeHasStationDesk
             'employee_id' => $this->employee_id,
             'station_desk_id' => $this->station_desk_id,
             'station_desk_role_id' => $this->station_desk_role_id,
-            'time_created' => $this->time_created,
+            'create_time' => $this->create_time,
         ]);
 
         return $dataProvider;

@@ -25,9 +25,7 @@ use backend\models\Division;
 
     <?= $form->field($model, 'first_name')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'create_time')->textInput() ?>
 
-    <?= $form->field($model, 'update_time')->textInput() ?>
 
     <?= $form->field($model, 'user_id')->dropDownList(
         ArrayHelper::map(User::find()->all(),'id','username'),

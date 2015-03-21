@@ -42,10 +42,6 @@ use backend\models\StationDesk;
 
     <?= $form->field($model, 'total_time_spent')->textInput() ?>
 
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
-
     <?= $form->field($model, 'next_receiver')->dropDownList(
         ArrayHelper::map(Employee::find()->all(),'id','last_name'),
         ['prompt'=>'Select Employee']
