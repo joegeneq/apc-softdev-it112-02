@@ -19,17 +19,17 @@ use backend\models\DocumentCategory;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'encoded_by')->dropDownList(
-         ArrayHelper::map(Employee::find()->all(),'id','last_name'),
+        ArrayHelper::map(Employee::find()->all(),'id','last_name'),
         ['prompt'=>'Select Employee']
     ) ?>
 
     <?= $form->field($model, 'customer_id')->dropDownList(
-         ArrayHelper::map(Customer::find()->all(),'id','customer_lastname'),
+        ArrayHelper::map(Customer::find()->all(),'id','customer_lastname'),
         ['prompt'=>'Select Customer']
     ) ?>
 
     <?= $form->field($model, 'company_agency_id')->dropDownList(
-         ArrayHelper::map(CompanyAgency::find()->all(),'id','company_agency_full_name'),
+        ArrayHelper::map(CompanyAgency::find()->all(),'id','company_agency_full_name'),
         ['prompt'=>'Select CompanyAgency']
     ) ?>
 
@@ -38,7 +38,7 @@ use backend\models\DocumentCategory;
     <?= $form->field($model, 'document_description')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'document_category')->dropDownList(
-         ArrayHelper::map(DocumentCategory::find()->all(),'id','document_category_name'),
+        ArrayHelper::map(DocumentCategory::find()->all(),'id','document_category_name'),
         ['prompt'=>'Select DocumentCategory']
     ) ?>
 
