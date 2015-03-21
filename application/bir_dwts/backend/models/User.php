@@ -2,7 +2,11 @@
 
 namespace backend\models;
 
+use yii\db\Expression;
 use Yii;
+use yii\db\ActiveRecord;
+use yii\helpers\Security;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "user".
@@ -42,6 +46,22 @@ class User extends \yii\db\ActiveRecord
         ];
     }
 
+    public function behaviors()
+    {
+        return [
+     'timestamp' => [
+     'class' => 'yii\behaviors\TimestampBehavior',
+     'attributes' => [
+       ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
+       ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
+    ],
+     'value' => new Expression('NOW()'),
+    ],
+  ];
+}
+
+
+
     /**
      * @inheritdoc
      */
@@ -55,8 +75,8 @@ class User extends \yii\db\ActiveRecord
             'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
             'status' => 'Status',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'created_at' => 'Create time',
+            'updated_at' => 'Update time',
         ];
     }
 

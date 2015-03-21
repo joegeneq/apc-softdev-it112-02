@@ -21,9 +21,6 @@ use backend\models\Division;
 
     <?= $form->field($model, 'station_desk_notes')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
 
     <?= $form->field($model, 'division_id')->dropDownList(
         ArrayHelper::map(Division::find()->all(),'id','division_name'),
