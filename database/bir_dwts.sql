@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2015 at 11:46 AM
+-- Generation Time: Mar 22, 2015 at 01:44 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -32,16 +32,19 @@ CREATE TABLE IF NOT EXISTS `company_agency` (
   `company_agency_full_name` varchar(45) DEFAULT NULL,
   `company_agency_notes` text,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `company_agency`
 --
 
 INSERT INTO `company_agency` (`id`, `company_agency_code`, `company_agency_full_name`, `company_agency_notes`, `create_time`, `update_time`) VALUES
-(1, 'MNGT-01', 'Management 01', 'asdasd', '2015-03-21 08:40:43', '2015-03-21 08:40:49'),
-(2, 'MNGT-02', 'Management 02', 'ewewew', '2015-03-21 08:42:23', '2015-03-21 08:43:46');
+(1, 'MNGT-01', 'Management 01', 'asdasd', '2015-03-21 08:40:43', '2015-03-21 16:40:49'),
+(2, 'MNGT-02', 'Management 02', 'ewewew', '2015-03-21 08:42:23', '2015-03-21 16:43:46'),
+(3, '12345', 'Paolo', '12312', '2015-03-22 11:45:52', '2015-03-22 19:45:57'),
+(4, '54321', 'Lopao', 'sdfsdfsdfsdfs', '2015-03-22 11:47:25', '2015-03-22 19:55:55'),
+(5, 'fsdfsfsd', '9090', '999', '2015-03-22 12:01:41', '2015-03-22 20:07:41');
 
 -- --------------------------------------------------------
 
@@ -58,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `customer_email` varchar(45) DEFAULT NULL,
   `customer_landline` varchar(45) DEFAULT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
@@ -66,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
 --
 
 INSERT INTO `customer` (`id`, `customer_name`, `customer_lastname`, `company_agency_id`, `customer_cell_phone`, `customer_email`, `customer_landline`, `create_time`, `update_time`) VALUES
-(1, 'Paolo', 'Lansigan', 1, '092364282847', 'kemchii.69@gmail.com', '4327472', '2015-03-21 08:46:50', '2015-03-21 08:46:50');
+(1, 'Paolo', 'pangit', 1, '092364282847', 'kemchii.69@gmail.com', '4327472', '2015-03-21 08:46:50', '2015-03-22 20:44:11');
 
 -- --------------------------------------------------------
 
@@ -79,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `division` (
   `division_name` varchar(255) NOT NULL,
   `division_description` varchar(32) NOT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
@@ -87,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `division` (
 --
 
 INSERT INTO `division` (`id`, `division_name`, `division_description`, `create_time`, `update_time`) VALUES
-(1, 'Division 1', 'Division 1 bla bs', '2015-03-21 08:51:47', '2015-03-21 08:51:54');
+(1, 'Division 1', 'Division 1 bla bs', '2015-03-21 08:51:47', '2015-03-21 16:51:54');
 
 -- --------------------------------------------------------
 
@@ -109,8 +112,8 @@ CREATE TABLE IF NOT EXISTS `document` (
   `document_notes` varchar(45) DEFAULT NULL,
   `document_image_front_page` blob,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -123,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `document_category` (
   `document_category_name` varchar(45) DEFAULT NULL,
   `document_category_description` text,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
@@ -131,7 +134,17 @@ CREATE TABLE IF NOT EXISTS `document_category` (
 --
 
 INSERT INTO `document_category` (`id`, `document_category_name`, `document_category_description`, `create_time`, `update_time`) VALUES
-(1, 'FILE 1 ', 'THIS IS FILE 1', '2015-03-21 08:57:47', '2015-03-21 08:57:47');
+(1, 'FILE 1 ', 'THIS IS FILE 1', '2015-03-21 08:57:47', '2015-03-21 16:57:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `document_seq`
+--
+
+CREATE TABLE IF NOT EXISTS `document_seq` (
+`id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -150,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `document_workflow` (
   `time_released` timestamp NULL DEFAULT NULL,
   `total_time_spent` time DEFAULT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `next_receiver` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -166,10 +179,17 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `last_name` varchar(45) DEFAULT NULL,
   `first_name` varchar(45) DEFAULT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `user_id` int(11) DEFAULT NULL,
   `division_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`id`, `current_position`, `last_name`, `first_name`, `create_time`, `update_time`, `user_id`, `division_id`) VALUES
+(1, 1, 'Lansigan', 'Paolo Lopao', '2015-03-22 09:25:16', '2015-03-22 17:27:59', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -183,8 +203,8 @@ CREATE TABLE IF NOT EXISTS `employee_has_position` (
   `position_id` int(11) NOT NULL,
   `employee_position_start_date` date DEFAULT NULL,
   `employee_position_end_date` varchar(45) DEFAULT NULL,
-  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -199,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `employee_has_station_desk` (
   `station_desk_id` int(11) NOT NULL,
   `station_desk_role_id` int(11) NOT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -233,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `position` (
   `position_description` varchar(45) DEFAULT NULL,
   `position_notes` text,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
@@ -241,7 +261,7 @@ CREATE TABLE IF NOT EXISTS `position` (
 --
 
 INSERT INTO `position` (`id`, `position_code`, `position_description`, `position_notes`, `create_time`, `update_time`) VALUES
-(1, 'sdsds', 'asdasda', 'asdasda', '2015-03-21 07:33:42', '2015-03-21 08:24:44');
+(1, 'sdsds', 'asdasda', 'asdasda', '2015-03-21 07:33:42', '2015-03-21 16:24:44');
 
 -- --------------------------------------------------------
 
@@ -255,7 +275,7 @@ CREATE TABLE IF NOT EXISTS `station_desk` (
   `station_desk_name` varchar(45) DEFAULT NULL,
   `station_desk_notes` text,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `division_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
@@ -264,7 +284,7 @@ CREATE TABLE IF NOT EXISTS `station_desk` (
 --
 
 INSERT INTO `station_desk` (`id`, `station_desk_code`, `station_desk_name`, `station_desk_notes`, `create_time`, `update_time`, `division_id`) VALUES
-(1, 'STN-01', 'Station 1', 'This station is a station', '2015-03-21 09:08:47', '2015-03-21 09:08:47', 1);
+(1, 'STN-01', 'Station 1', 'This station is a station', '2015-03-21 09:08:47', '2015-03-21 17:08:47', 1);
 
 -- --------------------------------------------------------
 
@@ -277,7 +297,7 @@ CREATE TABLE IF NOT EXISTS `station_desk_role` (
   `station_desk_code` varchar(45) DEFAULT NULL,
   `station_desk_description` varchar(45) DEFAULT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
@@ -285,20 +305,7 @@ CREATE TABLE IF NOT EXISTS `station_desk_role` (
 --
 
 INSERT INTO `station_desk_role` (`id`, `station_desk_code`, `station_desk_description`, `create_time`, `update_time`) VALUES
-(1, 'Station 1', 'Station is station', '2015-03-21 09:11:25', '2015-03-21 09:11:25');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ticket`
---
-
-CREATE TABLE IF NOT EXISTS `ticket` (
-`id` int(11) NOT NULL,
-  `company_agency_id` int(11) NOT NULL,
-  `customer_id` int(11) NOT NULL,
-  `Created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(1, 'Station 1', 'Station is station', '2015-03-21 09:11:25', '2015-03-21 17:11:25');
 
 -- --------------------------------------------------------
 
@@ -315,7 +322,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `status` smallint(6) NOT NULL DEFAULT '10',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -357,6 +364,12 @@ ALTER TABLE `document`
 -- Indexes for table `document_category`
 --
 ALTER TABLE `document_category`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `document_seq`
+--
+ALTER TABLE `document_seq`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -408,12 +421,6 @@ ALTER TABLE `station_desk_role`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ticket`
---
-ALTER TABLE `ticket`
- ADD PRIMARY KEY (`id`), ADD KEY `tickett_ibfk_1` (`company_agency_id`), ADD KEY `ticket_ibfk_1` (`customer_id`);
-
---
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -427,7 +434,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `company_agency`
 --
 ALTER TABLE `company_agency`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `customer`
 --
@@ -442,12 +449,17 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `document_category`
 --
 ALTER TABLE `document_category`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `document_seq`
+--
+ALTER TABLE `document_seq`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `document_workflow`
 --
@@ -457,7 +469,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `employee_has_position`
 --
@@ -483,11 +495,6 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 ALTER TABLE `station_desk_role`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `ticket`
---
-ALTER TABLE `ticket`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `user`
 --
@@ -549,13 +556,6 @@ ADD CONSTRAINT `fk_employee_has_station_desk_station_desk_role1` FOREIGN KEY (`s
 --
 ALTER TABLE `station_desk`
 ADD CONSTRAINT `fk_station_desk_division1` FOREIGN KEY (`division_id`) REFERENCES `division` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `ticket`
---
-ALTER TABLE `ticket`
-ADD CONSTRAINT `ticket_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`),
-ADD CONSTRAINT `tickett_ibfk_1` FOREIGN KEY (`company_agency_id`) REFERENCES `company_agency` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
