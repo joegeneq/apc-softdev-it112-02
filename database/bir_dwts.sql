@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2015 at 01:44 PM
+-- Generation Time: Mar 22, 2015 at 02:42 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -323,14 +323,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `status` smallint(6) NOT NULL DEFAULT '10',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'plansigan', 'jx_MsLhXJwy0Vn9W4a2tLXSQyzcVV6V9', '$2y$13$XZV1dwB5BytIQnKMvbB7ZuDH7qP6Dumko7z.nWF.rpuwWxRIwJzmu', NULL, 'kemchii.69@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(2, 'plansigan', 'jx_MsLhXJwy0Vn9W4a2tLXSQyzcVV6V9', '$2y$13$XZV1dwB5BytIQnKMvbB7ZuDH7qP6Dumko7z.nWF.rpuwWxRIwJzmu', NULL, 'kemchii.69@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'mfrianzares', 'Wo12hFFLPUWLRQowgYhpicKoGigazQC0', '$2y$13$rCFhSEG3uEubpEDwgfJhyuUc87g.PZTgrVZH40D8aDXVdTM7W82UC', NULL, 'markrianzares@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -499,7 +500,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --
