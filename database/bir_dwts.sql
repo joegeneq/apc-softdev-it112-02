@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.3.12
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2015 at 02:42 PM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Generation Time: Mar 22, 2015 at 02:55 PM
+-- Server version: 5.5.34
+-- PHP Version: 5.4.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `company_agency` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `company_agency_code` varchar(45) DEFAULT NULL,
   `company_agency_full_name` varchar(45) DEFAULT NULL,
   `company_agency_notes` text,
@@ -53,7 +53,7 @@ INSERT INTO `company_agency` (`id`, `company_agency_code`, `company_agency_full_
 --
 
 CREATE TABLE IF NOT EXISTS `customer` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `customer_name` varchar(45) DEFAULT NULL,
   `customer_lastname` varchar(45) DEFAULT NULL,
   `company_agency_id` int(11) NOT NULL,
@@ -78,7 +78,7 @@ INSERT INTO `customer` (`id`, `customer_name`, `customer_lastname`, `company_age
 --
 
 CREATE TABLE IF NOT EXISTS `division` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `division_name` varchar(255) NOT NULL,
   `division_description` varchar(32) NOT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -99,7 +99,7 @@ INSERT INTO `division` (`id`, `division_name`, `division_description`, `create_t
 --
 
 CREATE TABLE IF NOT EXISTS `document` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `encoded_by` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `company_agency_id` int(11) NOT NULL,
@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `document` (
 --
 
 CREATE TABLE IF NOT EXISTS `document_category` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `document_category_name` varchar(45) DEFAULT NULL,
   `document_category_description` text,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -143,7 +143,7 @@ INSERT INTO `document_category` (`id`, `document_category_name`, `document_categ
 --
 
 CREATE TABLE IF NOT EXISTS `document_seq` (
-`id` int(11) NOT NULL
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `document_seq` (
 --
 
 CREATE TABLE IF NOT EXISTS `document_workflow` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `document_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `station_desk_id` int(11) NOT NULL,
@@ -174,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `document_workflow` (
 --
 
 CREATE TABLE IF NOT EXISTS `employee` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `current_position` int(11) NOT NULL,
   `last_name` varchar(45) DEFAULT NULL,
   `first_name` varchar(45) DEFAULT NULL,
@@ -198,7 +198,7 @@ INSERT INTO `employee` (`id`, `current_position`, `last_name`, `first_name`, `cr
 --
 
 CREATE TABLE IF NOT EXISTS `employee_has_position` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `position_id` int(11) NOT NULL,
   `employee_position_start_date` date DEFAULT NULL,
@@ -214,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `employee_has_position` (
 --
 
 CREATE TABLE IF NOT EXISTS `employee_has_station_desk` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `station_desk_id` int(11) NOT NULL,
   `station_desk_role_id` int(11) NOT NULL,
@@ -248,7 +248,7 @@ INSERT INTO `migration` (`version`, `apply_time`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `position` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `position_code` varchar(45) DEFAULT NULL,
   `position_description` varchar(45) DEFAULT NULL,
   `position_notes` text,
@@ -270,7 +270,7 @@ INSERT INTO `position` (`id`, `position_code`, `position_description`, `position
 --
 
 CREATE TABLE IF NOT EXISTS `station_desk` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `station_desk_code` varchar(45) DEFAULT NULL,
   `station_desk_name` varchar(45) DEFAULT NULL,
   `station_desk_notes` text,
@@ -293,7 +293,7 @@ INSERT INTO `station_desk` (`id`, `station_desk_code`, `station_desk_name`, `sta
 --
 
 CREATE TABLE IF NOT EXISTS `station_desk_role` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `station_desk_code` varchar(45) DEFAULT NULL,
   `station_desk_description` varchar(45) DEFAULT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -314,7 +314,7 @@ INSERT INTO `station_desk_role` (`id`, `station_desk_code`, `station_desk_descri
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `auth_key` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -323,13 +323,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   `status` smallint(6) NOT NULL DEFAULT '10',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'bptopacio', 'IPhtC_N3eWDFdJPnNswe12Yhn1GUHJHR', '$2y$13$fnum5645.5p78mSUBAVRQ.33v807OvY9A5oo6gDsB7VLC8Wq6ud5i', NULL, 'bptopacio@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 'plansigan', 'jx_MsLhXJwy0Vn9W4a2tLXSQyzcVV6V9', '$2y$13$XZV1dwB5BytIQnKMvbB7ZuDH7qP6Dumko7z.nWF.rpuwWxRIwJzmu', NULL, 'kemchii.69@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (3, 'mfrianzares', 'Wo12hFFLPUWLRQowgYhpicKoGigazQC0', '$2y$13$rCFhSEG3uEubpEDwgfJhyuUc87g.PZTgrVZH40D8aDXVdTM7W82UC', NULL, 'markrianzares@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
@@ -341,91 +342,91 @@ INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_res
 -- Indexes for table `company_agency`
 --
 ALTER TABLE `company_agency`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
- ADD PRIMARY KEY (`id`), ADD KEY `fk_customer_company_agency1_idx` (`company_agency_id`);
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_customer_company_agency1_idx` (`company_agency_id`);
 
 --
 -- Indexes for table `division`
 --
 ALTER TABLE `division`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `document`
 --
 ALTER TABLE `document`
- ADD PRIMARY KEY (`id`), ADD KEY `fk_document_employee1_idx` (`encoded_by`), ADD KEY `fk_document_customer1_idx` (`customer_id`), ADD KEY `fk_document_company_agency1_idx` (`company_agency_id`), ADD KEY `fk_document_document_category1_idx` (`document_category`);
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_document_employee1_idx` (`encoded_by`), ADD KEY `fk_document_customer1_idx` (`customer_id`), ADD KEY `fk_document_company_agency1_idx` (`company_agency_id`), ADD KEY `fk_document_document_category1_idx` (`document_category`);
 
 --
 -- Indexes for table `document_category`
 --
 ALTER TABLE `document_category`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `document_seq`
 --
 ALTER TABLE `document_seq`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `document_workflow`
 --
 ALTER TABLE `document_workflow`
- ADD PRIMARY KEY (`id`), ADD KEY `fk_document_wokflow_document1_idx` (`document_id`), ADD KEY `fk_document_wokflow_employee1_idx` (`employee_id`), ADD KEY `fk_document_wokflow_station_desk1_idx` (`station_desk_id`), ADD KEY `fk_document_workflow_employee1_idx` (`next_receiver`);
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_document_wokflow_document1_idx` (`document_id`), ADD KEY `fk_document_wokflow_employee1_idx` (`employee_id`), ADD KEY `fk_document_wokflow_station_desk1_idx` (`station_desk_id`), ADD KEY `fk_document_workflow_employee1_idx` (`next_receiver`);
 
 --
 -- Indexes for table `employee`
 --
 ALTER TABLE `employee`
- ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_position1_idx` (`current_position`), ADD KEY `fk_employee_user1_idx` (`user_id`), ADD KEY `fk_employee_division1_idx` (`division_id`);
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_position1_idx` (`current_position`), ADD KEY `fk_employee_user1_idx` (`user_id`), ADD KEY `fk_employee_division1_idx` (`division_id`);
 
 --
 -- Indexes for table `employee_has_position`
 --
 ALTER TABLE `employee_has_position`
- ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_has_position_position1_idx` (`position_id`), ADD KEY `fk_employee_has_position_employee1_idx` (`employee_id`);
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_has_position_position1_idx` (`position_id`), ADD KEY `fk_employee_has_position_employee1_idx` (`employee_id`);
 
 --
 -- Indexes for table `employee_has_station_desk`
 --
 ALTER TABLE `employee_has_station_desk`
- ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_has_station_desk_station_desk1_idx` (`station_desk_id`), ADD KEY `fk_employee_has_station_desk_employee_idx` (`employee_id`), ADD KEY `fk_employee_has_station_desk_station_desk_role1_idx` (`station_desk_role_id`);
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_has_station_desk_station_desk1_idx` (`station_desk_id`), ADD KEY `fk_employee_has_station_desk_employee_idx` (`employee_id`), ADD KEY `fk_employee_has_station_desk_station_desk_role1_idx` (`station_desk_role_id`);
 
 --
 -- Indexes for table `migration`
 --
 ALTER TABLE `migration`
- ADD PRIMARY KEY (`version`);
+  ADD PRIMARY KEY (`version`);
 
 --
 -- Indexes for table `position`
 --
 ALTER TABLE `position`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `station_desk`
 --
 ALTER TABLE `station_desk`
- ADD PRIMARY KEY (`id`), ADD KEY `fk_station_desk_division1_idx` (`division_id`);
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_station_desk_division1_idx` (`division_id`);
 
 --
 -- Indexes for table `station_desk_role`
 --
 ALTER TABLE `station_desk_role`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -435,72 +436,72 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `company_agency`
 --
 ALTER TABLE `company_agency`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `division`
 --
 ALTER TABLE `division`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `document_category`
 --
 ALTER TABLE `document_category`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `document_seq`
 --
 ALTER TABLE `document_seq`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `document_workflow`
 --
 ALTER TABLE `document_workflow`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `employee_has_position`
 --
 ALTER TABLE `employee_has_position`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `employee_has_station_desk`
 --
 ALTER TABLE `employee_has_station_desk`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `position`
 --
 ALTER TABLE `position`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `station_desk`
 --
 ALTER TABLE `station_desk`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `station_desk_role`
 --
 ALTER TABLE `station_desk_role`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- Constraints for dumped tables
 --
