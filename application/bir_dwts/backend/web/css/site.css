@@ -91,11 +91,25 @@ a.desc:after {
 }
 
 .navbar-inverse {
-  background-color: #333333;
-  border-color: #333333;
+    color: #fff;
+    background-color: #333333;
+    border-color: #333333;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-  color: #fff;
-  background-color: #272727;
+    color: #fff;
+    background-color: #272727;
+}
+
+.site-login{
+   
+    text-align: center;
+    background-color: #F7EE6C;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 40px ;
+    margin-left: 275px ;
+    margin-right: 275px ;
 }
