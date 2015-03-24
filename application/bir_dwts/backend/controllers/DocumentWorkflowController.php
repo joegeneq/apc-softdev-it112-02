@@ -8,13 +8,13 @@ use backend\models\DocumentWorkflowSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * DocumentWorkflowController implements the CRUD actions for DocumentWorkflow model.
  */
 class DocumentWorkflowController extends Controller
 {
-    public function behaviors()
     public function behaviors()
     {
         return [

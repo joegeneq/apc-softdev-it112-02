@@ -8,13 +8,13 @@ use backend\models\StationDeskSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * StationDeskController implements the CRUD actions for StationDesk model.
  */
 class StationDeskController extends Controller
 {
-    public function behaviors()
     public function behaviors()
     {
         return [

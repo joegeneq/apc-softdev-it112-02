@@ -8,13 +8,13 @@ use backend\models\EmployeeHasPositionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * EmployeeHasPositionController implements the CRUD actions for EmployeeHasPosition model.
  */
 class EmployeeHasPositionController extends Controller
 {
-    public function behaviors()
     public function behaviors()
     {
         return [

@@ -8,13 +8,13 @@ use backend\models\CompanyAgencySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * CompanyAgencyController implements the CRUD actions for CompanyAgency model.
  */
 class CompanyAgencyController extends Controller
 {
-    public function behaviors()
     public function behaviors()
     {
         return [

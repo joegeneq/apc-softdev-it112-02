@@ -8,13 +8,13 @@ use backend\models\DivisionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * DivisionController implements the CRUD actions for Division model.
  */
 class DivisionController extends Controller
 {
-    public function behaviors()
     public function behaviors()
     {
         return [

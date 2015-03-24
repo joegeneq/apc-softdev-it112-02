@@ -8,13 +8,13 @@ use backend\models\DocumentCategorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * DocumentCategoryController implements the CRUD actions for DocumentCategory model.
  */
 class DocumentCategoryController extends Controller
 {
-    public function behaviors()
     public function behaviors()
     {
         return [

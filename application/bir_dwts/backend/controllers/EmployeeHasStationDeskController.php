@@ -8,13 +8,13 @@ use backend\models\EmployeeHasStationDeskSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * EmployeeHasStationDeskController implements the CRUD actions for EmployeeHasStationDesk model.
  */
 class EmployeeHasStationDeskController extends Controller
 {
-    public function behaviors()
     public function behaviors()
     {
         return [
