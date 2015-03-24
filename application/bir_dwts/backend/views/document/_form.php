@@ -7,7 +7,7 @@ use backend\models\Employee;
 use backend\models\Customer;
 use backend\models\CompanyAgency;
 use backend\models\DocumentCategory;
-
+use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Document */
@@ -44,7 +44,17 @@ use backend\models\DocumentCategory;
 
     <?= $form->field($model, 'document_priority')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'document_target_date')->textInput() ?>
+        <?= $form->field($model, 'document_target_date')->widget(
+         DatePicker::className(), [
+        // inline too, not bad
+        'inline' => false, 
+         // modify template for custom rendering
+        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'yyyy-mm-dd'
+        ]
+    ]);?>
 
     <?= $form->field($model, 'document_type')->textInput(['maxlength' => 45]) ?>
 
