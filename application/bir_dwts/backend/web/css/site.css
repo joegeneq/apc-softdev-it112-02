@@ -113,3 +113,9 @@ a.desc:after {
     margin-left: 275px ;
     margin-right: 275px ;
 }
+
+.modal-backdrop.in{
+    height:100%;    
+    background-repeat: repeat-y;
+
+}

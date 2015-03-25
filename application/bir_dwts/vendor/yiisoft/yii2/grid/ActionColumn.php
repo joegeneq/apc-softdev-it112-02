@@ -169,3 +169,4 @@ class ActionColumn extends Column
         }, $this->template);
     }
 }
+
