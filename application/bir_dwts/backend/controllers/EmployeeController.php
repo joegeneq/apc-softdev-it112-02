@@ -1,18 +1,18 @@
 <?php
 
-namespace backend\models;
+namespace backend\controllers;
 
 use Yii;
-use backend\models\StationDesk;
-use backend\models\StationDeskSearch;
+use backend\models\Employee;
+use backend\models\EmployeeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * StationDeskController implements the CRUD actions for StationDesk model.
+ * EmployeeController implements the CRUD actions for Employee model.
  */
-class StationDeskController extends Controller
+class EmployeeController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class StationDeskController extends Controller
     }
 
     /**
-     * Lists all StationDesk models.
+     * Lists all Employee models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new StationDeskSearch();
+        $searchModel = new EmployeeSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,7 +42,7 @@ class StationDeskController extends Controller
     }
 
     /**
-     * Displays a single StationDesk model.
+     * Displays a single Employee model.
      * @param integer $id
      * @return mixed
      */
@@ -54,13 +54,13 @@ class StationDeskController extends Controller
     }
 
     /**
-     * Creates a new StationDesk model.
+     * Creates a new Employee model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new StationDesk();
+        $model = new Employee();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,7 +72,7 @@ class StationDeskController extends Controller
     }
 
     /**
-     * Updates an existing StationDesk model.
+     * Updates an existing Employee model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -91,7 +91,7 @@ class StationDeskController extends Controller
     }
 
     /**
-     * Deletes an existing StationDesk model.
+     * Deletes an existing Employee model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -104,15 +104,15 @@ class StationDeskController extends Controller
     }
 
     /**
-     * Finds the StationDesk model based on its primary key value.
+     * Finds the Employee model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return StationDesk the loaded model
+     * @return Employee the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = StationDesk::findOne($id)) !== null) {
+        if (($model = Employee::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

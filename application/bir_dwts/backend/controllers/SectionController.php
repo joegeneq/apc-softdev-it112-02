@@ -1,18 +1,18 @@
 <?php
 
-namespace backend\models;
+namespace backend\controllers;
 
 use Yii;
-use backend\models\DocumentCategory;
-use backend\models\DocumentCategorySearch;
+use backend\models\Section;
+use backend\models\SectionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * DocumentCategoryController implements the CRUD actions for DocumentCategory model.
+ * SectionController implements the CRUD actions for Section model.
  */
-class DocumentCategoryController extends Controller
+class SectionController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class DocumentCategoryController extends Controller
     }
 
     /**
-     * Lists all DocumentCategory models.
+     * Lists all Section models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new DocumentCategorySearch();
+        $searchModel = new SectionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,7 +42,7 @@ class DocumentCategoryController extends Controller
     }
 
     /**
-     * Displays a single DocumentCategory model.
+     * Displays a single Section model.
      * @param integer $id
      * @return mixed
      */
@@ -54,13 +54,13 @@ class DocumentCategoryController extends Controller
     }
 
     /**
-     * Creates a new DocumentCategory model.
+     * Creates a new Section model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new DocumentCategory();
+        $model = new Section();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,7 +72,7 @@ class DocumentCategoryController extends Controller
     }
 
     /**
-     * Updates an existing DocumentCategory model.
+     * Updates an existing Section model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -91,7 +91,7 @@ class DocumentCategoryController extends Controller
     }
 
     /**
-     * Deletes an existing DocumentCategory model.
+     * Deletes an existing Section model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -104,15 +104,15 @@ class DocumentCategoryController extends Controller
     }
 
     /**
-     * Finds the DocumentCategory model based on its primary key value.
+     * Finds the Section model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return DocumentCategory the loaded model
+     * @return Section the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = DocumentCategory::findOne($id)) !== null) {
+        if (($model = Section::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

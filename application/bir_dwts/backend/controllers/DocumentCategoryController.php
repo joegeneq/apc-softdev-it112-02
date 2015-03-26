@@ -1,18 +1,18 @@
 <?php
 
-namespace backend\models;
+namespace backend\controllers;
 
 use Yii;
-use backend\models\StationDeskRole;
-use backend\models\StationDeskRoleSearch;
+use backend\models\DocumentCategory;
+use backend\models\DocumentCategorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * StationDeskRoleController implements the CRUD actions for StationDeskRole model.
+ * DocumentCategoryController implements the CRUD actions for DocumentCategory model.
  */
-class StationDeskRoleController extends Controller
+class DocumentCategoryController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class StationDeskRoleController extends Controller
     }
 
     /**
-     * Lists all StationDeskRole models.
+     * Lists all DocumentCategory models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new StationDeskRoleSearch();
+        $searchModel = new DocumentCategorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,7 +42,7 @@ class StationDeskRoleController extends Controller
     }
 
     /**
-     * Displays a single StationDeskRole model.
+     * Displays a single DocumentCategory model.
      * @param integer $id
      * @return mixed
      */
@@ -54,13 +54,13 @@ class StationDeskRoleController extends Controller
     }
 
     /**
-     * Creates a new StationDeskRole model.
+     * Creates a new DocumentCategory model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new StationDeskRole();
+        $model = new DocumentCategory();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,7 +72,7 @@ class StationDeskRoleController extends Controller
     }
 
     /**
-     * Updates an existing StationDeskRole model.
+     * Updates an existing DocumentCategory model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -91,7 +91,7 @@ class StationDeskRoleController extends Controller
     }
 
     /**
-     * Deletes an existing StationDeskRole model.
+     * Deletes an existing DocumentCategory model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -104,15 +104,15 @@ class StationDeskRoleController extends Controller
     }
 
     /**
-     * Finds the StationDeskRole model based on its primary key value.
+     * Finds the DocumentCategory model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return StationDeskRole the loaded model
+     * @return DocumentCategory the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = StationDeskRole::findOne($id)) !== null) {
+        if (($model = DocumentCategory::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

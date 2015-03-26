@@ -1,18 +1,18 @@
 <?php
 
-namespace backend\models;
+namespace backend\controllers;
 
 use Yii;
-use backend\models\DocumentPriority;
-use backend\models\DocumentPrioritySearch;
+use backend\models\Position;
+use backend\models\PositionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * DocumentPriorityController implements the CRUD actions for DocumentPriority model.
+ * PositionController implements the CRUD actions for Position model.
  */
-class DocumentPriorityController extends Controller
+class PositionController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class DocumentPriorityController extends Controller
     }
 
     /**
-     * Lists all DocumentPriority models.
+     * Lists all Position models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new DocumentPrioritySearch();
+        $searchModel = new PositionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,7 +42,7 @@ class DocumentPriorityController extends Controller
     }
 
     /**
-     * Displays a single DocumentPriority model.
+     * Displays a single Position model.
      * @param integer $id
      * @return mixed
      */
@@ -54,13 +54,13 @@ class DocumentPriorityController extends Controller
     }
 
     /**
-     * Creates a new DocumentPriority model.
+     * Creates a new Position model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new DocumentPriority();
+        $model = new Position();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -72,7 +72,7 @@ class DocumentPriorityController extends Controller
     }
 
     /**
-     * Updates an existing DocumentPriority model.
+     * Updates an existing Position model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -91,7 +91,7 @@ class DocumentPriorityController extends Controller
     }
 
     /**
-     * Deletes an existing DocumentPriority model.
+     * Deletes an existing Position model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -104,15 +104,15 @@ class DocumentPriorityController extends Controller
     }
 
     /**
-     * Finds the DocumentPriority model based on its primary key value.
+     * Finds the Position model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return DocumentPriority the loaded model
+     * @return Position the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = DocumentPriority::findOne($id)) !== null) {
+        if (($model = Position::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
