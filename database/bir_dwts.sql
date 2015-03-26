@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2015 at 04:00 PM
+-- Generation Time: Mar 26, 2015 at 07:55 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.22
 
@@ -33,7 +33,16 @@ CREATE TABLE IF NOT EXISTS `company_agency` (
   `company_agency_description` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `company_agency`
+--
+
+INSERT INTO `company_agency` (`id`, `company_agency_code`, `company_agencyl_name`, `company_agency_description`, `create_time`, `update_time`) VALUES
+(1, 'Po', 'people arrow', 'ffdsfsd', NULL, NULL),
+(2, 'f', 'f', 'dsfsd', NULL, NULL),
+(3, 'dfsf', 'dsf', 'dsfdsf', '2015-03-26 17:13:26', '2015-03-27 01:13:26');
 
 -- --------------------------------------------------------
 
@@ -51,7 +60,14 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `customer_landline` varchar(45) DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id`, `customer_lastname`, `customer_firstname`, `company_agency_id`, `customer_cell_phone`, `customer_email`, `customer_landline`, `create_time`, `update_time`) VALUES
+(1, 'Topacio', 'Bernard', 1, '09877', 'bptoac', '43535435', '2015-03-26 17:48:22', '2015-03-27 01:48:22');
 
 -- --------------------------------------------------------
 
@@ -75,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `document` (
   `document_image_front_page` blob,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -271,7 +287,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   `status` smallint(6) NOT NULL DEFAULT '10',
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `user_type`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
+(1, 0, 'bptopacio', 'Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW', '$2y$13$eAjYa5oy3oIlOOSvy5oQfOH1hNqNfqNACyUDRWYqbZOl3Wlfnceay', NULL, 'bptopacio@gmail.com', 10, 1427395642, 1427395642);
 
 --
 -- Indexes for dumped tables
@@ -375,17 +398,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `company_agency`
 --
 ALTER TABLE `company_agency`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `document_category`
 --
@@ -440,7 +463,7 @@ ALTER TABLE `station_desk_role`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --
