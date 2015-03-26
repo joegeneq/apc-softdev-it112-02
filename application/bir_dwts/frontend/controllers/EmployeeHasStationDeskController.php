@@ -3,16 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use frontend\models\CompanyAgency;
-use frontend\models\CompanyAgencySearch;
+use frontend\models\EmployeeHasStationDesk;
+use frontend\models\EmployeeHasStationDeskSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * CompanyAgencyController implements the CRUD actions for CompanyAgency model.
+ * EmployeeHasStationDeskController implements the CRUD actions for EmployeeHasStationDesk model.
  */
-class CompanyAgencyController extends Controller
+class EmployeeHasStationDeskController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class CompanyAgencyController extends Controller
     }
 
     /**
-     * Lists all CompanyAgency models.
+     * Lists all EmployeeHasStationDesk models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new CompanyAgencySearch();
+        $searchModel = new EmployeeHasStationDeskSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,7 +42,7 @@ class CompanyAgencyController extends Controller
     }
 
     /**
-     * Displays a single CompanyAgency model.
+     * Displays a single EmployeeHasStationDesk model.
      * @param integer $id
      * @return mixed
      */
@@ -54,25 +54,25 @@ class CompanyAgencyController extends Controller
     }
 
     /**
-     * Creates a new CompanyAgency model.
+     * Creates a new EmployeeHasStationDesk model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new CompanyAgency();
+        $model = new EmployeeHasStationDesk();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
-            return $this->renderAjax('create', [
+            return $this->render('create', [
                 'model' => $model,
             ]);
         }
     }
 
     /**
-     * Updates an existing CompanyAgency model.
+     * Updates an existing EmployeeHasStationDesk model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -91,7 +91,7 @@ class CompanyAgencyController extends Controller
     }
 
     /**
-     * Deletes an existing CompanyAgency model.
+     * Deletes an existing EmployeeHasStationDesk model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -104,15 +104,15 @@ class CompanyAgencyController extends Controller
     }
 
     /**
-     * Finds the CompanyAgency model based on its primary key value.
+     * Finds the EmployeeHasStationDesk model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return CompanyAgency the loaded model
+     * @return EmployeeHasStationDesk the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = CompanyAgency::findOne($id)) !== null) {
+        if (($model = EmployeeHasStationDesk::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
