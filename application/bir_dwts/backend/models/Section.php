@@ -3,7 +3,10 @@
 namespace backend\models;
 
 use Yii;
-
+use yii\db\Expression;
+use yii\db\ActiveRecord;
+use yii\helpers\Security;
+use yii\web\IdentityInterface;
 /**
  * This is the model class for table "section".
  *
@@ -69,5 +72,19 @@ class Section extends \yii\db\ActiveRecord
     public function getStationDesks()
     {
         return $this->hasMany(StationDesk::className(), ['section_id' => 'id']);
+    }
+	
+	public function behaviors()
+    {
+        return [
+        'timestamp' => [
+        'class' => 'yii\behaviors\TimestampBehavior',
+        'attributes' => [
+        ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'update_time'],
+        ActiveRecord::EVENT_BEFORE_UPDATE => ['update_time'],
+        ],
+        'value' => new Expression('NOW()'),
+        ],
+        ];
     }
 }
