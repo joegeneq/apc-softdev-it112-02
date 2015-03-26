@@ -5,6 +5,7 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
+use yii\backend\User;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\DocumentSearch */
@@ -42,8 +43,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'encoded_by',
-            'customer_id',
-            'company_agency_id',
+            [
+                'attribute'=>'customer_id',
+                'value'=>'customer.customer_lastname',
+
+            ],
+            [
+                'attribute'=>'company_agency_id',
+                'value'=>'companyAgency.company_agency_full_name',
+
+            ],
             'document_tracking_number',
             // 'document_description',
             // 'document_category',

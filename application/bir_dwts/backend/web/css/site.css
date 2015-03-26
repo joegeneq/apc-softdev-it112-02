@@ -119,3 +119,7 @@ a.desc:after {
     background-repeat: repeat-y;
 
 }
+
+.encoded{
+    display:none;
+}

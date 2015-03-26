@@ -123,6 +123,7 @@ class Document extends \yii\db\ActiveRecord
     public function getEncodedBy()
     {
         return $this->hasOne(Employee::className(), ['id' => 'encoded_by']);
+        return $this->hasOne(Employee::className(), ['encoded_by' => 'last_name']);
     }
 
     /**

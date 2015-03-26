@@ -5,6 +5,7 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
+use yii\backend\CompanyAgency;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\CustomerSearch */
@@ -43,7 +44,12 @@ $this->params['breadcrumbs'][] = $this->title;
             //'id',
             'customer_name',
             'customer_lastname',
-            'company_agency_id',
+            [
+                'attribute'=>'company_agency_id',
+                'value'=>'companyAgency.company_agency_full_name',
+
+            ],
+
             'customer_cell_phone',
             // 'customer_email:email',
             // 'customer_landline',

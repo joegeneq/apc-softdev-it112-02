@@ -86,6 +86,8 @@ ActiveRecord::EVENT_BEFORE_UPDATE => ['update_time'],
     public function getCompanyAgency()
     {
         return $this->hasOne(CompanyAgency::className(), ['id' => 'company_agency_id']);
+        return $this->hasOne(CompanyAgency::className(), ['company_agency_id' => 'company_agency_full_name']);
+        return $this->hasOne(CompanyAgency::className(), ['company_agency_id' => 'company_agency_code']);
     }
 
     /**

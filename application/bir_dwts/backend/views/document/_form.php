@@ -8,7 +8,11 @@ use backend\models\Customer;
 use backend\models\CompanyAgency;
 use backend\models\DocumentCategory;
 use dosamigos\datepicker\DatePicker;
+use common\models\User;
 
+
+//$model->roles = Yii::$app->user->identity->username;
+//<?= $form->field($model, 'encoded_by')->textInput(['value' => Yii::$app->user->identity->id,'readonly' => true]
 /* @var $this yii\web\View */
 /* @var $model backend\models\Document */
 /* @var $form yii\widgets\ActiveForm */
@@ -17,12 +21,11 @@ use dosamigos\datepicker\DatePicker;
 <div class="document-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
-    <?= $form->field($model, 'encoded_by')->dropDownList(
-        ArrayHelper::map(Employee::find()->all(),'id','last_name'),
-        ['prompt'=>'Select Employee']
+    <div class="encoded">
+    <?= $form->field($model, 'encoded_by')->textInput(['value' => Yii::$app->user->identity->id,'readonly' => true]
+   
     ) ?>
-
+    </div>
     <?= $form->field($model, 'customer_id')->dropDownList(
         ArrayHelper::map(Customer::find()->all(),'id','customer_lastname'),
         ['prompt'=>'Select Customer']
