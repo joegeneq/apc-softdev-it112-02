@@ -2,6 +2,10 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\widgets\Pjax;
+use yii\bootstrap\Modal;
+use yii\helpers\Url;
+
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\EmployeeHasStationDeskSearch */
@@ -16,8 +20,20 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Employee Has Station Desk', ['create'], ['class' => 'btn btn-success']) ?>
+       <?= Html::button('Create Employee Has Station Desk',  ['value'=>Url::to('index.php?r=employeehasstationdesk%2Fcreate'), 'class' => 'btn btn-success', 'id'=>'modalButton']) ?>
     </p>
+
+    <?php
+        Modal::begin([
+                'header'=>'<h4>Documents</h4>',
+                'id' => 'modal',
+                'size' => 'modal-lg',
+            ]);
+
+        echo "<div id='modalContent'></div>";
+
+        Modal::end();
+    ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'employee_id',
             'station_desk_id',
             'station_desk_role_id',

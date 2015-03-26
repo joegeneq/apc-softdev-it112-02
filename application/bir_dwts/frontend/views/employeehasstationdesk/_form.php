@@ -18,9 +18,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'station_desk_role_id')->textInput() ?>
 
-    <?= $form->field($model, 'created_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\widgets\Pjax;
+use yii\bootstrap\Modal;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\DocumentSearch */
@@ -16,8 +19,20 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Document', ['create'], ['class' => 'btn btn-success']) ?>
+       <?= Html::button('Create Customer',  ['value'=>Url::to('index.php?r=document%2Fcreate'), 'class' => 'btn btn-success', 'id'=>'modalButton']) ?>
     </p>
+
+    <?php
+        Modal::begin([
+                'header'=>'<h4>Documents</h4>',
+                'id' => 'modal',
+                'size' => 'modal-lg',
+            ]);
+
+        echo "<div id='modalContent'></div>";
+
+        Modal::end();
+    ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,16 +40,20 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'document_tracking_number',
             'document_name',
-            'document_description',
+            //'document_description',
             'document_target_date',
             // 'document_category',
-            // 'document_priority_id',
+            'document_priority_id',
             // 'document_type',
             // 'document_comment',
-            // 'employee_id',
+            [
+                'attribute'=>'employee_id',
+                'value'=>'employee.last_name',
+
+            ],
             // 'customer_id',
             // 'company_agency_id',
             // 'document_image_front_page',

@@ -28,10 +28,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'total_time_spent')->textInput() ?>
 
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
-
     <?= $form->field($model, 'employee_id1')->textInput() ?>
 
     <div class="form-group">
