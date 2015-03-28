@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\CompanyAgency */
 
-$this->title = $model->id;
+$this->title = $model->company_agency_code;
 $this->params['breadcrumbs'][] = ['label' => 'Company Agencies', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+//            'id',
             'company_agency_code',
             'company_agency_name',
             'company_agency_description:ntext',

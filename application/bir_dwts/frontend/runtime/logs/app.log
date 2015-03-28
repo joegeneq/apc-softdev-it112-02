@@ -1,72 +1,16 @@
-2015-03-28 08:08:25 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'where clause'' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\db\Command.php:822
+2015-03-28 12:23:45 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\models\ActiveRecord' not found' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\common\models\CompanyAgency.php:48
 Stack trace:
-#0 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\db\Command.php(822): PDOStatement->execute()
-#1 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
-#2 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\db\Query.php(348): yii\db\Command->queryScalar()
-#3 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\validators\UniqueValidator.php(111): yii\db\Query->exists()
-#4 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\validators\Validator.php(238): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), 'email')
-#5 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Model.php(333): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), Array)
-#6 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\models\SignupForm.php(45): yii\base\Model->validate()
-#7 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\controllers\SiteController.php(123): frontend\models\SignupForm->signup()
-#8 [internal function]: frontend\controllers\SiteController->actionSignup()
-#9 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
-#10 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
-#11 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('signup', Array)
-#12 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/signup', Array)
-#13 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
-#14 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\web\index.php(18): yii\base\Application->run()
-#15 {main}
-
-Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'where clause'
-The SQL being executed was: SELECT 1 FROM `user` WHERE `email`='bptopacio@gmail.com'' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\db\Schema.php:534
-Stack trace:
-#0 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\db\Command.php(837): yii\db\Schema->convertException(Object(PDOException), 'SELECT 1 FROM `...')
-#1 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
-#2 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\db\Query.php(348): yii\db\Command->queryScalar()
-#3 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\validators\UniqueValidator.php(111): yii\db\Query->exists()
-#4 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\validators\Validator.php(238): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), 'email')
-#5 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Model.php(333): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), Array)
-#6 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\models\SignupForm.php(45): yii\base\Model->validate()
-#7 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\controllers\SiteController.php(123): frontend\models\SignupForm->signup()
-#8 [internal function]: frontend\controllers\SiteController->actionSignup()
-#9 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
-#10 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
-#11 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('signup', Array)
-#12 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/signup', Array)
-#13 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
-#14 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\web\index.php(18): yii\base\Application->run()
-#15 {main}
-Additional Information:
-Array
-(
-    [0] => 42S22
-    [1] => 1054
-    [2] => Unknown column 'email' in 'where clause'
-)
-
-2015-03-28 08:08:23 [::1][-][-][info][application] $_GET = [
-    'r' => 'site/signup'
-]
-
-$_POST = [
-    '_csrf' => 'YUxOYmFQUWUbHwA6DgUjISg9N1ogOGcSCDooNy88PlEmAAwADghoAw=='
-    'SignupForm' => [
-        'username' => 'bernard'
-        'email' => 'bptopacio@gmail.com'
-        'password' => 'qwerty'
-    ]
-    'signup-button' => ''
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-28 12:23:44 [::1][-][-][info][application] $_GET = [
+    'r' => 'companyagency'
 ]
 
 $_COOKIE = [
     'SESS852d8b94f3c62424c67fe41570978de8' => '5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4'
     '_identity' => '67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW\",2592000]\";}'
     'PHPSESSID' => '7ojd7225hr3i4n765ei7ebbd35'
-    '_csrf' => 'd16543b8bbcaf54882b1ca89ca620544edb5637a170dbef7116dcb6258b7bf99a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zSNXoUrDIqy8Ah6wivfUNlo4GLBboX9f\";}'
-]
-
-$_SESSION = [
-    '__flash' => []
+    '_csrf' => 'd23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy\";}'
 ]
 
 $_SERVER = [
@@ -81,11 +25,9 @@ $_SERVER = [
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_REFERER' => 'http://localhost/bir_dwts/frontend/web/index.php?r=site%2Fsignup'
-    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=d16543b8bbcaf54882b1ca89ca620544edb5637a170dbef7116dcb6258b7bf99a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zSNXoUrDIqy8Ah6wivfUNlo4GLBboX9f%22%3B%7D'
+    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=d23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy%22%3B%7D'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
-    'CONTENT_LENGTH' => '190'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -104,56 +46,30 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/frontend/web/index.php'
-    'REMOTE_PORT' => '52962'
+    'REMOTE_PORT' => '49935'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => 'r=site%2Fsignup'
-    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=site%2Fsignup'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=companyagency'
+    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=companyagency'
     'SCRIPT_NAME' => '/bir_dwts/frontend/web/index.php'
     'PHP_SELF' => '/bir_dwts/frontend/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1427526503.895
-    'REQUEST_TIME' => 1427526503
+    'REQUEST_TIME_FLOAT' => 1427541824.114
+    'REQUEST_TIME' => 1427541824
 ]
-2015-03-28 08:35:56 [::1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Controller.php:110
+2015-03-28 12:24:21 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\models\Expression' not found' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\common\models\CompanyAgency.php:51
 Stack trace:
-#0 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
-#1 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
-#2 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('gii/default/vie...', Array)
-#3 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
-#4 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\web\index.php(18): yii\base\Application->run()
-#5 {main}
-2015-03-28 08:35:56 [::1][-][-][info][application] $_GET = [
-    'r' => 'gii/default/view'
-    'id' => 'crud'
-]
-
-$_POST = [
-    '_csrf' => 'Yk40SmViSWMYHXoSCjc7Jys/TXIkCn8UCzhSHysOJlclAnYoCjpwBQ=='
-    'Generator' => [
-        'modelClass' => 'common\\models\\document'
-        'searchModelClass' => 'common\\models\\DocumentSearch'
-        'controllerClass' => 'backend\\controllers\\DocumentController'
-        'viewPath' => 'C:\\xampp\\htdocs\\bir_dwts\\backend\\views\\document'
-        'baseControllerClass' => 'yii\\web\\Controller'
-        'indexWidgetType' => 'grid'
-        'enableI18N' => '0'
-        'messageCategory' => 'app'
-        'template' => 'default'
-    ]
-    'preview' => ''
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-28 12:24:21 [::1][-][-][info][application] $_GET = [
+    'r' => 'companyagency'
 ]
 
 $_COOKIE = [
     'SESS852d8b94f3c62424c67fe41570978de8' => '5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4'
     '_identity' => '67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW\",2592000]\";}'
     'PHPSESSID' => '7ojd7225hr3i4n765ei7ebbd35'
-    '_csrf' => '22542a5c9bab51f83f9a50ebbc7596da2d4c131c30f1f0ac9001ee2c3ed7ce38a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qfyxW7kpzU-Ico-yIqaxdOcxXefMD5aZ\";}'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '_csrf' => 'd23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy\";}'
 ]
 
 $_SERVER = [
@@ -168,11 +84,9 @@ $_SERVER = [
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_REFERER' => 'http://localhost/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
-    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=22542a5c9bab51f83f9a50ebbc7596da2d4c131c30f1f0ac9001ee2c3ed7ce38a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qfyxW7kpzU-Ico-yIqaxdOcxXefMD5aZ%22%3B%7D'
+    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=d23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy%22%3B%7D'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
-    'CONTENT_LENGTH' => '544'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -191,56 +105,30 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/frontend/web/index.php'
-    'REMOTE_PORT' => '62690'
+    'REMOTE_PORT' => '49940'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
-    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=companyagency'
+    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=companyagency'
     'SCRIPT_NAME' => '/bir_dwts/frontend/web/index.php'
     'PHP_SELF' => '/bir_dwts/frontend/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1427528156.57
-    'REQUEST_TIME' => 1427528156
+    'REQUEST_TIME_FLOAT' => 1427541861.257
+    'REQUEST_TIME' => 1427541861
 ]
-2015-03-28 08:36:05 [::1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Controller.php:110
+2015-03-28 12:24:22 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\models\Expression' not found' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\common\models\CompanyAgency.php:51
 Stack trace:
-#0 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
-#1 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
-#2 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('gii/default/vie...', Array)
-#3 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
-#4 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\web\index.php(18): yii\base\Application->run()
-#5 {main}
-2015-03-28 08:36:05 [::1][-][-][info][application] $_GET = [
-    'r' => 'gii/default/view'
-    'id' => 'crud'
-]
-
-$_POST = [
-    '_csrf' => 'Yk40SmViSWMYHXoSCjc7Jys/TXIkCn8UCzhSHysOJlclAnYoCjpwBQ=='
-    'Generator' => [
-        'modelClass' => 'common\\models\\document'
-        'searchModelClass' => 'common\\models\\DocumentSearch'
-        'controllerClass' => 'backend\\controllers\\DocumentController'
-        'viewPath' => 'C:\\xampp\\htdocs\\bir_dwts\\backend\\views\\document'
-        'baseControllerClass' => 'yii\\web\\Controller'
-        'indexWidgetType' => 'grid'
-        'enableI18N' => '0'
-        'messageCategory' => 'app'
-        'template' => 'default'
-    ]
-    'preview' => ''
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-28 12:24:22 [::1][-][-][info][application] $_GET = [
+    'r' => 'companyagency'
 ]
 
 $_COOKIE = [
     'SESS852d8b94f3c62424c67fe41570978de8' => '5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4'
     '_identity' => '67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW\",2592000]\";}'
     'PHPSESSID' => '7ojd7225hr3i4n765ei7ebbd35'
-    '_csrf' => '22542a5c9bab51f83f9a50ebbc7596da2d4c131c30f1f0ac9001ee2c3ed7ce38a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qfyxW7kpzU-Ico-yIqaxdOcxXefMD5aZ\";}'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '_csrf' => 'd23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy\";}'
 ]
 
 $_SERVER = [
@@ -255,11 +143,9 @@ $_SERVER = [
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_REFERER' => 'http://localhost/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
-    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=22542a5c9bab51f83f9a50ebbc7596da2d4c131c30f1f0ac9001ee2c3ed7ce38a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qfyxW7kpzU-Ico-yIqaxdOcxXefMD5aZ%22%3B%7D'
+    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=d23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy%22%3B%7D'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
-    'CONTENT_LENGTH' => '544'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -278,56 +164,30 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/frontend/web/index.php'
-    'REMOTE_PORT' => '62696'
+    'REMOTE_PORT' => '49941'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
-    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=companyagency'
+    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=companyagency'
     'SCRIPT_NAME' => '/bir_dwts/frontend/web/index.php'
     'PHP_SELF' => '/bir_dwts/frontend/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1427528165.383
-    'REQUEST_TIME' => 1427528165
+    'REQUEST_TIME_FLOAT' => 1427541862.437
+    'REQUEST_TIME' => 1427541862
 ]
-2015-03-28 08:36:11 [::1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Controller.php:110
+2015-03-28 12:24:23 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\models\Expression' not found' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\common\models\CompanyAgency.php:51
 Stack trace:
-#0 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
-#1 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
-#2 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('gii/default/vie...', Array)
-#3 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
-#4 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\web\index.php(18): yii\base\Application->run()
-#5 {main}
-2015-03-28 08:36:11 [::1][-][-][info][application] $_GET = [
-    'r' => 'gii/default/view'
-    'id' => 'crud'
-]
-
-$_POST = [
-    '_csrf' => 'Yk40SmViSWMYHXoSCjc7Jys/TXIkCn8UCzhSHysOJlclAnYoCjpwBQ=='
-    'Generator' => [
-        'modelClass' => ''
-        'searchModelClass' => ''
-        'controllerClass' => 'backend\\controllers\\DocumentController'
-        'viewPath' => 'C:\\xampp\\htdocs\\bir_dwts\\backend\\views\\document'
-        'baseControllerClass' => 'yii\\web\\Controller'
-        'indexWidgetType' => 'grid'
-        'enableI18N' => '0'
-        'messageCategory' => 'app'
-        'template' => 'default'
-    ]
-    'preview' => ''
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-28 12:24:23 [::1][-][-][info][application] $_GET = [
+    'r' => 'companyagency'
 ]
 
 $_COOKIE = [
     'SESS852d8b94f3c62424c67fe41570978de8' => '5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4'
     '_identity' => '67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW\",2592000]\";}'
     'PHPSESSID' => '7ojd7225hr3i4n765ei7ebbd35'
-    '_csrf' => '22542a5c9bab51f83f9a50ebbc7596da2d4c131c30f1f0ac9001ee2c3ed7ce38a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qfyxW7kpzU-Ico-yIqaxdOcxXefMD5aZ\";}'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '_csrf' => 'd23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy\";}'
 ]
 
 $_SERVER = [
@@ -342,11 +202,9 @@ $_SERVER = [
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_REFERER' => 'http://localhost/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
-    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=22542a5c9bab51f83f9a50ebbc7596da2d4c131c30f1f0ac9001ee2c3ed7ce38a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qfyxW7kpzU-Ico-yIqaxdOcxXefMD5aZ%22%3B%7D'
+    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=d23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy%22%3B%7D'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
-    'CONTENT_LENGTH' => '486'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -365,56 +223,30 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/frontend/web/index.php'
-    'REMOTE_PORT' => '62700'
+    'REMOTE_PORT' => '49942'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
-    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=companyagency'
+    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=companyagency'
     'SCRIPT_NAME' => '/bir_dwts/frontend/web/index.php'
     'PHP_SELF' => '/bir_dwts/frontend/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1427528171.499
-    'REQUEST_TIME' => 1427528171
+    'REQUEST_TIME_FLOAT' => 1427541863.542
+    'REQUEST_TIME' => 1427541863
 ]
-2015-03-28 08:57:35 [::1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Controller.php:110
+2015-03-28 12:24:24 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\models\Expression' not found' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\common\models\CompanyAgency.php:51
 Stack trace:
-#0 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
-#1 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
-#2 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('gii/default/vie...', Array)
-#3 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
-#4 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\web\index.php(18): yii\base\Application->run()
-#5 {main}
-2015-03-28 08:57:35 [::1][-][-][info][application] $_GET = [
-    'r' => 'gii/default/view'
-    'id' => 'crud'
-]
-
-$_POST = [
-    '_csrf' => 'M1lqaWNtSkgCGw06IiJyClsxWyAtJAZ.BwpYGRs0LAsEGhsBNTl6Cg=='
-    'Generator' => [
-        'modelClass' => 'common\\models\\DocumentType'
-        'searchModelClass' => 'common\\models\\DocumentTypeSearch'
-        'controllerClass' => 'backend\\controllers\\DocumentTypeController'
-        'viewPath' => 'C:\\xampp\\htdocs\\bir_dwts\\backend\\views\\documenttype'
-        'baseControllerClass' => 'yii\\web\\Controller'
-        'indexWidgetType' => 'grid'
-        'enableI18N' => '0'
-        'messageCategory' => 'app'
-        'template' => 'default'
-    ]
-    'preview' => ''
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-28 12:24:24 [::1][-][-][info][application] $_GET = [
+    'r' => 'companyagency'
 ]
 
 $_COOKIE = [
     'SESS852d8b94f3c62424c67fe41570978de8' => '5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4'
     '_identity' => '67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW\",2592000]\";}'
     'PHPSESSID' => '7ojd7225hr3i4n765ei7ebbd35'
-    '_csrf' => '770719fba33e2d6ff390a686a24fbe57c675c6439668fa5bca06c88ad82a5448a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DLTx3-_e-pzCy42hDIYNg9XGbzkep_uq\";}'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '_csrf' => 'd23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy\";}'
 ]
 
 $_SERVER = [
@@ -429,11 +261,9 @@ $_SERVER = [
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_REFERER' => 'http://localhost/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
-    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=770719fba33e2d6ff390a686a24fbe57c675c6439668fa5bca06c88ad82a5448a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DLTx3-_e-pzCy42hDIYNg9XGbzkep_uq%22%3B%7D'
+    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=d23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy%22%3B%7D'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
-    'CONTENT_LENGTH' => '558'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -452,58 +282,30 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/frontend/web/index.php'
-    'REMOTE_PORT' => '62960'
+    'REMOTE_PORT' => '49943'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
-    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=companyagency'
+    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=companyagency'
     'SCRIPT_NAME' => '/bir_dwts/frontend/web/index.php'
     'PHP_SELF' => '/bir_dwts/frontend/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1427529455.615
-    'REQUEST_TIME' => 1427529455
+    'REQUEST_TIME_FLOAT' => 1427541864.486
+    'REQUEST_TIME' => 1427541864
 ]
-2015-03-28 09:06:59 [::1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Controller.php:110
+2015-03-28 12:24:27 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\models\Expression' not found' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\common\models\CompanyAgency.php:51
 Stack trace:
-#0 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
-#1 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
-#2 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('gii/default/vie...', Array)
-#3 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
-#4 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\web\index.php(18): yii\base\Application->run()
-#5 {main}
-2015-03-28 09:06:57 [::1][-][-][info][application] $_GET = [
-    'r' => 'gii/default/view'
-    'id' => 'model'
-]
-
-$_POST = [
-    '_csrf' => 'X0xlcjQyUS05DQFGXUcHFRsFMDl6Bw5paXwkGl5XE2A5DVYKYWQ5dw=='
-    'Generator' => [
-        'tableName' => 'document_workflow'
-        'modelClass' => 'DocumentWorkflow'
-        'ns' => 'common\\models'
-        'baseClass' => 'yii\\db\\ActiveRecord'
-        'db' => 'db'
-        'useTablePrefix' => '0'
-        'generateRelations' => '1'
-        'generateLabelsFromComments' => '0'
-        'enableI18N' => '0'
-        'messageCategory' => 'app'
-        'template' => 'default'
-    ]
-    'preview' => ''
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-28 12:24:26 [::1][-][-][info][application] $_GET = [
+    'r' => 'companyagency'
 ]
 
 $_COOKIE = [
     'SESS852d8b94f3c62424c67fe41570978de8' => '5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4'
     '_identity' => '67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW\",2592000]\";}'
     'PHPSESSID' => '7ojd7225hr3i4n765ei7ebbd35'
-    '_csrf' => '9b8457a16c30883b452bdcaaa4a3558a643a63a0037a5cae4609c0d5e415db2fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"m727hyA9rdO0E9Yva9YlTJhq-E7S1Smz\";}'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '_csrf' => 'd23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy\";}'
 ]
 
 $_SERVER = [
@@ -518,11 +320,9 @@ $_SERVER = [
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_REFERER' => 'http://localhost/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=model'
-    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=9b8457a16c30883b452bdcaaa4a3558a643a63a0037a5cae4609c0d5e415db2fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22m727hyA9rdO0E9Yva9YlTJhq-E7S1Smz%22%3B%7D'
+    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=d23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy%22%3B%7D'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
-    'CONTENT_LENGTH' => '506'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -541,58 +341,30 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/frontend/web/index.php'
-    'REMOTE_PORT' => '63345'
+    'REMOTE_PORT' => '49944'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=model'
-    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=model'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=companyagency'
+    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=companyagency'
     'SCRIPT_NAME' => '/bir_dwts/frontend/web/index.php'
     'PHP_SELF' => '/bir_dwts/frontend/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1427530017.978
-    'REQUEST_TIME' => 1427530017
+    'REQUEST_TIME_FLOAT' => 1427541866.949
+    'REQUEST_TIME' => 1427541866
 ]
-2015-03-28 09:30:30 [::1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Controller.php:110
+2015-03-28 12:24:28 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\models\Expression' not found' in C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\common\models\CompanyAgency.php:51
 Stack trace:
-#0 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
-#1 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
-#2 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('gii/default/vie...', Array)
-#3 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
-#4 C:\Users\Bernard\Desktop\Repository\apc-softdev-it112-02\application\bir_dwts\frontend\web\index.php(18): yii\base\Application->run()
-#5 {main}
-2015-03-28 09:30:30 [::1][-][-][info][application] $_GET = [
-    'r' => 'gii/default/view'
-    'id' => 'model'
-]
-
-$_POST = [
-    '_csrf' => 'NjVzUF9EUXBAX14nNxVhBgENSzoNKmQDdWYQCGtzJildX0oPcnBpFQ=='
-    'Generator' => [
-        'tableName' => 'employee_has_position'
-        'modelClass' => 'EmployeeHasPosition'
-        'ns' => 'common\\models'
-        'baseClass' => 'yii\\db\\ActiveRecord'
-        'db' => 'db'
-        'useTablePrefix' => '0'
-        'generateRelations' => '1'
-        'generateLabelsFromComments' => '0'
-        'enableI18N' => '0'
-        'messageCategory' => 'app'
-        'template' => 'default'
-    ]
-    'preview' => ''
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-28 12:24:28 [::1][-][-][info][application] $_GET = [
+    'r' => 'companyagency'
 ]
 
 $_COOKIE = [
     'SESS852d8b94f3c62424c67fe41570978de8' => '5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4'
     '_identity' => '67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW\",2592000]\";}'
     'PHPSESSID' => '7ojd7225hr3i4n765ei7ebbd35'
-    '_csrf' => 'daf5e513521f7557badca461222fba6ac7e92f131091fec509a455c77edc2e8da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UQss1TpcK77j4JEIF9KCZUTtS5XUnkoA\";}'
-]
-
-$_SESSION = [
-    '__flash' => []
-    '__returnUrl' => '/bir_dwts/backend/web/index.php'
+    '_csrf' => 'd23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy\";}'
 ]
 
 $_SERVER = [
@@ -607,11 +379,9 @@ $_SERVER = [
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
-    'HTTP_REFERER' => 'http://localhost/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=model'
-    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=daf5e513521f7557badca461222fba6ac7e92f131091fec509a455c77edc2e8da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UQss1TpcK77j4JEIF9KCZUTtS5XUnkoA%22%3B%7D'
+    'HTTP_COOKIE' => 'SESS852d8b94f3c62424c67fe41570978de8=5yL00e1yfDL5kW4-0ibLxVSqqPjvFMOtb3bbxk0phg4; _identity=67703c2f6da9d640461770c7bc53346c5b6efe3b95b5f950844c3c015b7055eaa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Sf7oCZn0iOIuHA9rBFhBiUDCb7hpdpgW%22%2C2592000%5D%22%3B%7D; PHPSESSID=7ojd7225hr3i4n765ei7ebbd35; _csrf=d23e0d50704ab7d5c25ed06fbc389141716e5e0e7c63d1f417d5cc029a0721e8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PCUECZEiH3Y41oIZPUT1iWt0ikzho1Sy%22%3B%7D'
     'HTTP_CONNECTION' => 'keep-alive'
-    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
-    'CONTENT_LENGTH' => '513'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseGit\\bin;c:\\xampp\\php'
     'SystemRoot' => 'C:\\WINDOWS'
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
@@ -630,14 +400,14 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'C:/xampp/htdocs/bir_dwts/frontend/web/index.php'
-    'REMOTE_PORT' => '63689'
+    'REMOTE_PORT' => '49945'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
-    'REQUEST_METHOD' => 'POST'
-    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=model'
-    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=gii%2Fdefault%2Fview&id=model'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=companyagency'
+    'REQUEST_URI' => '/bir_dwts/frontend/web/index.php?r=companyagency'
     'SCRIPT_NAME' => '/bir_dwts/frontend/web/index.php'
     'PHP_SELF' => '/bir_dwts/frontend/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1427531430.166
-    'REQUEST_TIME' => 1427531430
+    'REQUEST_TIME_FLOAT' => 1427541868.758
+    'REQUEST_TIME' => 1427541868
 ]
