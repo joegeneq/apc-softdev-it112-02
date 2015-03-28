@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\DocumentType */
 
-$this->title = $model->id;
+$this->title = $model->document_type_name;
 $this->params['breadcrumbs'][] = ['label' => 'Document Types', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+//            'id',
             'document_type_name',
             'document_type_description:ntext',
             'create_time',
