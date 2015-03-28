@@ -6,6 +6,11 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model common\models\CompanyAgency */
 /* @var $form yii\widgets\ActiveForm */
+/*<?= $form->field($model, 'create_time')->textInput() ?>
+
+  <?= $form->field($model, 'update_time')->textInput() ?>*/
+
+
 ?>
 
 <div class="company-agency-form">
@@ -17,10 +22,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'company_agency_name')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'company_agency_description')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
