@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\DocumentWorkflowStatus */
 
-$this->title = $model->id;
+$this->title = $model->document_workflow_status_name;
 $this->params['breadcrumbs'][] = ['label' => 'Document Workflow Statuses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+//            'id',
             'document_workflow_status_name',
             'document_workflow_status_description:ntext',
             'create_time',

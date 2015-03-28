@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2015 at 03:12 PM
+-- Generation Time: Mar 28, 2015 at 06:03 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.22
 
@@ -189,7 +189,14 @@ CREATE TABLE IF NOT EXISTS `document_workflow_status` (
   `document_workflow_status_description` text,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `document_workflow_status`
+--
+
+INSERT INTO `document_workflow_status` (`id`, `document_workflow_status_name`, `document_workflow_status_description`, `create_time`, `update_time`) VALUES
+(1, 'Ongoing', 'thjomvmdgbrbbdrfb', '2015-03-28 15:31:32', '2015-03-28 23:31:32');
 
 -- --------------------------------------------------------
 
@@ -207,7 +214,14 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`id`, `employee_id_number`, `employee_last_name`, `employee_first_name`, `current_position`, `section_id`, `create_time`, `update_time`, `user_id`) VALUES
+(1, '4544234', 'Topacio', 'Bernard', 1, 4, '2015-03-28 16:35:59', '2015-03-29 00:35:59', 1);
 
 -- --------------------------------------------------------
 
@@ -254,7 +268,14 @@ CREATE TABLE IF NOT EXISTS `position` (
   `position_notes` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `position`
+--
+
+INSERT INTO `position` (`id`, `position_code`, `position_name`, `position_description`, `position_notes`, `create_time`, `update_time`) VALUES
+(1, 'OP', 'Opeaning Position', 'fisnenfens', 'effsfesfsef', '2015-03-28 16:21:15', '2015-03-29 00:21:15');
 
 -- --------------------------------------------------------
 
@@ -270,7 +291,14 @@ CREATE TABLE IF NOT EXISTS `section` (
   `section_description` text NOT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `section`
+--
+
+INSERT INTO `section` (`id`, `section_number`, `section_code`, `section_name`, `section_description`, `create_time`, `update_time`) VALUES
+(4, '01', 'PSN', 'PeopleSection', 'regregregregreg', '2015-03-28 16:05:53', '2015-03-29 00:05:53');
 
 -- --------------------------------------------------------
 
@@ -286,7 +314,14 @@ CREATE TABLE IF NOT EXISTS `station_desk` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `section_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `station_desk`
+--
+
+INSERT INTO `station_desk` (`id`, `station_desk_code`, `station_desk_name`, `station_desk_notes`, `create_time`, `update_time`, `section_id`) VALUES
+(1, 'STND', 'station desk 1 ', 'dfsfdgdgwfdgrgfrdh', '2015-03-28 16:41:50', '2015-03-29 00:41:50', 4);
 
 -- --------------------------------------------------------
 
@@ -301,7 +336,14 @@ CREATE TABLE IF NOT EXISTS `station_desk_role` (
   `station_desk_role_description` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `station_desk_role`
+--
+
+INSERT INTO `station_desk_role` (`id`, `station_desk_role_code`, `station_desk_role_name`, `station_desk_role_description`, `create_time`, `update_time`) VALUES
+(1, 'DNN', 'Desk Na Na', 'sesfesfsef', '2015-03-28 16:43:44', '2015-03-29 00:43:44');
 
 -- --------------------------------------------------------
 
@@ -465,10 +507,15 @@ ALTER TABLE `document_type`
 ALTER TABLE `document_workflow`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `document_workflow_status`
+--
+ALTER TABLE `document_workflow_status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `employee_has_position`
 --
@@ -483,22 +530,22 @@ ALTER TABLE `employee_has_station_desk`
 -- AUTO_INCREMENT for table `position`
 --
 ALTER TABLE `position`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `station_desk`
 --
 ALTER TABLE `station_desk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `station_desk_role`
 --
 ALTER TABLE `station_desk_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `user`
 --

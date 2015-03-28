@@ -18,6 +18,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'company_agency_id')->textInput() ?>
 
+    <?= $form->field($model, 'company_agency_id')->dropDownList(
+        ArrayHelper::map(CompanyAgency::find()->all(),'id', 'company_agency_code'),
+        ['prompt'=>'Select Company Agency']
+    ) ?>
+
     <?= $form->field($model, 'customer_cell_phone')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'customer_email')->textInput(['maxlength' => 45]) ?>

@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "employee_has_position".
@@ -37,6 +39,20 @@ class EmployeeHasPosition extends \yii\db\ActiveRecord
             [['employee_id', 'position_id'], 'required'],
             [['employee_id', 'position_id'], 'integer'],
             [['employee_position_start_date', 'employee_position_end_date', 'create_time', 'update_time'], 'safe']
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+            'class' => 'yii\behaviors\TimestampBehavior',
+            'attributes' => [
+            ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'update_time'],
+            ActiveRecord::EVENT_BEFORE_UPDATE => ['update_time'],
+            ],
+            'value' => new Expression('NOW()'),
+        ],
         ];
     }
 

@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "station_desk".
@@ -39,6 +41,20 @@ class StationDesk extends \yii\db\ActiveRecord
             [['create_time', 'update_time'], 'safe'],
             [['section_id'], 'integer'],
             [['station_desk_code', 'station_desk_name'], 'string', 'max' => 45]
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+            'class' => 'yii\behaviors\TimestampBehavior',
+            'attributes' => [
+            ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'update_time'],
+            ActiveRecord::EVENT_BEFORE_UPDATE => ['update_time'],
+            ],
+            'value' => new Expression('NOW()'),
+        ],
         ];
     }
 

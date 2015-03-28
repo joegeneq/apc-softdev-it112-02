@@ -2,6 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use common\models\Document;
+use common\models\Employee;
+use common\models\StationDesk;
+use common\models\DocumentWorkflowStatus;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\DocumentWorkflow */
@@ -12,15 +17,28 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'document_id')->textInput() ?>
+    <?= $form->field($model, 'document_id')->dropDownList(
+        ArrayHelper::map(Document::find()->all(),'id', 'document_name'),
+        ['prompt'=>'Select Document']
+    ) ?>
 
-    <?= $form->field($model, 'employee_id')->textInput() ?>
+    <?= $form->field($model, 'employee_id')->dropDownList(
+        ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name' .', '.'employee_first_name'),
+        ['prompt'=>'Select Employee']
+    ) ?>
 
-    <?= $form->field($model, 'station_desk_id')->textInput() ?>
+    <?= $form->field($model, 'station_desk_id')->dropDownList(
+        ArrayHelper::map(StationDesk::find()->all(),'id', 'station_desk_code'),
+        ['prompt'=>'Select Station Desk']
+    ) ?>
+
 
     <?= $form->field($model, 'document_wokflow_comments')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'document_status_id')->textInput() ?>
+    <?= $form->field($model, 'document_status_id')->dropDownList(
+        ArrayHelper::map(DocumentWorkflowStatus::find()->all(),'id', 'document_workflow_status_name'),
+        ['prompt'=>'Select DocumentStatus']
+    ) ?>
 
     <?= $form->field($model, 'time_accepted')->textInput() ?>
 
@@ -28,11 +46,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'total_time_spent')->textInput() ?>
 
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
-
-    <?= $form->field($model, 'employee_id1')->textInput() ?>
+    <?= $form->field($model, 'employee_id1')->dropDownList(
+        ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name' .', '.'employee_first_name'),
+        ['prompt'=>'Select Employee']
+    ) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

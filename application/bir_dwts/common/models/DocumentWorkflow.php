@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "document_workflow".
@@ -46,6 +48,20 @@ class DocumentWorkflow extends \yii\db\ActiveRecord
             [['document_id', 'employee_id', 'station_desk_id', 'document_status_id', 'employee_id1'], 'integer'],
             [['document_wokflow_comments'], 'string'],
             [['time_accepted', 'time_released', 'total_time_spent', 'create_time', 'update_time'], 'safe']
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+            'class' => 'yii\behaviors\TimestampBehavior',
+            'attributes' => [
+            ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'update_time'],
+            ActiveRecord::EVENT_BEFORE_UPDATE => ['update_time'],
+            ],
+            'value' => new Expression('NOW()'),
+        ],
         ];
     }
 

@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+//            'id',
             'document_id',
             'employee_id',
             'station_desk_id',
@@ -34,8 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'time_accepted',
             // 'time_released',
             // 'total_time_spent',
-            // 'create_time',
-            // 'update_time',
+            'create_time',
+            'update_time',
             // 'employee_id1',
 
             ['class' => 'yii\grid\ActionColumn'],

@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\StationDesk */
 
-$this->title = $model->id;
+$this->title = $model->station_desk_name;
 $this->params['breadcrumbs'][] = ['label' => 'Station Desks', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+//            'id',
             'station_desk_code',
             'station_desk_name',
             'station_desk_notes:ntext',

@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use common\models\Section;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\StationDesk */
@@ -17,12 +19,11 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'station_desk_name')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'station_desk_notes')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
-
-    <?= $form->field($model, 'section_id')->textInput() ?>
+    
+    <?= $form->field($model, 'section_id')->dropDownList(
+        ArrayHelper::map(Section::find()->all(),'id', 'section_name'),
+        ['prompt'=>'Select Section']
+    ) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
