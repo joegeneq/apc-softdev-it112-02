@@ -19,11 +19,13 @@ use dosamigos\datepicker\DatePicker;
 
 <div class="document-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' =>['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'document_tracking_number')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'document_name')->textInput(['maxlength' => 45]) ?>
+
+    <?=$form->field($model, 'file')->fileInput(); ?>
 
     <?= $form->field($model, 'document_description')->textInput(['maxlength' => 45]) ?>
 

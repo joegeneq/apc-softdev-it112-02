@@ -8,6 +8,7 @@ use common\models\DocumentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\Uploadedfile;
 
 /**
  * DocumentController implements the CRUD actions for document model.
@@ -63,6 +64,13 @@ class DocumentController extends Controller
         $model = new document();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+ 
+            //get the instance of the uploaded file
+            $imageName= $model->document_name;
+            $model->file = UPloadedFile::getInstance($model,'file');
+            $model->file->saveAs( 'uploads/'.$imageName.'.'.$model->file->extension );
+            //save the path in the db column
+            $model->logo = 'uploads/'.$imageName.'.'.$model->file->extension;
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

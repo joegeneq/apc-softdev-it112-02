@@ -40,6 +40,7 @@ class Document extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $file;
     public static function tableName()
     {
         return 'document';
@@ -55,7 +56,8 @@ class Document extends \yii\db\ActiveRecord
             [['document_category', 'document_priority_id', 'document_type_id', 'employee_id', 'customer_id', 'company_agency_id', 'section_id'], 'required'],
             [['document_category', 'document_priority_id', 'document_type_id', 'employee_id', 'customer_id', 'company_agency_id', 'section_id'], 'integer'],
             [['document_image_front_page'], 'string'],
-            [['document_tracking_number', 'document_name', 'document_description', 'document_comment'], 'string', 'max' => 45]
+            [['file'],'file'],
+            [['document_tracking_number','logo', 'document_name', 'document_description', 'document_comment'], 'string', 'max' => 45]
         ];
     }
 
@@ -81,6 +83,7 @@ class Document extends \yii\db\ActiveRecord
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
             'section_id' => 'Section ID',
+            'file'=>'Logo',
         ];
     }
 
