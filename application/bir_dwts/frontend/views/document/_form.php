@@ -10,6 +10,7 @@ use common\models\Employee;
 use common\models\Customer;
 use common\models\CompanyAgency;
 use common\models\Section;
+use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\document */
@@ -26,7 +27,18 @@ use common\models\Section;
 
     <?= $form->field($model, 'document_description')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'document_target_date')->textInput() ?>
+            <?= $form->field($model, 'document_target_date')->widget(
+         DatePicker::className(), [
+        // inline too, not bad
+        'inline' => false, 
+         // modify template for custom rendering
+        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'yyyy-mm-dd'
+        ]
+    ]);?>
+
 
     <?= $form->field($model, 'document_category')->dropDownList(
         ArrayHelper::map(DocumentCategory::find()->all(),'id', 'document_category_name'),
