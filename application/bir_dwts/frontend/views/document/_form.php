@@ -25,8 +25,6 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'document_name')->textInput(['maxlength' => 45]) ?>
 
-    <?=$form->field($model, 'file')->fileInput(); ?>
-
     <?= $form->field($model, 'document_description')->textInput(['maxlength' => 45]) ?>
 
             <?= $form->field($model, 'document_target_date')->widget(
@@ -74,7 +72,7 @@ use dosamigos\datepicker\DatePicker;
         ['prompt'=>'Select Company Agency']
     ) ?>
 
-    <?= $form->field($model, 'document_image_front_page')->textInput() ?>
+    <?=$form->field($model, 'file')->fileInput(); ?>
 
     <?= $form->field($model, 'section_id')->dropDownList(
         ArrayHelper::map(Section::find()->all(),'id', 'section_code'),

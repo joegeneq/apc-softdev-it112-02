@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\document;
+use common\models\Document;
 use common\models\DocumentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

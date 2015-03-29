@@ -10,6 +10,7 @@ use common\models\Employee;
 use common\models\Customer;
 use common\models\CompanyAgency;
 use common\models\Section;
+use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Document */
@@ -18,7 +19,7 @@ use common\models\Section;
 
 <div class="document-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' =>['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'document_tracking_number')->textInput(['maxlength' => 45]) ?>
 
@@ -26,7 +27,18 @@ use common\models\Section;
 
     <?= $form->field($model, 'document_description')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'document_target_date')->textInput() ?>
+            <?= $form->field($model, 'document_target_date')->widget(
+         DatePicker::className(), [
+        // inline too, not bad
+        'inline' => false, 
+         // modify template for custom rendering
+        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'yyyy-mm-dd'
+        ]
+    ]);?>
+
 
     <?= $form->field($model, 'document_category')->dropDownList(
         ArrayHelper::map(DocumentCategory::find()->all(),'id', 'document_category_name'),
@@ -42,7 +54,7 @@ use common\models\Section;
         ArrayHelper::map(DocumentType::find()->all(),'id', 'document_type_name'),
         ['prompt'=>'Select Type']
     ) ?>
-	
+    
     <?= $form->field($model, 'document_comment')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'employee_id')->dropDownList(
@@ -60,7 +72,7 @@ use common\models\Section;
         ['prompt'=>'Select Company Agency']
     ) ?>
 
-    <?= $form->field($model, 'document_image_front_page')->textInput() ?>
+    <?=$form->field($model, 'file')->fileInput(); ?>
 
     <?= $form->field($model, 'section_id')->dropDownList(
         ArrayHelper::map(Section::find()->all(),'id', 'section_code'),

@@ -83,7 +83,7 @@ class Document extends \yii\db\ActiveRecord
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
             'section_id' => 'Section ID',
-            'file'=>'Logo',
+            'file'=>'Document Image Front Page',
         ];
     }
 
