@@ -2,6 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use common\models\Document;
+use common\models\Employee;
+use common\models\StationDesk;
+use common\models\DocumentWorkflowStatus;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\DocumentWorkflow */
@@ -13,12 +18,12 @@ use yii\widgets\ActiveForm;
 <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'document_id')->dropDownList(
-        ArrayHelper::map(Document::find()->all(),'id', 'ddocument_name'),
+        ArrayHelper::map(Document::find()->all(),'id', 'document_name'),
         ['prompt'=>'Select Document']
     ) ?>
 
     <?= $form->field($model, 'employee_id')->dropDownList(
-        ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name' .', '.'employee_first_name'),
+        ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name'),
         ['prompt'=>'Select Employee']
     ) ?>
 
@@ -42,7 +47,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'total_time_spent')->textInput() ?>
 
     <?= $form->field($model, 'employee_id1')->dropDownList(
-        ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name' .', '.'employee_first_name'),
+        ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name'),
         ['prompt'=>'Select Employee']
     ) ?>
 

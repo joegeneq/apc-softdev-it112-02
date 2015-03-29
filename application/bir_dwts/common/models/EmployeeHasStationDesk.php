@@ -13,7 +13,7 @@ use yii\db\Expression;
  * @property integer $employee_id
  * @property integer $station_desk_id
  * @property integer $station_desk_role_id
- * @property string $created_time
+ * @property string $create_time
  * @property string $update_time
  *
  * @property Employee $employee
@@ -38,7 +38,7 @@ class EmployeeHasStationDesk extends \yii\db\ActiveRecord
         return [
             [['employee_id', 'station_desk_id', 'station_desk_role_id'], 'required'],
             [['employee_id', 'station_desk_id', 'station_desk_role_id'], 'integer'],
-            [['created_time', 'update_time'], 'safe']
+            [['create_time', 'update_time'], 'safe']
         ];
     }
 
@@ -66,7 +66,7 @@ class EmployeeHasStationDesk extends \yii\db\ActiveRecord
             'employee_id' => 'Employee ID',
             'station_desk_id' => 'Station Desk ID',
             'station_desk_role_id' => 'Station Desk Role ID',
-            'created_time' => 'Created Time',
+            'create_time' => 'Create Time',
             'update_time' => 'Update Time',
         ];
     }

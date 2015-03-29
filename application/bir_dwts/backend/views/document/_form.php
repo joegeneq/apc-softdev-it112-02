@@ -62,10 +62,6 @@ use common\models\Section;
 
     <?= $form->field($model, 'document_image_front_page')->textInput() ?>
 
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
-
     <?= $form->field($model, 'section_id')->dropDownList(
         ArrayHelper::map(Section::find()->all(),'id', 'section_code'),
         ['prompt'=>'Select Section']

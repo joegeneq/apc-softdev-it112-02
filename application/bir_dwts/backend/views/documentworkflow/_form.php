@@ -23,7 +23,7 @@ use common\models\DocumentWorkflowStatus;
     ) ?>
 
     <?= $form->field($model, 'employee_id')->dropDownList(
-        ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name' .', '.'employee_first_name'),
+        ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name'),
         ['prompt'=>'Select Employee']
     ) ?>
 
@@ -47,7 +47,7 @@ use common\models\DocumentWorkflowStatus;
     <?= $form->field($model, 'total_time_spent')->textInput() ?>
 
     <?= $form->field($model, 'employee_id1')->dropDownList(
-        ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name' .', '.'employee_first_name'),
+        ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name'),
         ['prompt'=>'Select Employee']
     ) ?>
 

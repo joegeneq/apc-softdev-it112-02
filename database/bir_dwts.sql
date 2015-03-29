@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2015 at 06:03 PM
+-- Generation Time: Mar 29, 2015 at 03:39 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.22
 
@@ -90,7 +90,14 @@ CREATE TABLE IF NOT EXISTS `document` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `section_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `document`
+--
+
+INSERT INTO `document` (`id`, `document_tracking_number`, `document_name`, `document_description`, `document_target_date`, `document_category`, `document_priority_id`, `document_type_id`, `document_comment`, `employee_id`, `customer_id`, `company_agency_id`, `document_image_front_page`, `create_time`, `update_time`, `section_id`) VALUES
+(1, '32343432432', 'Bdf', 'fefe', '0000-00-00', 2, 1, 2, 'fefes', 1, 3, 5, '', '2015-03-29 01:34:29', '2015-03-29 09:34:29', 4);
 
 -- --------------------------------------------------------
 
@@ -175,7 +182,14 @@ CREATE TABLE IF NOT EXISTS `document_workflow` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `employee_id1` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `document_workflow`
+--
+
+INSERT INTO `document_workflow` (`id`, `document_id`, `employee_id`, `station_desk_id`, `document_wokflow_comments`, `document_status_id`, `time_accepted`, `time_released`, `total_time_spent`, `create_time`, `update_time`, `employee_id1`) VALUES
+(1, 1, 1, 1, 'sdfsdfsefes', 1, NULL, NULL, NULL, '2015-03-29 01:39:10', '2015-03-29 09:39:10', 1);
 
 -- --------------------------------------------------------
 
@@ -250,9 +264,16 @@ CREATE TABLE IF NOT EXISTS `employee_has_station_desk` (
   `employee_id` int(11) NOT NULL,
   `station_desk_id` int(11) NOT NULL,
   `station_desk_role_id` int(11) NOT NULL,
-  `created_time` timestamp NULL DEFAULT NULL,
+  `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee_has_station_desk`
+--
+
+INSERT INTO `employee_has_station_desk` (`id`, `employee_id`, `station_desk_id`, `station_desk_role_id`, `create_time`, `update_time`) VALUES
+(1, 1, 1, 1, '2015-03-29 01:21:37', '2015-03-29 09:21:37');
 
 -- --------------------------------------------------------
 
@@ -485,7 +506,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `document_category`
 --
@@ -505,7 +526,7 @@ ALTER TABLE `document_type`
 -- AUTO_INCREMENT for table `document_workflow`
 --
 ALTER TABLE `document_workflow`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `document_workflow_status`
 --
@@ -525,7 +546,7 @@ ALTER TABLE `employee_has_position`
 -- AUTO_INCREMENT for table `employee_has_station_desk`
 --
 ALTER TABLE `employee_has_station_desk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `position`
 --

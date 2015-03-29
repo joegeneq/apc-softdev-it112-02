@@ -23,7 +23,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'station_desk_role_id') ?>
 
-    <?= $form->field($model, 'created_time') ?>
+    <?= $form->field($model, 'create_time') ?>
 
     <?php // echo $form->field($model, 'update_time') ?>
 

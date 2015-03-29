@@ -23,12 +23,12 @@ use common\models\StationDeskRole;
 
     <?= $form->field($model, 'station_desk_id')->dropDownList(
         ArrayHelper::map(StationDesk::find()->all(),'id', 'station_desk_name'),
-        ['prompt'=>'Select StationDesk']
+        ['prompt'=>'Select Station Desk']
     ) ?>
 
     <?= $form->field($model, 'station_desk_role_id')->dropDownList(
         ArrayHelper::map(StationDeskRole::find()->all(),'id', 'station_desk_role_name'),
-        ['prompt'=>'Select StationDeskRole']
+        ['prompt'=>'Select Station Desk Role']
     ) ?>
 
     <div class="form-group">

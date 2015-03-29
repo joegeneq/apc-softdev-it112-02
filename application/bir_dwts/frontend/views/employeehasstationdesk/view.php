@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'employee_id',
             'station_desk_id',
             'station_desk_role_id',
-            'created_time',
+            'create_time',
             'update_time',
         ],
     ]) ?>
