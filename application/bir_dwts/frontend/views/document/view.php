@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'employee_id',
             'customer_id',
             'company_agency_id',
-            'document_image_front_page',
+            'logo',
             'create_time',
             'update_time',
             'section_id',

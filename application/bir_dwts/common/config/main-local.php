@@ -4,9 +4,9 @@ return [
         'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=bir_dwts',
-            'username' => 'root',
+            'username' => 'bir_dwts',
             'password' => '',
-            'charset' => 'utf8',
+            'charset' => 'bir_dwts',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
