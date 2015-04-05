@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2015 at 11:56 AM
+-- Generation Time: Apr 05, 2015 at 09:40 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.5.19
 
@@ -19,6 +19,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `bir_dwts`
 --
+
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `TruncateTable`()
+    MODIFIES SQL DATA
+    DETERMINISTIC
+    SQL SECURITY INVOKER
+BEGIN
+    TRUNCATE table_seq;
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -91,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `document` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `section_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document`
@@ -99,7 +113,36 @@ CREATE TABLE IF NOT EXISTS `document` (
 
 INSERT INTO `document` (`id`, `document_tracking_number`, `document_name`, `document_description`, `document_target_date`, `document_category`, `document_priority_id`, `document_type_id`, `document_comment`, `employee_id`, `customer_id`, `company_agency_id`, `document_image_front_page`, `logo`, `create_time`, `update_time`, `section_id`) VALUES
 (1, '32343432432', 'dsa', 'fefe', '0000-00-00', 2, 1, 2, 'fefes', 1, 3, 5, '', '', '2015-03-29 01:34:29', '2015-03-29 16:42:15', 4),
-(2, '12345', 'wew', 'wew', '2015-03-17', 1, 1, 2, 'wew', 1, 3, 5, 0x776577, '', '2015-03-29 09:10:37', '2015-03-29 17:10:37', 4);
+(65, '2015040502003', 'qgqgq', 'egqegw', '2015-04-05', 2, 1, 2, 'afas', 1, 3, 5, NULL, '', '2015-04-05 07:19:35', '2015-04-05 15:19:35', 5);
+
+--
+-- Triggers `document`
+--
+DELIMITER //
+CREATE TRIGGER `tg_dtn_insert` BEFORE INSERT ON `document`
+ FOR EACH ROW BEGIN
+  
+  declare DTN varchar(20); 
+  declare TODAY date;
+  declare table_date varchar(20);
+  declare EXIST varchar(1);
+  declare CURRENT varchar(1);
+  set EXIST = (SELECT 1 from table_seq);
+ 
+
+  INSERT INTO table_seq VALUES (NULL, CURDATE());  
+  
+  SET DTN = CONCAT(DATE_FORMAT(NOW(), "%Y%m%d"),
+      (SELECT section_number from section where id = NEW.section_id),
+      LPAD(LAST_INSERT_ID(), 3, '0'));
+  
+  
+  
+  SET NEW.document_tracking_number = DTN;
+  
+END
+//
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -314,14 +357,15 @@ CREATE TABLE IF NOT EXISTS `section` (
   `section_description` text NOT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `section`
 --
 
 INSERT INTO `section` (`id`, `section_number`, `section_code`, `section_name`, `section_description`, `create_time`, `update_time`) VALUES
-(4, '01', 'PSN', 'PeopleSection', 'regregregregreg', '2015-03-28 16:05:53', '2015-03-29 00:05:53');
+(4, '01', 'PSN', 'PeopleSection', 'regregregregreg', '2015-03-28 16:05:53', '2015-03-29 00:05:53'),
+(5, '02', 'SMSGT', 'IAmLegend', 'para sa kinabukasan', '2015-03-28 16:05:53', '2015-03-29 00:05:53');
 
 -- --------------------------------------------------------
 
@@ -367,6 +411,25 @@ CREATE TABLE IF NOT EXISTS `station_desk_role` (
 
 INSERT INTO `station_desk_role` (`id`, `station_desk_role_code`, `station_desk_role_name`, `station_desk_role_description`, `create_time`, `update_time`) VALUES
 (1, 'DNN', 'Desk Na Na', 'sesfesfsef', '2015-03-28 16:43:44', '2015-03-29 00:43:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table_seq`
+--
+
+CREATE TABLE IF NOT EXISTS `table_seq` (
+`id` int(11) NOT NULL,
+  `time_stamp` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `table_seq`
+--
+
+INSERT INTO `table_seq` (`id`, `time_stamp`) VALUES
+(1, '2015-04-06'),
+(3, '2015-04-05');
 
 -- --------------------------------------------------------
 
@@ -485,6 +548,12 @@ ALTER TABLE `station_desk_role`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `table_seq`
+--
+ALTER TABLE `table_seq`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -508,7 +577,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=66;
 --
 -- AUTO_INCREMENT for table `document_category`
 --
@@ -558,7 +627,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `station_desk`
 --
@@ -569,6 +638,11 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 ALTER TABLE `station_desk_role`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `table_seq`
+--
+ALTER TABLE `table_seq`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
