@@ -26,7 +26,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                'brandLabel' => 'BIR DWTS',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
@@ -34,12 +34,33 @@ AppAsset::register($this);
             ]);
             $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],
-                ['label' => 'About', 'url' => ['/site/about']],
-                ['label' => 'Contact', 'url' => ['/site/contact']],
+//                ['label' => 'About', 'url' => ['/site/about']],
+//                ['label' => 'Contact', 'url' => ['/site/contact']],
+
             ];
+
+            $menuItems[]=['label' => 'Document',
+                'items' => [
+                    ['label' => 'My Document', 'url' => ['/document']],
+                    ['label' => 'Document Workflow', 'url' => ['/document-workflow']],
+                    ['label' => 'Company Agencies', 'url' => ['/company-agency']],
+                    ['label' => 'Customers', 'url' => ['/customer']],
+                ],
+
+            ];
+
+            $menuItems[]=['label' => 'My Account',
+                'items' => [
+                    ['label' => 'My Information', 'url' => ['/employee']],
+                    ['label' => 'My Station', 'url' => ['/employee-has-station-desk']],
+                ],
+
+            ];
+
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+
             } else {
                 $menuItems[] = [
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
@@ -47,6 +68,8 @@ AppAsset::register($this);
                     'linkOptions' => ['data-method' => 'post']
                 ];
             }
+
+
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
@@ -65,7 +88,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; BIR <?= date('Y') ?></p>
         <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>

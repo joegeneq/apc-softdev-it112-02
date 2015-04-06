@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use common\models\CompanyAgency;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Customer */
@@ -16,8 +18,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'customer_firstname')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'company_agency_id')->textInput() ?>
-
     <?= $form->field($model, 'company_agency_id')->dropDownList(
         ArrayHelper::map(CompanyAgency::find()->all(),'id', 'company_agency_code'),
         ['prompt'=>'Select Company Agency']
@@ -28,10 +28,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'customer_email')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'customer_landline')->textInput(['maxlength' => 45]) ?>
-
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\widgets\Pjax;
+use yii\bootstrap\Modal;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\CustomerSearch */
@@ -16,8 +19,20 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Customer', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::button('Create Customer', ['value'=>Url::to('/bir_dwts/backend/web/index.php?r=customer%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
     </p>
+
+    <?php
+        Modal::begin([
+                'header'=>'<h4>Customer</h4>',
+                'id'=>'modal',
+                'size'=>'modal-lg',
+            ]);
+
+        echo "<div id='modalContent'></div>";
+
+        Modal::end()
+    ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+//            'id',
             'customer_lastname',
             'customer_firstname',
             'company_agency_id',

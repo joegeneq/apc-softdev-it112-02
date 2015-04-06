@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\widgets\Pjax;
+use yii\bootstrap\Modal;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\StationDeskRoleSearch */
@@ -15,9 +18,21 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Station Desk Role', ['create'], ['class' => 'btn btn-success']) ?>
+     <p>
+        <?= Html::button('Create Station Desk Role', ['value'=>Url::to('/bir_dwts/backend/web/index.php?r=station-desk-role%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
     </p>
+
+    <?php
+        Modal::begin([
+                'header'=>'<h4>Station Desk Role</h4>',
+                'id'=>'modal',
+                'size'=>'modal-lg',
+            ]);
+
+        echo "<div id='modalContent'></div>";
+
+        Modal::end()
+    ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

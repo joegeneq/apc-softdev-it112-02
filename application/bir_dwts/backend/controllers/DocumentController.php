@@ -71,9 +71,9 @@ class DocumentController extends Controller
             $model->file->saveAs( 'uploads/'.$imageName.'.'.$model->file->extension );
             //save the path in the db column
             $model->logo = 'uploads/'.$imageName.'.'.$model->file->extension;
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         } else {
-            return $this->render('create', [
+            return $this->renderAjax('create', [
                 'model' => $model,
             ]);
         }

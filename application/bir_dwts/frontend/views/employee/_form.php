@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use common\models\Section;
 use common\models\User;
+use common\models\Position;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Employee */

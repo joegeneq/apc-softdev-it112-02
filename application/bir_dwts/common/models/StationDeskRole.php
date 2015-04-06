@@ -35,7 +35,7 @@ class StationDeskRole extends \yii\db\ActiveRecord
     {
         return [
             [['station_desk_role_description'], 'string'],
-            [['created_time', 'update_time'], 'safe'],
+            [['create_time', 'update_time'], 'safe'],
             [['station_desk_role_code', 'station_desk_role_name'], 'string', 'max' => 45]
         ];
     }
@@ -46,7 +46,7 @@ class StationDeskRole extends \yii\db\ActiveRecord
             'timestamp' => [
             'class' => 'yii\behaviors\TimestampBehavior',
             'attributes' => [
-            ActiveRecord::EVENT_BEFORE_INSERT => ['created_time', 'update_time'],
+            ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'update_time'],
             ActiveRecord::EVENT_BEFORE_UPDATE => ['update_time'],
             ],
             'value' => new Expression('NOW()'),
@@ -64,7 +64,7 @@ class StationDeskRole extends \yii\db\ActiveRecord
             'station_desk_role_code' => 'Station Desk Role Code',
             'station_desk_role_name' => 'Station Desk Role Name',
             'station_desk_role_description' => 'Station Desk Role Description',
-            'created_time' => 'Create Time',
+            'create_time' => 'Create Time',
             'update_time' => 'Update Time',
         ];
     }

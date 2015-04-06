@@ -34,6 +34,46 @@ AppAsset::register($this);
             $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],
             ];
+
+            $menuItems[]=['label' => 'Document',
+                'items' => [
+                    ['label' => 'My Document', 'url' => ['/document']],
+                    ['label' => 'Document Workflow', 'url' => ['/document-workflow']],
+                    ['label' => 'Company Agencies', 'url' => ['/company-agency']],
+                    ['label' => 'Customers', 'url' => ['/customer']],
+                ],
+
+            ];
+
+            $menuItems[]=['label' => 'Employees',
+                'items' => [
+                    ['label' => 'Employee', 'url' => ['/employee']],
+                    ['label' => 'Employee Has Position', 'url' => ['/employee-has-position']],
+                    ['label' => 'User', 'url' => ['/user']],
+                ],
+
+            ];
+
+            $menuItems[]=['label' => 'Station',
+                'items' => [
+                    ['label' => 'Station Desk', 'url' => ['/station-desk']],
+                    ['label' => 'Station Desk Role', 'url' => ['/station-desk-role']],
+                ],
+
+            ];
+
+            $menuItems[]=['label' => 'Admin',
+                'items' => [
+                    ['label' => 'Document Category', 'url' => ['/document-category']],
+                    ['label' => 'Document Priority', 'url' => ['/document-priority']],
+                    ['label' => 'Document Type', 'url' => ['/document-type']],
+                    ['label' => 'Document Work Flow Status', 'url' => ['/document-workflow-status']],
+                    ['label' => 'Section', 'url' => ['/section']],
+                    ['label' => 'Position', 'url' => ['/position']],
+                ],
+
+            ];
+
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
             } else {
