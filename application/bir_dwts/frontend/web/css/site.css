@@ -111,3 +111,51 @@ a.desc:after {
 .navbar-inverse .navbar-brand {
     color: #FFF;
 }
+
+.modal-backdrop {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #F7EE6C;
+}
+
+.modal-backdrop.in {
+    opacity: 0.9;
+}
+
+.btn-success {
+    color: #050303;
+    background-color: #FCF378;
+    border-color: #2A270E;
+}
+
+
+.site-login{
+   
+    text-align: center;
+    background-color: #F7EE6C;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 40px ;
+    margin-left: 275px ;
+    margin-right: 275px ;
+}
+
+.col-lg-5{
+   
+    text-align: center;
+    background-color: #F7EE6C;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+
+    margin-left: 150px ;
+    margin-right: 175px ;
+
+}
+
+

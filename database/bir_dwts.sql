@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2015 at 02:47 PM
+-- Generation Time: Apr 07, 2015 at 06:09 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.22
 
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `company_agency` (
   `company_agency_description` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `company_agency`
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `customer_landline` varchar(45) DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `customer`
@@ -105,16 +105,19 @@ CREATE TABLE IF NOT EXISTS `document` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `section_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document`
 --
 
 INSERT INTO `document` (`id`, `document_tracking_number`, `document_name`, `document_description`, `document_target_date`, `document_category`, `document_priority_id`, `document_type_id`, `document_comment`, `employee_id`, `customer_id`, `company_agency_id`, `document_image_front_page`, `logo`, `create_time`, `update_time`, `section_id`) VALUES
-(1, '32343432432', 'dsa', 'fefe', '0000-00-00', 2, 1, 2, 'fefes', 1, 3, 5, '', '', '2015-03-29 01:34:29', '2015-03-29 16:42:15', 4),
-(65, '2015040502003', 'qgqgq', 'egqegw', '2015-04-05', 2, 1, 2, 'afas', 1, 3, 5, NULL, '', '2015-04-05 07:19:35', '2015-04-05 15:19:35', 5),
-(66, '2015040502004', 'BER', 'dsdfsdffhgfhrssvs', '2015-04-15', 2, 1, 2, '', 1, 3, 5, NULL, '', '2015-04-05 11:49:26', '2015-04-05 19:49:26', 5);
+(1, '32343432432', 'dsa', 'fefe', '1900-12-15', 2, 1, 2, 'fefes', 1, 3, 5, '', '', '2015-03-29 01:34:29', '2015-04-05 19:02:40', 4),
+(69, '2015040501002', 'asgaweg', 'wagewg', '2015-05-06', 1, 1, 2, 'asrhawh', 1, 3, 5, NULL, '', '2015-04-05 11:25:33', '2015-04-05 19:25:33', 4),
+(70, '2015040501003', 'asgaweg', 'wagewg', '2015-05-06', 1, 1, 2, 'asrhawh', 1, 3, 5, NULL, '', '2015-04-05 11:39:30', '2015-04-05 19:39:30', 4),
+(71, '2015040601004', 'asgaweg', 'wagewg', '2015-05-06', 1, 1, 2, 'asrhawh', 1, 3, 5, NULL, '', '2015-04-06 12:57:27', '2015-04-06 20:57:27', 4),
+(72, '2015040501005', 'asgaweg', 'wagewg', '2015-05-06', 1, 1, 2, 'asrhawh', 1, 3, 5, NULL, '', '2015-04-05 13:23:19', '2015-04-05 21:23:19', 4),
+(73, '2015040701006', 'asdsadas', 'asdasdas', '2015-04-23', 1, 1, 2, 'sadsadas', 1, 3, 5, NULL, '', '2015-04-07 02:20:22', '2015-04-07 10:20:22', 4);
 
 --
 -- Triggers `document`
@@ -149,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `document_category` (
   `document_category_description` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_category`
@@ -171,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `document_priority` (
   `document_priority_description` text,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_priority`
@@ -192,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `document_type` (
   `document_type_description` text,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_type`
@@ -220,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `document_workflow` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `employee_id1` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_workflow`
@@ -241,7 +244,7 @@ CREATE TABLE IF NOT EXISTS `document_workflow_status` (
   `document_workflow_status_description` text,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_workflow_status`
@@ -266,14 +269,14 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `employee`
 --
 
 INSERT INTO `employee` (`id`, `employee_id_number`, `employee_last_name`, `employee_first_name`, `current_position`, `section_id`, `create_time`, `update_time`, `user_id`) VALUES
-(1, '4544234', 'Topacio', 'Bernard', 1, 4, '2015-03-28 16:35:59', '2015-03-29 00:35:59', 1);
+(1, '4544234', 'Topacio', 'Bernard', 1, 4, '2015-03-28 16:35:59', '2015-04-07 12:05:52', 2);
 
 -- --------------------------------------------------------
 
@@ -304,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `employee_has_station_desk` (
   `station_desk_role_id` int(11) NOT NULL,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `employee_has_station_desk`
@@ -327,7 +330,7 @@ CREATE TABLE IF NOT EXISTS `position` (
   `position_notes` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `position`
@@ -350,7 +353,7 @@ CREATE TABLE IF NOT EXISTS `section` (
   `section_description` text NOT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `section`
@@ -374,7 +377,7 @@ CREATE TABLE IF NOT EXISTS `station_desk` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `section_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `station_desk`
@@ -396,7 +399,7 @@ CREATE TABLE IF NOT EXISTS `station_desk_role` (
   `station_desk_role_description` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `station_desk_role`
@@ -413,17 +416,20 @@ INSERT INTO `station_desk_role` (`id`, `station_desk_role_code`, `station_desk_r
 
 CREATE TABLE IF NOT EXISTS `table_seq` (
   `id` int(11) NOT NULL,
-  `time_stamp` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `time_stamp` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `table_seq`
 --
 
 INSERT INTO `table_seq` (`id`, `time_stamp`) VALUES
-(1, '2015-04-06'),
+(1, '2015-04-05'),
+(2, '2015-04-05'),
 (3, '2015-04-05'),
-(4, '2015-04-05');
+(4, '2015-04-06'),
+(5, '2015-04-05'),
+(6, '2015-04-07');
 
 -- --------------------------------------------------------
 
@@ -433,29 +439,124 @@ INSERT INTO `table_seq` (`id`, `time_stamp`) VALUES
 
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL,
-  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `auth_key` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
-  `password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password_reset_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `status` smallint(6) NOT NULL DEFAULT '10',
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `auth_key` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password_hash` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password_reset_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `status` smallint(6) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'bptopacio', 'IPhtC_N3eWDFdJPnNswe12Yhn1GUHJHR', '$2y$13$fnum5645.5p78mSUBAVRQ.33v807OvY9A5oo6gDsB7VLC8Wq6ud5i', NULL, 'bptopacio@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, 'plansigan', 'jx_MsLhXJwy0Vn9W4a2tLXSQyzcVV6V9', '$2y$13$XZV1dwB5BytIQnKMvbB7ZuDH7qP6Dumko7z.nWF.rpuwWxRIwJzmu', NULL, 'kemchii.69@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, 'mfrianzares', 'Wo12hFFLPUWLRQowgYhpicKoGigazQC0', '$2y$13$rCFhSEG3uEubpEDwgfJhyuUc87g.PZTgrVZH40D8aDXVdTM7W82UC', NULL, 'markrianzares@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(4, 'test', 'nSpv2sRWp57vA1E8bXeNEw60I1R2_p_U', '$2y$13$/YaybwakF/65cr/m/mazWOfOiras4MHz/p7OrkdJVSYC/RSq2wVde', NULL, 'test@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+INSERT INTO `user` (`id`, `username`, `password`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
+(2, 'mfrianzares', NULL, 'x8HM9FKRdDBpRwOIaCxM888yZ5LBE2U9', '$2y$13$FfYJcsG4sxF7mFNydxXsSuGPwJo5lwE2.FRiFxVi1LztUELMMRfRy', '', 'mfrianzares@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'bptopacio', NULL, '6P8JJJPAXnuIFrjFphypqXTMa_tfVZ-f', '$2y$13$IwUALhy5UrzKn/i7ty.GjejfE2MJ.n7XvL8w0Q/uSQbkcmj1JtMg6', '', 'bptopacio@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `company_agency`
+--
+ALTER TABLE `company_agency`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_customer_company_agency1_idx` (`company_agency_id`);
+
+--
+-- Indexes for table `document`
+--
+ALTER TABLE `document`
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_document_employee1_idx` (`employee_id`), ADD KEY `fk_document_customer1_idx` (`customer_id`), ADD KEY `fk_document_company_agency1_idx` (`company_agency_id`), ADD KEY `fk_document_document_category1_idx` (`document_category`), ADD KEY `fk_document_document_priority1_idx` (`document_priority_id`), ADD KEY `fk_document_document_type1_idx` (`document_type_id`), ADD KEY `fk_document_section1_idx` (`section_id`);
+
+--
+-- Indexes for table `document_category`
+--
+ALTER TABLE `document_category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `document_priority`
+--
+ALTER TABLE `document_priority`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `document_type`
+--
+ALTER TABLE `document_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `document_workflow`
+--
+ALTER TABLE `document_workflow`
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_document_wokflow_document1_idx` (`document_id`), ADD KEY `fk_document_wokflow_employee1_idx` (`employee_id`), ADD KEY `fk_document_wokflow_station_desk1_idx` (`station_desk_id`), ADD KEY `fk_document_workflow_employee1_idx` (`employee_id1`), ADD KEY `fk_document_workflow_document_status1_idx` (`document_status_id`);
+
+--
+-- Indexes for table `document_workflow_status`
+--
+ALTER TABLE `document_workflow_status`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_position1_idx` (`current_position`), ADD KEY `fk_employee_division1_idx` (`section_id`), ADD KEY `fk_employee_user1_idx` (`user_id`);
+
+--
+-- Indexes for table `employee_has_position`
+--
+ALTER TABLE `employee_has_position`
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_has_position_position1_idx` (`position_id`), ADD KEY `fk_employee_has_position_employee1_idx` (`employee_id`);
+
+--
+-- Indexes for table `employee_has_station_desk`
+--
+ALTER TABLE `employee_has_station_desk`
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_has_station_desk_station_desk1_idx` (`station_desk_id`), ADD KEY `fk_employee_has_station_desk_employee_idx` (`employee_id`), ADD KEY `fk_employee_has_station_desk_station_desk_role1_idx` (`station_desk_role_id`);
+
+--
+-- Indexes for table `position`
+--
+ALTER TABLE `position`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `section`
+--
+ALTER TABLE `section`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `station_desk`
+--
+ALTER TABLE `station_desk`
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_station_desk_division1_idx` (`section_id`);
+
+--
+-- Indexes for table `station_desk_role`
+--
+ALTER TABLE `station_desk_role`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `table_seq`
+--
+ALTER TABLE `table_seq`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
@@ -468,10 +569,151 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `company_agency`
+--
+ALTER TABLE `company_agency`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `customer`
+--
+ALTER TABLE `customer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `document`
+--
+ALTER TABLE `document`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
+--
+-- AUTO_INCREMENT for table `document_category`
+--
+ALTER TABLE `document_category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `document_priority`
+--
+ALTER TABLE `document_priority`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `document_type`
+--
+ALTER TABLE `document_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `document_workflow`
+--
+ALTER TABLE `document_workflow`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `document_workflow_status`
+--
+ALTER TABLE `document_workflow_status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `employee`
+--
+ALTER TABLE `employee`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `employee_has_position`
+--
+ALTER TABLE `employee_has_position`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `employee_has_station_desk`
+--
+ALTER TABLE `employee_has_station_desk`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `position`
+--
+ALTER TABLE `position`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `section`
+--
+ALTER TABLE `section`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `station_desk`
+--
+ALTER TABLE `station_desk`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `station_desk_role`
+--
+ALTER TABLE `station_desk_role`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `table_seq`
+--
+ALTER TABLE `table_seq`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `customer`
+--
+ALTER TABLE `customer`
+ADD CONSTRAINT `fk_customer_company_agency1` FOREIGN KEY (`company_agency_id`) REFERENCES `company_agency` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `document`
+--
+ALTER TABLE `document`
+ADD CONSTRAINT `fk_document_company_agency1` FOREIGN KEY (`company_agency_id`) REFERENCES `company_agency` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_document_customer1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_document_document_category1` FOREIGN KEY (`document_category`) REFERENCES `document_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_document_document_priority1` FOREIGN KEY (`document_priority_id`) REFERENCES `document_priority` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_document_document_type1` FOREIGN KEY (`document_type_id`) REFERENCES `document_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_document_employee1` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_document_section1` FOREIGN KEY (`section_id`) REFERENCES `section` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `document_workflow`
+--
+ALTER TABLE `document_workflow`
+ADD CONSTRAINT `fk_document_wokflow_document1` FOREIGN KEY (`document_id`) REFERENCES `document` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_document_wokflow_employee1` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_document_wokflow_station_desk1` FOREIGN KEY (`station_desk_id`) REFERENCES `station_desk` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_document_workflow_document_status1` FOREIGN KEY (`document_status_id`) REFERENCES `document_workflow_status` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_document_workflow_employee1` FOREIGN KEY (`employee_id1`) REFERENCES `employee` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `employee`
+--
+ALTER TABLE `employee`
+ADD CONSTRAINT `fk_employee_division1` FOREIGN KEY (`section_id`) REFERENCES `section` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_employee_position1` FOREIGN KEY (`current_position`) REFERENCES `position` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_employee_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `employee_has_position`
+--
+ALTER TABLE `employee_has_position`
+ADD CONSTRAINT `fk_employee_has_position_employee1` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_employee_has_position_position1` FOREIGN KEY (`position_id`) REFERENCES `position` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `employee_has_station_desk`
+--
+ALTER TABLE `employee_has_station_desk`
+ADD CONSTRAINT `fk_employee_has_station_desk_employee` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_employee_has_station_desk_station_desk1` FOREIGN KEY (`station_desk_id`) REFERENCES `station_desk` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_employee_has_station_desk_station_desk_role1` FOREIGN KEY (`station_desk_role_id`) REFERENCES `station_desk_role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `station_desk`
+--
+ALTER TABLE `station_desk`
+ADD CONSTRAINT `fk_station_desk_division1` FOREIGN KEY (`section_id`) REFERENCES `section` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
