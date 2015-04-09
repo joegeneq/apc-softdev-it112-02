@@ -2,9 +2,6 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use yii\widgets\Pjax;
-use yii\bootstrap\Modal;
-use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\UserSearch */
@@ -19,20 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::button('Create User', ['value'=>Url::to('/bir_dwts/backend/web/index.php?r=user%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
+        <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
-    <?php
-        Modal::begin([
-                'header'=>'<h4>User</h4>',
-                'id'=>'modal',
-                'size'=>'modal-lg',
-            ]);
-
-        echo "<div id='modalContent'></div>";
-
-        Modal::end()
-    ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -42,9 +27,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'username',
+            'password',
             'auth_key',
             'password_hash',
-            'password_reset_token',
+            // 'password_reset_token',
             // 'email:email',
             // 'status',
             // 'created_at',

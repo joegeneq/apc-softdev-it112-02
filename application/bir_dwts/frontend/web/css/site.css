@@ -130,8 +130,28 @@ a.desc:after {
     border-color: #2A270E;
 }
 
+.btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success {
+    color: #050303;
+    background-color: #FCF378;
+    border-color: #2A270E;
+}
 
 .site-login{
+   
+    font-size:20px;   
+    text-align: left;
+    color:#FFF;
+    background-color: #333;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 40px ;
+    margin-left: 275px ;
+    margin-right: 275px ;
+}
+
+.site-login2{
    
     text-align: center;
     background-color: #F7EE6C;
@@ -139,23 +159,23 @@ a.desc:after {
     padding-right: 50px;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-top: 40px ;
     margin-left: 275px ;
     margin-right: 275px ;
 }
 
-.col-lg-5{
-   
-    text-align: center;
-    background-color: #F7EE6C;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 25px;
-
-    margin-left: 150px ;
-    margin-right: 175px ;
-
+.btn-primary {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
 }
-
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+}
 

@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $username
+ * @property string $password
  * @property string $auth_key
  * @property string $password_hash
  * @property string $password_reset_token
@@ -16,6 +17,8 @@ use Yii;
  * @property integer $status
  * @property string $created_at
  * @property string $updated_at
+ *
+ * @property Employee[] $employees
  */
 class User extends \yii\db\ActiveRecord
 {
@@ -33,10 +36,10 @@ class User extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'auth_key', 'password_hash', 'email'], 'required'],
+            [['username', 'auth_key', 'password_hash', 'password_reset_token', 'email', 'status', 'updated_at'], 'required'],
             [['status'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
-            [['username', 'password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
+            [['username', 'password', 'password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32]
         ];
     }
@@ -49,6 +52,7 @@ class User extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'username' => 'Username',
+            'password' => 'Password',
             'auth_key' => 'Auth Key',
             'password_hash' => 'Password Hash',
             'password_reset_token' => 'Password Reset Token',
@@ -57,5 +61,13 @@ class User extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getEmployees()
+    {
+        return $this->hasMany(Employee::className(), ['user_id' => 'id']);
     }
 }
