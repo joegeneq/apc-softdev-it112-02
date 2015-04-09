@@ -82,10 +82,13 @@ class DocumentController extends Controller
  
             //get the instance of the uploaded file
             $imageName= $model->document_name;
-            $model->file = UploadedFile::getInstance($model,'file');
+            if ($model->file = UploadedFile::getInstance($model,'file'))
+            {
             $model->file->saveAs( 'uploads/'.$imageName.'.'.$model->file->extension );
             //save the path in the db column
             $model->logo = 'uploads/'.$imageName.'.'.$model->file->extension;
+            }
+
             return $this->redirect(['index']);
         } else {
             return $this->renderAjax('create', [
