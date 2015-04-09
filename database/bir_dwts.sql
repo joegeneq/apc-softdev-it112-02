@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.12
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2015 at 04:59 AM
--- Server version: 5.5.34
--- PHP Version: 5.4.22
+-- Generation Time: Apr 09, 2015 at 08:41 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `auth_rule` (
 --
 
 CREATE TABLE IF NOT EXISTS `company_agency` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `company_agency_code` varchar(45) DEFAULT NULL,
   `company_agency_name` varchar(45) DEFAULT NULL,
   `company_agency_description` text,
@@ -130,7 +130,7 @@ INSERT INTO `company_agency` (`id`, `company_agency_code`, `company_agency_name`
 --
 
 CREATE TABLE IF NOT EXISTS `customer` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `customer_lastname` varchar(45) DEFAULT NULL,
   `customer_firstname` varchar(45) DEFAULT NULL,
   `company_agency_id` int(11) NOT NULL,
@@ -155,7 +155,7 @@ INSERT INTO `customer` (`id`, `customer_lastname`, `customer_firstname`, `compan
 --
 
 CREATE TABLE IF NOT EXISTS `document` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `document_tracking_number` varchar(45) DEFAULT NULL,
   `document_name` varchar(45) DEFAULT NULL,
   `document_description` varchar(45) DEFAULT NULL,
@@ -172,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `document` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `section_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document`
@@ -184,12 +184,14 @@ INSERT INTO `document` (`id`, `document_tracking_number`, `document_name`, `docu
 (70, '2015040501003', 'asgaweg', 'wagewg', '2015-05-06', 1, 1, 2, 'asrhawh', 1, 3, 5, NULL, '', '2015-04-05 11:39:30', '2015-04-05 19:39:30', 4),
 (71, '2015040601004', 'asgaweg', 'wagewg', '2015-05-06', 1, 1, 2, 'asrhawh', 1, 3, 5, NULL, '', '2015-04-06 12:57:27', '2015-04-06 20:57:27', 4),
 (72, '2015040501005', 'asgaweg', 'wagewg', '2015-05-06', 1, 1, 2, 'asrhawh', 1, 3, 5, NULL, '', '2015-04-05 13:23:19', '2015-04-05 21:23:19', 4),
-(73, '2015040701006', 'asdsadas', 'asdasdas', '2015-04-23', 1, 1, 2, 'sadsadas', 1, 3, 5, NULL, '', '2015-04-07 02:20:22', '2015-04-07 10:20:22', 4);
+(73, '2015040701006', 'asdsadas', 'asdasdas', '2015-04-23', 1, 1, 2, 'sadsadas', 1, 3, 5, NULL, '', '2015-04-07 02:20:22', '2015-04-07 10:20:22', 4),
+(74, '2015040901007', 'Test', 'Test', '2015-04-15', 1, 3, 2, 'OK', 1, 3, 5, NULL, '', '2015-04-09 06:31:17', '2015-04-09 14:31:17', 4),
+(75, '2015040901008', 'TestM', 'TestM', '2015-04-12', 1, 2, 2, 'sc', 1, 3, 5, NULL, '', '2015-04-09 06:35:41', '2015-04-09 14:35:41', 4);
 
 --
 -- Triggers `document`
 --
-DELIMITER $$
+DELIMITER //
 CREATE TRIGGER `tg_dtn_insert` BEFORE INSERT ON `document`
  FOR EACH ROW BEGIN
 
@@ -204,7 +206,7 @@ CREATE TRIGGER `tg_dtn_insert` BEFORE INSERT ON `document`
   SET NEW.document_tracking_number = DTN;
   
 END
-$$
+//
 DELIMITER ;
 
 -- --------------------------------------------------------
@@ -214,7 +216,7 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `document_category` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `document_category_name` varchar(45) DEFAULT NULL,
   `document_category_description` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -236,19 +238,21 @@ INSERT INTO `document_category` (`id`, `document_category_name`, `document_categ
 --
 
 CREATE TABLE IF NOT EXISTS `document_priority` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `document_priority_name` varchar(45) DEFAULT NULL,
   `document_priority_description` text,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_priority`
 --
 
 INSERT INTO `document_priority` (`id`, `document_priority_name`, `document_priority_description`, `create_time`, `update_time`) VALUES
-(1, 'Meduim', 'blah', '2015-03-28 13:33:09', '2015-03-28 21:33:09');
+(1, 'Low', 'blah', '2015-03-28 13:33:09', '2015-03-28 21:33:09'),
+(2, 'Medium', 'blah', '2015-04-08 16:00:00', '2015-04-09 00:00:00'),
+(3, 'High', 'blah', '2015-04-09 07:36:00', '2015-04-09 15:37:07');
 
 -- --------------------------------------------------------
 
@@ -257,7 +261,7 @@ INSERT INTO `document_priority` (`id`, `document_priority_name`, `document_prior
 --
 
 CREATE TABLE IF NOT EXISTS `document_type` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `document_type_name` varchar(45) DEFAULT NULL,
   `document_type_description` text,
   `create_time` timestamp NULL DEFAULT NULL,
@@ -278,7 +282,7 @@ INSERT INTO `document_type` (`id`, `document_type_name`, `document_type_descript
 --
 
 CREATE TABLE IF NOT EXISTS `document_workflow` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `document_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `station_desk_id` int(11) NOT NULL,
@@ -306,7 +310,7 @@ INSERT INTO `document_workflow` (`id`, `document_id`, `employee_id`, `station_de
 --
 
 CREATE TABLE IF NOT EXISTS `document_workflow_status` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `document_workflow_status_name` varchar(45) DEFAULT NULL,
   `document_workflow_status_description` text,
   `create_time` timestamp NULL DEFAULT NULL,
@@ -327,7 +331,7 @@ INSERT INTO `document_workflow_status` (`id`, `document_workflow_status_name`, `
 --
 
 CREATE TABLE IF NOT EXISTS `employee` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `employee_id_number` varchar(45) DEFAULT NULL,
   `employee_last_name` varchar(45) DEFAULT NULL,
   `employee_first_name` varchar(45) DEFAULT NULL,
@@ -352,7 +356,7 @@ INSERT INTO `employee` (`id`, `employee_id_number`, `employee_last_name`, `emplo
 --
 
 CREATE TABLE IF NOT EXISTS `employee_has_position` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `position_id` int(11) NOT NULL,
   `employee_position_start_date` date DEFAULT NULL,
@@ -368,7 +372,7 @@ CREATE TABLE IF NOT EXISTS `employee_has_position` (
 --
 
 CREATE TABLE IF NOT EXISTS `employee_has_station_desk` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `station_desk_id` int(11) NOT NULL,
   `station_desk_role_id` int(11) NOT NULL,
@@ -390,7 +394,7 @@ INSERT INTO `employee_has_station_desk` (`id`, `employee_id`, `station_desk_id`,
 --
 
 CREATE TABLE IF NOT EXISTS `position` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `position_code` varchar(45) DEFAULT NULL,
   `position_name` varchar(45) DEFAULT NULL,
   `position_description` text,
@@ -413,7 +417,7 @@ INSERT INTO `position` (`id`, `position_code`, `position_name`, `position_descri
 --
 
 CREATE TABLE IF NOT EXISTS `section` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `section_number` varchar(45) DEFAULT NULL,
   `section_code` varchar(45) DEFAULT NULL,
   `section_name` varchar(45) NOT NULL,
@@ -437,7 +441,7 @@ INSERT INTO `section` (`id`, `section_number`, `section_code`, `section_name`, `
 --
 
 CREATE TABLE IF NOT EXISTS `station_desk` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `station_desk_code` varchar(45) DEFAULT NULL,
   `station_desk_name` varchar(45) DEFAULT NULL,
   `station_desk_notes` text,
@@ -460,7 +464,7 @@ INSERT INTO `station_desk` (`id`, `station_desk_code`, `station_desk_name`, `sta
 --
 
 CREATE TABLE IF NOT EXISTS `station_desk_role` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `station_desk_role_code` varchar(45) DEFAULT NULL,
   `station_desk_role_name` varchar(45) DEFAULT NULL,
   `station_desk_role_description` text,
@@ -482,9 +486,9 @@ INSERT INTO `station_desk_role` (`id`, `station_desk_role_code`, `station_desk_r
 --
 
 CREATE TABLE IF NOT EXISTS `table_seq` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `time_stamp` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `table_seq`
@@ -496,7 +500,9 @@ INSERT INTO `table_seq` (`id`, `time_stamp`) VALUES
 (3, '2015-04-05'),
 (4, '2015-04-06'),
 (5, '2015-04-05'),
-(6, '2015-04-07');
+(6, '2015-04-07'),
+(7, '2015-04-09'),
+(8, '2015-04-09');
 
 -- --------------------------------------------------------
 
@@ -505,7 +511,7 @@ INSERT INTO `table_seq` (`id`, `time_stamp`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) DEFAULT NULL,
   `auth_key` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -533,127 +539,127 @@ INSERT INTO `user` (`id`, `username`, `password`, `auth_key`, `password_hash`, `
 -- Indexes for table `auth_assignment`
 --
 ALTER TABLE `auth_assignment`
-  ADD PRIMARY KEY (`item_name`,`user_id`);
+ ADD PRIMARY KEY (`item_name`,`user_id`);
 
 --
 -- Indexes for table `auth_item`
 --
 ALTER TABLE `auth_item`
-  ADD PRIMARY KEY (`name`), ADD KEY `rule_name` (`rule_name`), ADD KEY `type` (`type`);
+ ADD PRIMARY KEY (`name`), ADD KEY `rule_name` (`rule_name`), ADD KEY `type` (`type`);
 
 --
 -- Indexes for table `auth_item_child`
 --
 ALTER TABLE `auth_item_child`
-  ADD PRIMARY KEY (`parent`,`child`), ADD KEY `child` (`child`);
+ ADD PRIMARY KEY (`parent`,`child`), ADD KEY `child` (`child`);
 
 --
 -- Indexes for table `auth_rule`
 --
 ALTER TABLE `auth_rule`
-  ADD PRIMARY KEY (`name`);
+ ADD PRIMARY KEY (`name`);
 
 --
 -- Indexes for table `company_agency`
 --
 ALTER TABLE `company_agency`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_customer_company_agency1_idx` (`company_agency_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_customer_company_agency1_idx` (`company_agency_id`);
 
 --
 -- Indexes for table `document`
 --
 ALTER TABLE `document`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_document_employee1_idx` (`employee_id`), ADD KEY `fk_document_customer1_idx` (`customer_id`), ADD KEY `fk_document_company_agency1_idx` (`company_agency_id`), ADD KEY `fk_document_document_category1_idx` (`document_category`), ADD KEY `fk_document_document_priority1_idx` (`document_priority_id`), ADD KEY `fk_document_document_type1_idx` (`document_type_id`), ADD KEY `fk_document_section1_idx` (`section_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_document_employee1_idx` (`employee_id`), ADD KEY `fk_document_customer1_idx` (`customer_id`), ADD KEY `fk_document_company_agency1_idx` (`company_agency_id`), ADD KEY `fk_document_document_category1_idx` (`document_category`), ADD KEY `fk_document_document_priority1_idx` (`document_priority_id`), ADD KEY `fk_document_document_type1_idx` (`document_type_id`), ADD KEY `fk_document_section1_idx` (`section_id`);
 
 --
 -- Indexes for table `document_category`
 --
 ALTER TABLE `document_category`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `document_priority`
 --
 ALTER TABLE `document_priority`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `document_type`
 --
 ALTER TABLE `document_type`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `document_workflow`
 --
 ALTER TABLE `document_workflow`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_document_wokflow_document1_idx` (`document_id`), ADD KEY `fk_document_wokflow_employee1_idx` (`employee_id`), ADD KEY `fk_document_wokflow_station_desk1_idx` (`station_desk_id`), ADD KEY `fk_document_workflow_employee1_idx` (`employee_id1`), ADD KEY `fk_document_workflow_document_status1_idx` (`document_status_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_document_wokflow_document1_idx` (`document_id`), ADD KEY `fk_document_wokflow_employee1_idx` (`employee_id`), ADD KEY `fk_document_wokflow_station_desk1_idx` (`station_desk_id`), ADD KEY `fk_document_workflow_employee1_idx` (`employee_id1`), ADD KEY `fk_document_workflow_document_status1_idx` (`document_status_id`);
 
 --
 -- Indexes for table `document_workflow_status`
 --
 ALTER TABLE `document_workflow_status`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `employee`
 --
 ALTER TABLE `employee`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_position1_idx` (`current_position`), ADD KEY `fk_employee_division1_idx` (`section_id`), ADD KEY `fk_employee_user1_idx` (`user_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_position1_idx` (`current_position`), ADD KEY `fk_employee_division1_idx` (`section_id`), ADD KEY `fk_employee_user1_idx` (`user_id`);
 
 --
 -- Indexes for table `employee_has_position`
 --
 ALTER TABLE `employee_has_position`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_has_position_position1_idx` (`position_id`), ADD KEY `fk_employee_has_position_employee1_idx` (`employee_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_has_position_position1_idx` (`position_id`), ADD KEY `fk_employee_has_position_employee1_idx` (`employee_id`);
 
 --
 -- Indexes for table `employee_has_station_desk`
 --
 ALTER TABLE `employee_has_station_desk`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_has_station_desk_station_desk1_idx` (`station_desk_id`), ADD KEY `fk_employee_has_station_desk_employee_idx` (`employee_id`), ADD KEY `fk_employee_has_station_desk_station_desk_role1_idx` (`station_desk_role_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_employee_has_station_desk_station_desk1_idx` (`station_desk_id`), ADD KEY `fk_employee_has_station_desk_employee_idx` (`employee_id`), ADD KEY `fk_employee_has_station_desk_station_desk_role1_idx` (`station_desk_role_id`);
 
 --
 -- Indexes for table `position`
 --
 ALTER TABLE `position`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `section`
 --
 ALTER TABLE `section`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `station_desk`
 --
 ALTER TABLE `station_desk`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_station_desk_division1_idx` (`section_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_station_desk_division1_idx` (`section_id`);
 
 --
 -- Indexes for table `station_desk_role`
 --
 ALTER TABLE `station_desk_role`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `table_seq`
 --
 ALTER TABLE `table_seq`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -663,87 +669,87 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `company_agency`
 --
 ALTER TABLE `company_agency`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=76;
 --
 -- AUTO_INCREMENT for table `document_category`
 --
 ALTER TABLE `document_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `document_priority`
 --
 ALTER TABLE `document_priority`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `document_type`
 --
 ALTER TABLE `document_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `document_workflow`
 --
 ALTER TABLE `document_workflow`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `document_workflow_status`
 --
 ALTER TABLE `document_workflow_status`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `employee_has_position`
 --
 ALTER TABLE `employee_has_position`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `employee_has_station_desk`
 --
 ALTER TABLE `employee_has_station_desk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `position`
 --
 ALTER TABLE `position`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `station_desk`
 --
 ALTER TABLE `station_desk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `station_desk_role`
 --
 ALTER TABLE `station_desk_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `table_seq`
 --
 ALTER TABLE `table_seq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --
