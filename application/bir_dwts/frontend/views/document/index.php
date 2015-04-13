@@ -5,6 +5,7 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
+use dosamigos\datepicker\DatePicker;
 
 
 /* @var $this yii\web\View */
@@ -56,7 +57,20 @@ $this->params['breadcrumbs'][] = $this->title;
             'document_tracking_number',
             'document_name',
             'document_description',
-            'document_target_date',
+            [
+                'attribute' => 'document_target_date',
+                'value' => 'document_target_date',
+                'format' => 'raw',
+                'filter' => DatePicker::widget([
+                    'model' => $searchModel,
+                    'attribute' => 'document_target_date', 
+                    'clientOptions' => [
+                        'autoclose' => true,
+                        'format' => 'yyyy-mm-dd'
+                    ]
+                ]),
+
+            ],
             [
                 'attribute' => 'document_category',
                 'value' => 'documentCategory.document_category_name',
