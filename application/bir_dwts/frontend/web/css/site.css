@@ -125,15 +125,15 @@ a.desc:after {
 }
 
 .btn-success {
-    color: #050303;
-    background-color: #FCF378;
-    border-color: #2A270E;
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success {
-    color: #050303;
-    background-color: #FCF378;
-    border-color: #2A270E;
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
 }
 
 .site-login{

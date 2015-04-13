@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::button('Create Company Agency', ['value'=>Url::to('/bir_dwts/frontend/web/index.php?r=company-agency%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
     </p>
-
+    
     <?php
         Modal::begin([
                 'header'=>'<h4>Company Agency</h4>',
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         Modal::end()
     ?>
-
+    
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,

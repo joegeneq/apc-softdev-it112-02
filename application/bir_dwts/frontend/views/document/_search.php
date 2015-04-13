@@ -25,27 +25,27 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'document_target_date') ?>
 
-    <?php // echo $form->field($model, 'document_category') ?>
+    <?php $form->field($model, 'document_category') ?>
 
-    <?php // echo $form->field($model, 'document_priority_id') ?>
+    <?php $form->field($model, 'document_priority_id') ?>
 
-    <?php // echo $form->field($model, 'document_type_id') ?>
+    <?php $form->field($model, 'document_type_id') ?>
 
-    <?php // echo $form->field($model, 'document_comment') ?>
+    <?php $form->field($model, 'document_comment') ?>
 
-    <?php // echo $form->field($model, 'employee_id') ?>
+    <?php $form->field($model, 'employee_id') ?>
 
-    <?php // echo $form->field($model, 'customer_id') ?>
+    <?php $form->field($model, 'customer_id') ?>
 
-    <?php // echo $form->field($model, 'company_agency_id') ?>
+    <?php $form->field($model, 'company_agency_id') ?>
 
-    <?php // echo $form->field($model, 'document_image_front_page') ?>
+    <?php $form->field($model, 'document_image_front_page') ?>
 
-    <?php // echo $form->field($model, 'create_time') ?>
+    <?php $form->field($model, 'create_time') ?>
 
-    <?php // echo $form->field($model, 'update_time') ?>
+    <?php $form->field($model, 'update_time') ?>
 
-    <?php // echo $form->field($model, 'section_id') ?>
+    <?php $form->field($model, 'section_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

@@ -28,7 +28,7 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error', 'signup'],
                         'allow' => true,
                     ],
                     [
@@ -80,7 +80,7 @@ class SiteController extends Controller
             {
                 //            return $this->goBack();
                 //        Yii::$app->urlManager->createUrl('http://localhost/bir_dwts/backend/web/index.php');
-                 return $this->redirect('http://localhost/bir_dwts/backend/web/index.php');
+                return $this->redirect('http://localhost/bir_dwts/backend/web/index.php');
             } else {
                 return $this->redirect('http://localhost/bir_dwts/frontend/web/index.php');
             }
