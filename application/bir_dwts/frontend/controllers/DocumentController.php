@@ -79,7 +79,6 @@ class DocumentController extends Controller
         $model = new document();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
- 
             //get the instance of the uploaded file
             $imageName= $model->document_name;
             if ($model->file = UploadedFile::getInstance($model,'file'))
