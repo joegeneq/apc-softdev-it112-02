@@ -44,8 +44,8 @@ class DocumentWorkflow extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['document_id', 'employee_id', 'station_desk_id', 'document_status_id', 'employee_id1'], 'required'],
-            [['document_id', 'employee_id', 'station_desk_id', 'document_status_id', 'employee_id1'], 'integer'],
+            [['document_id', 'employee_id', 'station_desk_id', 'document_workflow_status_id', 'employee_id1'], 'required'],
+            [['document_id', 'employee_id', 'station_desk_id', 'document_workflow_status_id', 'employee_id1'], 'integer'],
             [['document_wokflow_comments'], 'string'],
             [['time_accepted', 'time_released', 'total_time_spent', 'create_time', 'update_time'], 'safe']
         ];
@@ -76,7 +76,7 @@ class DocumentWorkflow extends \yii\db\ActiveRecord
             'employee_id' => 'Receiver',
             'station_desk_id' => 'Station Desk',
             'document_wokflow_comments' => 'Document Wokflow Comments',
-            'document_status_id' => 'Document Status',
+            'document_workflow_status_id' => 'Document Status',
             'time_accepted' => 'Time Accepted',
             'time_released' => 'Time Released',
             'total_time_spent' => 'Total Time Spent',
@@ -121,8 +121,8 @@ class DocumentWorkflow extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getDocumentStatus()
+    public function getDocumentWorkflowStatus()
     {
-        return $this->hasOne(DocumentStatus::className(), ['id' => 'document_status_id']);
+        return $this->hasOne(DocumentWorkflowStatus::className(), ['id' => 'document_workflow_status_id']);
     }
 }

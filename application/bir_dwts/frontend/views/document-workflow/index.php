@@ -8,7 +8,7 @@ use yii\helpers\Url;
 use common\models\Document;
 use common\models\Employee;
 use common\models\StationDesk;
-
+use common\models\DocumentWorkflowStatus;
 
 
 /* @var $this yii\web\View */
@@ -61,8 +61,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'document_wokflow_comments:ntext',
             [
 
-                'attribute' => 'document_status_id',
-//                'value' => 'documentworkflowStatus.document_workflow_status_name',
+                'attribute' => 'document_workflow_status_id',
+                'value' => 'documentWorkflowStatus.document_workflow_status_name',
 
             ],
             [

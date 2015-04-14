@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'employee_id',
             'station_desk_id',
             'document_wokflow_comments:ntext',
-            'document_status_id',
+            'document_workflow_status_id',
             'time_accepted',
             'time_released',
             'total_time_spent',

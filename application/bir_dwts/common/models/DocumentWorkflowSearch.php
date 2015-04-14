@@ -18,8 +18,8 @@ class DocumentWorkflowSearch extends DocumentWorkflow
     public function rules()
     {
         return [
-            [['id', 'document_status_id'], 'integer'],
-            [['employee_id1', 'station_desk_id','employee_id','document_id', 'document_wokflow_comments', 'time_accepted', 'time_released', 'total_time_spent', 'create_time', 'update_time'], 'safe'],
+            [['id',], 'integer'],
+            [['document_workflow_status_id','employee_id1', 'station_desk_id','employee_id','document_id', 'document_wokflow_comments', 'time_accepted', 'time_released', 'total_time_spent', 'create_time', 'update_time'], 'safe'],
         ];
     }
 
@@ -64,7 +64,7 @@ class DocumentWorkflowSearch extends DocumentWorkflow
 //            'document_id' => $this->document_id,
 //            'employee_id' => $this->employee_id,
 //            'station_desk_id' => $this->station_desk_id,
-            'document_status_id' => $this->document_status_id,
+            'document_workflow_status_id' => $this->document_workflow_status_id,
             'time_accepted' => $this->time_accepted,
             'time_released' => $this->time_released,
             'total_time_spent' => $this->total_time_spent,
