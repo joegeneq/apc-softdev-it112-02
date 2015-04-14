@@ -18,8 +18,8 @@ class DocumentWorkflowSearch extends DocumentWorkflow
     public function rules()
     {
         return [
-            [['id', 'document_id', 'employee_id', 'station_desk_id', 'document_status_id', 'employee_id1'], 'integer'],
-            [['document_wokflow_comments', 'time_accepted', 'time_released', 'total_time_spent', 'create_time', 'update_time'], 'safe'],
+            [['id', 'document_status_id'], 'integer'],
+            [['employee_id1', 'station_desk_id','employee_id','document_id', 'document_wokflow_comments', 'time_accepted', 'time_released', 'total_time_spent', 'create_time', 'update_time'], 'safe'],
         ];
     }
 
@@ -55,21 +55,29 @@ class DocumentWorkflowSearch extends DocumentWorkflow
             return $dataProvider;
         }
 
+        $query->joinWith('document');
+        $query->joinWith('employee');
+        $query->joinWith('stationDesk');
+
         $query->andFilterWhere([
             'id' => $this->id,
-            'document_id' => $this->document_id,
-            'employee_id' => $this->employee_id,
-            'station_desk_id' => $this->station_desk_id,
+//            'document_id' => $this->document_id,
+//            'employee_id' => $this->employee_id,
+//            'station_desk_id' => $this->station_desk_id,
             'document_status_id' => $this->document_status_id,
             'time_accepted' => $this->time_accepted,
             'time_released' => $this->time_released,
             'total_time_spent' => $this->total_time_spent,
             'create_time' => $this->create_time,
             'update_time' => $this->update_time,
-            'employee_id1' => $this->employee_id1,
+//            'employee_id1' => $this->employee_id1,
         ]);
 
-        $query->andFilterWhere(['like', 'document_wokflow_comments', $this->document_wokflow_comments]);
+        $query->andFilterWhere(['like', 'document_wokflow_comments', $this->document_wokflow_comments])
+             ->andFilterWhere(['like', 'employee_last_name', $this->employee_id]) 
+             ->andFilterWhere(['like', 'station_desk.station_desk_name', $this->station_desk_id]) 
+             ->andFilterWhere(['like', 'document.document_tracking_number', $this->document_id])
+             ->andFilterWhere(['like', 'employee_last_name', $this->employee_id1]);
 
         return $dataProvider;
     }

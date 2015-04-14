@@ -18,7 +18,7 @@ use common\models\DocumentWorkflowStatus;
 <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'document_id')->dropDownList(
-        ArrayHelper::map(Document::find()->all(),'id', 'document_name'),
+        ArrayHelper::map(Document::find()->all(),'id', 'document_tracking_number'),
         ['prompt'=>'Select Document']
     ) ?>
 
@@ -39,12 +39,6 @@ use common\models\DocumentWorkflowStatus;
         ArrayHelper::map(DocumentWorkflowStatus::find()->all(),'id', 'document_workflow_status_name'),
         ['prompt'=>'Select DocumentStatus']
     ) ?>
-
-    <?= $form->field($model, 'time_accepted')->textInput() ?>
-
-    <?= $form->field($model, 'time_released')->textInput() ?>
-
-    <?= $form->field($model, 'total_time_spent')->textInput() ?>
 
     <?= $form->field($model, 'employee_id1')->dropDownList(
         ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name'),

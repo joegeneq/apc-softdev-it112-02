@@ -5,6 +5,10 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
+use common\models\Document;
+use common\models\Employee;
+use common\models\StationDesk;
+
 
 
 /* @var $this yii\web\View */
@@ -42,17 +46,34 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
-            'document_id',
-            'employee_id',
-            'station_desk_id',
+            [
+                'attribute' => 'document_id',
+                'value' => 'document.document_tracking_number',
+            ],
+            [
+                'attribute' => 'employee_id',
+                'value' => 'employee.employee_last_name',
+            ],
+            [
+                'attribute' => 'station_desk_id',
+                'value' => 'stationDesk.station_desk_name',
+            ],
             'document_wokflow_comments:ntext',
-            // 'document_status_id',
-            // 'time_accepted',
-            // 'time_released',
-            // 'total_time_spent',
+            [
+
+                'attribute' => 'document_status_id',
+//                'value' => 'documentworkflowStatus.document_workflow_status_name',
+
+            ],
+            [
+                'attribute' => 'employee_id1',
+                'value' => 'employee.employee_last_name',
+            ],
+            'time_accepted',
+            'time_released',
+            'total_time_spent',
             'create_time',
             'update_time',
-            // 'employee_id1',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

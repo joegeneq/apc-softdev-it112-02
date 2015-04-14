@@ -1,11 +1,14 @@
 <?php
 
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
 use dosamigos\datepicker\DatePicker;
+use yii\helpers\ArrayHelper;
+use common\models\DocumentCategory;
 
 
 /* @var $this yii\web\View */
@@ -69,12 +72,15 @@ $this->params['breadcrumbs'][] = $this->title;
                         'format' => 'yyyy-mm-dd'
                     ]
                 ]),
-
             ],
             [
                 'attribute' => 'document_category',
                 'value' => 'documentCategory.document_category_name',
+//                'filter' => Html::activeDropDownList($model, 'document_category', ArrayHelper::map(DocumentCategory::find()->asArray()->all(), 'id', 'document_category_name'),['class'=>'form-control','prompt' => 'Select Category']),
+//              'filter' => Html::activeDropDownList($model, 'document_category', ArrayHelper::map(DocumentCategory::find()->all(),'id', 'document_category_name'),
+//                            ['class'=>'form-control','prompt'=>'Select Category']),
             ],
+
             [
                 'attribute' => 'document_priority_id',
                 'value' => 'documentPriority.document_priority_name',
@@ -96,13 +102,28 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'company_agency_id',
                 'value' => 'companyAgency.company_agency_code',
             ],
-            //'document_image_front_page',
-            'create_time',
-            'update_time',
+
             [
                 'attribute' => 'section_id',
                 'value' => 'section.section_name',
             ],
+            //'document_image_front_page',
+/*            [
+
+                'attribute' => 'create_time',
+                'value' => 'create_time',
+                'filter' => DatePicker::widget([
+                    'model' => $searchModel,
+                    'attribute' => 'create_time', 
+                    'clientOptions' => [
+                        'autoclose' => true,
+                        'format' => 'yyyy-mm-dd'
+                    ]
+                ]),
+
+            ],
+*/
+//            'update_time',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

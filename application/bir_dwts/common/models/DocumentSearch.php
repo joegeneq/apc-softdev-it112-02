@@ -84,7 +84,7 @@ class DocumentSearch extends Document
             ->andFilterWhere(['like', 'document_priority.document_priority_name', $this->document_priority_id])
             ->andFilterWhere(['like', 'document_type.document_type_name', $this->document_type_id])
             ->andFilterWhere(['like', 'employee.employee_last_name', $this->employee_id])
-            ->andFilterWhere(['like', 'customer.employee_last_name', $this->employee_id])
+            ->andFilterWhere(['like', 'customer.customer_lastname', $this->customer_id])
             ->andFilterWhere(['like', 'company_agency.company_agency_code', $this->company_agency_id])
             ->andFilterWhere(['like', 'section.section_name', $this->section_id])
             ->andFilterWhere(['like', 'document_comment', $this->document_comment])

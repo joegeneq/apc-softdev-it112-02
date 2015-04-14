@@ -21,8 +21,6 @@ use dosamigos\datepicker\DatePicker;
 
     <?php $form = ActiveForm::begin(['options' =>['enctype' => 'multipart/form-data']]); ?>
 
-    <?= $form->field($model, 'document_tracking_number')->textInput(['maxlength' => 45]) ?>
-
     <?= $form->field($model, 'document_name')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'document_description')->textInput(['maxlength' => 45]) ?>

@@ -72,17 +72,17 @@ class DocumentWorkflow extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'document_id' => 'Document ID',
-            'employee_id' => 'Employee ID',
-            'station_desk_id' => 'Station Desk ID',
+            'document_id' => 'Tracking Number',
+            'employee_id' => 'Receiver',
+            'station_desk_id' => 'Station Desk',
             'document_wokflow_comments' => 'Document Wokflow Comments',
-            'document_status_id' => 'Document Status ID',
+            'document_status_id' => 'Document Status',
             'time_accepted' => 'Time Accepted',
             'time_released' => 'Time Released',
             'total_time_spent' => 'Total Time Spent',
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
-            'employee_id1' => 'Employee Id1',
+            'employee_id1' => 'Release To',
         ];
     }
 

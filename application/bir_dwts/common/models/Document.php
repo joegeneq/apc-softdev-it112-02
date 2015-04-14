@@ -68,21 +68,21 @@ class Document extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'document_tracking_number' => 'Document Tracking Number',
+            'document_tracking_number' => 'Tracking Number',
             'document_name' => 'Document Name',
             'document_description' => 'Document Description',
             'document_target_date' => 'Document Target Date',
             'document_category' => 'Document Category',
-            'document_priority_id' => 'Document Priority ID',
-            'document_type_id' => 'Document Type ID',
+            'document_priority_id' => 'Document Priority',
+            'document_type_id' => 'Document Type',
             'document_comment' => 'Document Comment',
-            'employee_id' => 'Employee ID',
-            'customer_id' => 'Customer ID',
-            'company_agency_id' => 'Company Agency ID',
+            'employee_id' => 'Employee',
+            'customer_id' => 'Customer',
+            'company_agency_id' => 'Company Agency',
             'document_image_front_page' => 'Document Image Front Page',
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
-            'section_id' => 'Section ID',
+            'section_id' => 'Section',
             'file'=>'Logo',
         ];
     }
