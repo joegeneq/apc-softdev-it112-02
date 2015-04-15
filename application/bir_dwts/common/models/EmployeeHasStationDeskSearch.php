@@ -18,8 +18,8 @@ class EmployeeHasStationDeskSearch extends EmployeeHasStationDesk
     public function rules()
     {
         return [
-            [['id', 'employee_id', 'station_desk_id', 'station_desk_role_id'], 'integer'],
-            [['create_time', 'update_time'], 'safe'],
+            [['id'], 'integer'],
+            [['station_desk_role_id','station_desk_id','employee_id','create_time', 'update_time'], 'safe'],
         ];
     }
 
@@ -55,14 +55,22 @@ class EmployeeHasStationDeskSearch extends EmployeeHasStationDesk
             return $dataProvider;
         }
 
+        $query->joinWith('employee');
+        $query->joinWith('stationDesk');
+        $query->joinWith('stationDeskRole');
+
         $query->andFilterWhere([
             'id' => $this->id,
-            'employee_id' => $this->employee_id,
-            'station_desk_id' => $this->station_desk_id,
-            'station_desk_role_id' => $this->station_desk_role_id,
+//            'employee_id' => $this->employee_id,
+//            'station_desk_id' => $this->station_desk_id,
+ //           'station_desk_role_id' => $this->station_desk_role_id,
             'create_time' => $this->create_time,
             'update_time' => $this->update_time,
         ]);
+
+        $query->andFilterWhere(['like', 'employee.employee_last_name', $this->employee_id])
+            ->andFilterWhere(['like', 'station_desk_role.station_desk_role_name', $this->station_desk_role_id])
+            ->andFilterWhere(['like', 'station_desk.station_desk_name', $this->station_desk_id]);
 
         return $dataProvider;
     }

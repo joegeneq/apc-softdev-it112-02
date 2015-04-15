@@ -29,9 +29,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
 //            'id',
-            'employee_id',
-            'station_desk_id',
-            'station_desk_role_id',
+            [
+                'attribute' => 'employee_id',
+                'value' => $model->employee->employee_last_name,
+            ],
+            [
+                'attribute' => 'station_desk_id',
+                'value' => $model->stationDesk->station_desk_name,
+            ],
+            [
+                'attribute' => 'station_desk_role_id',
+                'value' => $model->stationDeskRole->station_desk_role_name,
+            ],
             'create_time',
             'update_time',
         ],

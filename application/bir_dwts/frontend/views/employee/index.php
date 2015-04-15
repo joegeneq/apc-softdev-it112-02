@@ -44,11 +44,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'employee_id_number',
             'employee_last_name',
             'employee_first_name',
-            'current_position',
-            // 'section_id',
+            [
+                'attribute' => 'current_position',
+                'value' => 'position.position_name',
+            ],
+            [
+                'attribute' => 'section_id',
+                'value' => 'section.section_name',
+            ],
+
+            [
+                'attribute' => 'user_id',
+                'value' => 'user.username',
+            ],
             // 'create_time',
             // 'update_time',
-            // 'user_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -43,7 +43,10 @@ $this->params['breadcrumbs'][] = $this->title;
             //'id',
             'customer_lastname',
             'customer_firstname',
-            'company_agency_id',
+            [
+                'attribute' => 'company_agency_id',
+                'value' => 'companyAgency.company_agency_code',
+            ],
             'customer_cell_phone',
             // 'customer_email:email',
             // 'customer_landline',

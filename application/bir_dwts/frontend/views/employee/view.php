@@ -32,11 +32,20 @@ $this->params['breadcrumbs'][] = $this->title;
             'employee_id_number',
             'employee_last_name',
             'employee_first_name',
-            'current_position',
-            'section_id',
+            [
+                'attribute' => 'current_position',
+                'value' => $model->position->position_name,
+            ],
+            [
+                'attribute' => 'section_id',
+                'value' => $model->section->section_name,
+            ],
+            [
+                'attribute' => 'user_id',
+                'value' => $model->user->username,
+            ],
             'create_time',
             'update_time',
-            'user_id',
         ],
     ]) ?>
 

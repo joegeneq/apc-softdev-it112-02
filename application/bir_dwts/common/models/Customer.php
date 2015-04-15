@@ -67,12 +67,12 @@ class Customer extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'customer_lastname' => 'Customer Lastname',
-            'customer_firstname' => 'Customer Firstname',
-            'company_agency_id' => 'Company Agency ID',
-            'customer_cell_phone' => 'Customer Cell Phone',
-            'customer_email' => 'Customer Email',
-            'customer_landline' => 'Customer Landline',
+            'customer_lastname' => 'Lastname',
+            'customer_firstname' => 'Firstname',
+            'company_agency_id' => 'Company Agency',
+            'customer_cell_phone' => 'Cell Phone Number',
+            'customer_email' => 'Email',
+            'customer_landline' => 'Landline',
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
         ];

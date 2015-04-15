@@ -56,7 +56,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Customer',
                 'value' => $model->customer->customer_lastname,
             ],
-            'company_agency_id',
             [
                 'label' => 'Company Agency',
                 'value' => $model->companyAgency->company_agency_code,

@@ -72,13 +72,13 @@ class Employee extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'employee_id_number' => 'Employee Id Number',
-            'employee_last_name' => 'Employee Last Name',
-            'employee_first_name' => 'Employee First Name',
+            'employee_last_name' => 'Last Name',
+            'employee_first_name' => 'First Name',
             'current_position' => 'Current Position',
-            'section_id' => 'Section ID',
+            'section_id' => 'Section',
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
-            'user_id' => 'User ID',
+            'user_id' => 'Username',
         ];
     }
 
@@ -101,7 +101,7 @@ class Employee extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCurrentPosition()
+    public function getPosition()
     {
         return $this->hasOne(Position::className(), ['id' => 'current_position']);
     }

@@ -18,8 +18,8 @@ class CustomerSearch extends Customer
     public function rules()
     {
         return [
-            [['id', 'company_agency_id'], 'integer'],
-            [['customer_lastname', 'customer_firstname', 'customer_cell_phone', 'customer_email', 'customer_landline', 'create_time', 'update_time'], 'safe'],
+            [['id'], 'integer'],
+            [['company_agency_id','customer_lastname', 'customer_firstname', 'customer_cell_phone', 'customer_email', 'customer_landline', 'create_time', 'update_time'], 'safe'],
         ];
     }
 
@@ -55,9 +55,11 @@ class CustomerSearch extends Customer
             return $dataProvider;
         }
 
+        $query->joinWith('companyAgency');
+
         $query->andFilterWhere([
             'id' => $this->id,
-            'company_agency_id' => $this->company_agency_id,
+//            'company_agency_id' => $this->company_agency_id,
             'create_time' => $this->create_time,
             'update_time' => $this->update_time,
         ]);
@@ -66,6 +68,7 @@ class CustomerSearch extends Customer
             ->andFilterWhere(['like', 'customer_firstname', $this->customer_firstname])
             ->andFilterWhere(['like', 'customer_cell_phone', $this->customer_cell_phone])
             ->andFilterWhere(['like', 'customer_email', $this->customer_email])
+            ->andFilterWhere(['like', 'company_agency.company_agency_code', $this->company_agency_id])
             ->andFilterWhere(['like', 'customer_landline', $this->customer_landline]);
 
         return $dataProvider;

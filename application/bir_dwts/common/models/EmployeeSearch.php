@@ -18,8 +18,8 @@ class EmployeeSearch extends Employee
     public function rules()
     {
         return [
-            [['id', 'current_position', 'section_id', 'user_id'], 'integer'],
-            [['employee_id_number', 'employee_last_name', 'employee_first_name', 'create_time', 'update_time'], 'safe'],
+            [['id'], 'integer'],
+            [['current_position','user_id','section_id','employee_id_number', 'employee_last_name', 'employee_first_name', 'create_time', 'update_time'], 'safe'],
         ];
     }
 
@@ -55,17 +55,24 @@ class EmployeeSearch extends Employee
             return $dataProvider;
         }
 
+        $query->joinWith('section');
+        $query->joinWith('user');
+        $query->joinWith('position');
+
         $query->andFilterWhere([
             'id' => $this->id,
-            'current_position' => $this->current_position,
-            'section_id' => $this->section_id,
+//            'current_position' => $this->current_position,
+//            'section_id' => $this->section_id,
             'create_time' => $this->create_time,
             'update_time' => $this->update_time,
-            'user_id' => $this->user_id,
+//            'user_id' => $this->user_id,
         ]);
 
         $query->andFilterWhere(['like', 'employee_id_number', $this->employee_id_number])
             ->andFilterWhere(['like', 'employee_last_name', $this->employee_last_name])
+            ->andFilterWhere(['like', 'section.section_name', $this->section_id])
+            ->andFilterWhere(['like', 'user.username', $this->user_id])
+            ->andFilterWhere(['like', 'position.position_name', $this->current_position])
             ->andFilterWhere(['like', 'employee_first_name', $this->employee_first_name]);
 
         return $dataProvider;

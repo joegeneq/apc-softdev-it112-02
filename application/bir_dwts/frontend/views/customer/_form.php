@@ -23,7 +23,7 @@ use common\models\CompanyAgency;
     <?= $form->field($model, 'customer_firstname')->textInput(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'company_agency_id')->dropDownList(
-        ArrayHelper::map(CompanyAgency::find()->all(),'id','company_agency_name'),
+        ArrayHelper::map(CompanyAgency::find()->all(),'id','company_agency_code'),
         ['prompt'=>'Select CompanyAgency']
     ) ?>
 
