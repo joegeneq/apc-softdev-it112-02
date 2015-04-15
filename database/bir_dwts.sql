@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2015 at 03:05 PM
+-- Generation Time: Apr 15, 2015 at 08:28 AM
 -- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- PHP Version: 5.5.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -172,16 +172,14 @@ CREATE TABLE IF NOT EXISTS `document` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `section_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document`
 --
 
 INSERT INTO `document` (`id`, `document_tracking_number`, `document_name`, `document_description`, `document_target_date`, `document_category`, `document_priority_id`, `document_type_id`, `document_comment`, `employee_id`, `customer_id`, `company_agency_id`, `document_image_front_page`, `logo`, `create_time`, `update_time`, `section_id`) VALUES
-(106, '20150413-02-0012', 'wew', 'wew', '2015-04-21', 2, 3, 2, 'wew', 1, 3, 5, NULL, '', '2015-04-13 01:59:34', '2015-04-13 09:59:34', 5),
-(107, '20150414-01-0013', 'dadwadwa', 'wdawdwadwadw', '2015-03-26', 2, 3, 2, 'sfesfsfe', 1, 3, 5, NULL, '', '2015-04-14 09:29:36', '2015-04-14 17:29:36', 4),
-(108, '20150415-02-0014', 'sadawdwa', 'dawdawd', '2015-04-14', 1, 2, 2, 'wdwadw', 1, 3, 5, NULL, '', '2015-04-15 09:30:28', '2015-04-15 17:30:28', 5);
+(107, '20150414-01-0013', 'dadwadwa', 'wdawdwadwadw', '2015-03-26', 2, 3, 2, 'sfesfsfe', 1, 3, 5, NULL, '', '2015-04-14 09:29:36', '2015-04-14 17:29:36', 4);
 
 --
 -- Triggers `document`
@@ -283,20 +281,21 @@ CREATE TABLE IF NOT EXISTS `document_workflow` (
   `station_desk_id` int(11) NOT NULL,
   `document_wokflow_comments` text,
   `document_workflow_status_id` int(11) NOT NULL,
-  `time_accepted` timestamp NULL DEFAULT NULL,
-  `time_released` timestamp NULL DEFAULT NULL,
+  `time_accepted` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `time_released` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `total_time_spent` time DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `employee_id1` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_workflow`
 --
 
 INSERT INTO `document_workflow` (`id`, `document_id`, `employee_id`, `station_desk_id`, `document_wokflow_comments`, `document_workflow_status_id`, `time_accepted`, `time_released`, `total_time_spent`, `create_time`, `update_time`, `employee_id1`) VALUES
-(1, 107, 1, 1, 'vdvdvxdv', 1, NULL, NULL, NULL, '2015-04-14 12:49:23', '2015-04-14 20:49:23', 1);
+(1, 107, 1, 1, 'vdvdvxdv', 1, NULL, '2015-04-15 05:41:04', NULL, '2015-04-14 12:49:23', '2015-04-14 20:49:23', 1),
+(7, 107, 1, 1, 'wew', 1, '2015-04-15 05:42:31', '2015-04-15 06:24:00', NULL, '2015-04-15 05:42:31', '2015-04-15 14:24:00', 1);
 
 -- --------------------------------------------------------
 
@@ -310,14 +309,15 @@ CREATE TABLE IF NOT EXISTS `document_workflow_status` (
   `document_workflow_status_description` text,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_workflow_status`
 --
 
 INSERT INTO `document_workflow_status` (`id`, `document_workflow_status_name`, `document_workflow_status_description`, `create_time`, `update_time`) VALUES
-(1, 'Ongoing', 'thjomvmdgbrbbdrfb', '2015-03-28 15:31:32', '2015-03-28 23:31:32');
+(1, 'Ongoing', 'thjomvmdgbrbbdrfb', '2015-03-28 15:31:32', '2015-03-28 23:31:32'),
+(2, 'Finished', 'The document is being released', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -483,27 +483,14 @@ INSERT INTO `station_desk_role` (`id`, `station_desk_role_code`, `station_desk_r
 CREATE TABLE IF NOT EXISTS `table_seq` (
 `id` int(11) NOT NULL,
   `time_stamp` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `table_seq`
 --
 
 INSERT INTO `table_seq` (`id`, `time_stamp`) VALUES
-(1, '2015-04-13'),
-(2, '2015-04-13'),
-(3, '2015-04-13'),
-(4, '2015-04-13'),
-(5, '2015-04-13'),
-(6, '2015-04-13'),
-(7, '2015-04-13'),
-(8, '2015-04-13'),
-(9, '2015-04-13'),
-(10, '2015-04-13'),
-(11, '2015-04-13'),
-(12, '2015-04-13'),
-(13, '2015-04-14'),
-(14, '2015-04-15');
+(1, '2015-04-15');
 
 -- --------------------------------------------------------
 
@@ -681,7 +668,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=109;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=114;
 --
 -- AUTO_INCREMENT for table `document_category`
 --
@@ -701,12 +688,12 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT for table `document_workflow`
 --
 ALTER TABLE `document_workflow`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `document_workflow_status`
 --
 ALTER TABLE `document_workflow_status`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `employee`
 --
@@ -746,7 +733,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `table_seq`
 --
 ALTER TABLE `table_seq`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `user`
 --
@@ -836,7 +823,7 @@ DELIMITER $$
 --
 -- Events
 --
-CREATE DEFINER=`root`@`localhost` EVENT `e_daily` ON SCHEDULE EVERY 1 DAY STARTS '2015-04-15 00:00:00' ON COMPLETION NOT PRESERVE ENABLE COMMENT 'Descriptive comment' DO TRUNCATE table_seq$$
+CREATE DEFINER=`root`@`localhost` EVENT `e_daily` ON SCHEDULE EVERY 1 DAY STARTS '2015-04-16 00:00:00' ON COMPLETION NOT PRESERVE ENABLE COMMENT 'Descriptive comment' DO TRUNCATE table_seq$$
 
 DELIMITER ;
 
