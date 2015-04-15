@@ -18,8 +18,8 @@ class StationDeskSearch extends StationDesk
     public function rules()
     {
         return [
-            [['id', 'section_id'], 'integer'],
-            [['station_desk_code', 'station_desk_name', 'station_desk_notes', 'create_time', 'update_time'], 'safe'],
+            [['id'], 'integer'],
+            [['section_id','station_desk_code', 'station_desk_name', 'station_desk_notes', 'create_time', 'update_time'], 'safe'],
         ];
     }
 
@@ -55,16 +55,18 @@ class StationDeskSearch extends StationDesk
             return $dataProvider;
         }
 
+        $query->joinWith('section');
+
         $query->andFilterWhere([
             'id' => $this->id,
             'create_time' => $this->create_time,
             'update_time' => $this->update_time,
-            'section_id' => $this->section_id,
         ]);
 
         $query->andFilterWhere(['like', 'station_desk_code', $this->station_desk_code])
             ->andFilterWhere(['like', 'station_desk_name', $this->station_desk_name])
-            ->andFilterWhere(['like', 'station_desk_notes', $this->station_desk_notes]);
+            ->andFilterWhere(['like', 'station_desk_notes', $this->station_desk_notes])
+            ->andFilterWhere(['like', 'section.section_name', $this->section_id]);
 
         return $dataProvider;
     }

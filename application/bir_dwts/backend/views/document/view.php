@@ -33,17 +33,38 @@ $this->params['breadcrumbs'][] = $this->title;
             'document_name',
             'document_description',
             'document_target_date',
-            'document_category',
-            'document_priority_id',
-            'document_type_id',
+            [
+                'label' => 'Document Category',
+                'value' => $model->documentCategory->document_category_name,
+            ],
+            [
+                'label' => 'Document Priority',
+                'value' => $model->documentPriority->document_priority_name,
+            ],
+            [
+                'label' => 'Document Type',
+                'value' => $model->documentType->document_type_name,
+            ],
             'document_comment',
-            'employee_id',
-            'customer_id',
-            'company_agency_id',
-            'document_image_front_page',
+            [
+                'label' => 'Employee',
+                'value' => $model->employee->employee_last_name,
+            ],
+            [
+                'label' => 'Customer',
+                'value' => $model->customer->customer_lastname,
+            ],
+            [
+                'label' => 'Company Agency',
+                'value' => $model->companyAgency->company_agency_code,
+            ],
+            [
+                'label' => 'Section',
+                'value' => $model->section->section_name,
+            ],
+            'file',
             'create_time',
             'update_time',
-            'section_id',
         ],
     ]) ?>
 

@@ -32,9 +32,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'station_desk_code',
             'station_desk_name',
             'station_desk_notes:ntext',
+            [
+                'attribute' => 'section_id',
+                'value' => $model->section->section_name,
+            ],
             'create_time',
             'update_time',
-            'section_id',
         ],
     ]) ?>
 

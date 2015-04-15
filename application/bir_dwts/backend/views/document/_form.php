@@ -25,7 +25,7 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'document_name')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'document_description')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'document_description')->textarea(['maxlength' => 45]) ?>
 
             <?= $form->field($model, 'document_target_date')->widget(
          DatePicker::className(), [
@@ -55,7 +55,7 @@ use dosamigos\datepicker\DatePicker;
         ['prompt'=>'Select Type']
     ) ?>
     
-    <?= $form->field($model, 'document_comment')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'document_comment')->textarea(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'employee_id')->dropDownList(
         ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name'),

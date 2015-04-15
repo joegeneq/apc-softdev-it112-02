@@ -41,8 +41,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
-            'employee_id',
-            'position_id',
+            [
+                'attribute' => 'employee_id',
+                'value' => 'employee.employee_last_name',
+            ],
+            [
+                'attribute' => 'position_id',
+                'value' => 'position.position_name',
+            ],
             'employee_position_start_date',
             'employee_position_end_date',
             // 'create_time',

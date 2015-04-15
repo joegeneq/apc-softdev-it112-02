@@ -63,8 +63,8 @@ class EmployeeHasPosition extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'employee_id' => 'Employee ID',
-            'position_id' => 'Position ID',
+            'employee_id' => 'Employee',
+            'position_id' => 'Position',
             'employee_position_start_date' => 'Employee Position Start Date',
             'employee_position_end_date' => 'Employee Position End Date',
             'create_time' => 'Create Time',

@@ -18,8 +18,8 @@ class EmployeeHasPositionSearch extends EmployeeHasPosition
     public function rules()
     {
         return [
-            [['id', 'employee_id', 'position_id'], 'integer'],
-            [['employee_position_start_date', 'employee_position_end_date', 'create_time', 'update_time'], 'safe'],
+            [['id'], 'integer'],
+            [['employee_id', 'position_id','employee_position_start_date', 'employee_position_end_date', 'create_time', 'update_time'], 'safe'],
         ];
     }
 
@@ -55,15 +55,21 @@ class EmployeeHasPositionSearch extends EmployeeHasPosition
             return $dataProvider;
         }
 
+        $query->joinWith('employee');
+        $query->joinWith('position');
+
         $query->andFilterWhere([
             'id' => $this->id,
-            'employee_id' => $this->employee_id,
-            'position_id' => $this->position_id,
+ //           'employee_id' => $this->employee_id,
+  //          'position_id' => $this->position_id,
             'employee_position_start_date' => $this->employee_position_start_date,
             'employee_position_end_date' => $this->employee_position_end_date,
             'create_time' => $this->create_time,
             'update_time' => $this->update_time,
         ]);
+
+        $query->andFilterWhere(['like', 'employee.employee_last_name', $this->employee_id])
+            ->andFilterWhere(['like', 'position.position_name', $this->position_id]);
 
         return $dataProvider;
     }

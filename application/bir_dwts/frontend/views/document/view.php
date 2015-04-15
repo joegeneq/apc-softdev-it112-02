@@ -64,7 +64,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Section',
                 'value' => $model->section->section_name,
             ],
-            'logo',
+ //           'file',
             'create_time',
             'update_time',
         ],

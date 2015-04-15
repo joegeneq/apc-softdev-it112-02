@@ -70,7 +70,7 @@ class StationDesk extends \yii\db\ActiveRecord
             'station_desk_notes' => 'Station Desk Notes',
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
-            'section_id' => 'Section ID',
+            'section_id' => 'Section',
         ];
     }
 

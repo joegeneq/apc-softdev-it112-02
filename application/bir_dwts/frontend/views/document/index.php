@@ -108,7 +108,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'section_id',
                 'value' => 'section.section_name',
             ],
-            //'document_image_front_page',
+          //  'file',
 /*            [
 
                 'attribute' => 'create_time',

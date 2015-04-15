@@ -29,8 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
 //            'id',
-            'employee_id',
-            'position_id',
+            [
+                'attribute' => 'employee_id',
+                'value' => $model->employee->employee_last_name,
+            ],
+            [
+                'attribute' => 'position_id',
+                'value' => $model->position->position_name,
+            ],
             'employee_position_start_date',
             'employee_position_end_date',
             'create_time',

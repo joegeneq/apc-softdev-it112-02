@@ -29,17 +29,32 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
 //            'id',
-            'document_id',
-            'employee_id',
-            'station_desk_id',
+            [
+                'label' => 'Tracking Number',
+                'value' => $model->document->document_tracking_number,
+            ],
+            [
+                'label' => 'Receiver',
+                'value' => $model->employee->employee_last_name,
+            ],
+            [
+                'label' => 'Station Desk',
+                'value' => $model->stationDesk->station_desk_name,
+            ],
             'document_wokflow_comments:ntext',
-            'document_status_id',
+            [
+                'label' => 'Document Status',
+                'value' => $model->documentWorkflowStatus->document_workflow_status_name,
+            ],
+            [
+                'attribute' => 'employee_id1',
+                'value' => $model->employee->employee_last_name,
+            ],
             'time_accepted',
             'time_released',
             'total_time_spent',
             'create_time',
             'update_time',
-            'employee_id1',
         ],
     ]) ?>
 
