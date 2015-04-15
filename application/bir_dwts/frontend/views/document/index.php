@@ -77,13 +77,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'document_category',
                 'value' => 'documentCategory.document_category_name',
 //                'filter' => Html::activeDropDownList($model, 'document_category', ArrayHelper::map(DocumentCategory::find()->asArray()->all(), 'id', 'document_category_name'),['class'=>'form-control','prompt' => 'Select Category']),
-//              'filter' => Html::activeDropDownList($model, 'document_category', ArrayHelper::map(DocumentCategory::find()->all(),'id', 'document_category_name'),
-//                            ['class'=>'form-control','prompt'=>'Select Category']),
+  //                'filter' => Html::dropDownList($model, 'document_category', ArrayHelper::map(DocumentCategory::find()->all(),'id', 'document_category_name'),
+    //                        ['class'=>'form-control','prompt'=>'Select Category']),
             ],
 
             [
                 'attribute' => 'document_priority_id',
                 'value' => 'documentPriority.document_priority_name',
+//                'filter' => Html::textInput(['maxlength' => 45]) 
             ],
             [
                 'attribute' => 'document_type_id',
@@ -130,3 +131,4 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
     <?php Pjax::end(); ?>
 </div>
+

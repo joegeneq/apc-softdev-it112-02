@@ -73,7 +73,7 @@ use dosamigos\datepicker\DatePicker;
     <?=$form->field($model, 'file')->fileInput(); ?>
 
     <?= $form->field($model, 'section_id')->dropDownList(
-        ArrayHelper::map(Section::find()->all(),'id', 'section_code'),
+        ArrayHelper::map(Section::find()->all(),'id', 'section_name'),
         ['prompt'=>'Select Section']
     ) ?>
 
