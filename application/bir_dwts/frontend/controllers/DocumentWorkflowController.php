@@ -9,6 +9,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\db\ActiveRecord;
+use yii\db\Expression;
 
 /**
  * DocumentWorkflowController implements the CRUD actions for DocumentWorkflow model.
@@ -26,7 +28,7 @@ class DocumentWorkflowController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'create','view','update','delete'],
+                        'actions' => ['logout', 'index', 'create','view','update','delete','release'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -104,7 +106,6 @@ class DocumentWorkflowController extends Controller
             ]);
         }
     }
-
     /**
      * Deletes an existing DocumentWorkflow model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
@@ -117,6 +118,26 @@ class DocumentWorkflowController extends Controller
 
         return $this->redirect(['index']);
     }
+
+    public function actionRelease() {
+
+        if(isset($_POST['button1']))
+        {
+            return [
+            'timestamp' => [
+            'class' => 'yii\behaviors\TimestampBehavior',
+            'attributes' => [
+            ActiveRecord::EVENT_BEFORE_UPDATE => ['time_released'],
+            ],
+            'value' => new Expression('NOW()'),
+        ],
+        ];
+        }
+
+        
+    }
+
+    
 
     /**
      * Finds the DocumentWorkflow model based on its primary key value.

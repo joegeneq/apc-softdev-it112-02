@@ -51,8 +51,22 @@ class DocumentWorkflow extends \yii\db\ActiveRecord
         ];
     }
 
+    
+
     public function behaviors()
     {
+                if(isset($_POST['button1']))
+        {
+            return [
+            'timestamp' => [
+            'class' => 'yii\behaviors\TimestampBehavior',
+            'attributes' => [
+            ActiveRecord::EVENT_BEFORE_UPDATE => ['time_released','update_time'],
+            ],
+            'value' => new Expression('NOW()'),
+        ],
+        ];
+        }
         return [
             'timestamp' => [
             'class' => 'yii\behaviors\TimestampBehavior',
