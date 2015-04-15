@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2015 at 08:28 AM
+-- Generation Time: Apr 15, 2015 at 10:51 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.5.19
 
@@ -283,11 +283,11 @@ CREATE TABLE IF NOT EXISTS `document_workflow` (
   `document_workflow_status_id` int(11) NOT NULL,
   `time_accepted` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `time_released` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `total_time_spent` time DEFAULT NULL,
+  `total_time_spent` varchar(45) DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `employee_id1` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_workflow`
@@ -295,7 +295,29 @@ CREATE TABLE IF NOT EXISTS `document_workflow` (
 
 INSERT INTO `document_workflow` (`id`, `document_id`, `employee_id`, `station_desk_id`, `document_wokflow_comments`, `document_workflow_status_id`, `time_accepted`, `time_released`, `total_time_spent`, `create_time`, `update_time`, `employee_id1`) VALUES
 (1, 107, 1, 1, 'vdvdvxdv', 1, NULL, '2015-04-15 05:41:04', NULL, '2015-04-14 12:49:23', '2015-04-14 20:49:23', 1),
-(7, 107, 1, 1, 'wew', 1, '2015-04-15 05:42:31', '2015-04-15 06:24:00', NULL, '2015-04-15 05:42:31', '2015-04-15 14:24:00', 1);
+(9, 107, 1, 1, 'wew', 1, '2015-04-15 08:03:39', '0000-00-00 00:00:00', NULL, '2015-04-15 08:03:39', '2015-04-15 16:03:39', 1);
+
+--
+-- Triggers `document_workflow`
+--
+DELIMITER //
+CREATE TRIGGER `tg_insert_total_time` BEFORE UPDATE ON `document_workflow`
+ FOR EACH ROW BEGIN
+
+  declare DTN varchar(20); 
+  declare day varchar(20);
+  declare oras varchar(20);
+  
+  SET oras = (SELECT DATE_FORMAT(TIMEDIFF(NEW.time_released, NEW.time_accepted), "%Hhour/s %imin/s %ssec/s"));
+  SET day = (SELECT DATEDIFF(DATE_FORMAT(NEW.time_released, "%Y-%m-%d"), DATE_FORMAT(NEW.time_accepted, "%Y-%m-%d")));
+  
+  
+  SET NEW.total_time_spent = CONCAT(day, "day/s,", oras);
+  
+  
+END
+//
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -688,7 +710,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT for table `document_workflow`
 --
 ALTER TABLE `document_workflow`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `document_workflow_status`
 --
