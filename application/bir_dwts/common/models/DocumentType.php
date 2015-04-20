@@ -34,8 +34,7 @@ class DocumentType extends \yii\db\ActiveRecord
     {
         return [
             [['document_type_description'], 'string'],
-            [['section_id'], 'integer'],
-            [['create_time', 'update_time'], 'safe'],
+            [['section_id','create_time', 'update_time'], 'safe'],
             [['document_type_name','section_id'], 'required'],
             [['document_type_name'], 'string', 'max' => 255]
         ];

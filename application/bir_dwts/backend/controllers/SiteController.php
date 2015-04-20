@@ -68,7 +68,7 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
-            return $this->redirect('http://localhost/bir_dwts/frontend/web/index.php');
+            return $this->redirect('/bir_dwts/frontend/web/index.php');
         }
     }
 
@@ -76,6 +76,6 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->redirect('http://localhost/bir_dwts/frontend/web/index.php');
+        return $this->redirect('/bir_dwts/frontend/web/index.php');
     }
 }

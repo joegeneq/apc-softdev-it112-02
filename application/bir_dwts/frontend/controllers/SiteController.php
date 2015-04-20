@@ -80,9 +80,9 @@ class SiteController extends Controller
             {
                 //            return $this->goBack();
                 //        Yii::$app->urlManager->createUrl('http://localhost/bir_dwts/backend/web/index.php');
-                return $this->redirect('http://localhost/bir_dwts/backend/web/index.php');
+                return $this->redirect('/bir_dwts/backend/web/index.php');
             } else {
-                return $this->redirect('http://localhost/bir_dwts/frontend/web/index.php');
+                return $this->redirect('/bir_dwts/frontend/web/index.php');
             }
 
         } else {
@@ -96,7 +96,7 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->redirect('http://localhost/bir_dwts/frontend/web/index.php');
+        return $this->redirect('/bir_dwts/frontend/web/index.php');
     }
 
     public function actionContact()

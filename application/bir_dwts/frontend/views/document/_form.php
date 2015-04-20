@@ -45,7 +45,14 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'section_id')->dropDownList(
         ArrayHelper::map(Section::find()->all(),'id', 'section_name'),
-        ['prompt'=>'Select Section']
+        [
+        'prompt'=>'Select Section',
+        'onchange'=>'
+            $.post( "/bir_dwts/backend/web/index.php?r=document-type/lists&id='.'"+$(this).val(), function( data ) {
+                $( "select#models-contact" ).html( data );
+        });'
+
+        ]
     ) ?>
 
 

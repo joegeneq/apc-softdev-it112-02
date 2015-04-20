@@ -21,11 +21,9 @@ use dosamigos\datepicker\DatePicker;
 
     <?php $form = ActiveForm::begin(['options' =>['enctype' => 'multipart/form-data']]); ?>
 
-    <?= $form->field($model, 'document_tracking_number')->textInput(['maxlength' => 45]) ?>
-
     <?= $form->field($model, 'document_name')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'document_description')->textarea(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'document_description')->textArea(['maxlength' => 45]) ?>
 
             <?= $form->field($model, 'document_target_date')->widget(
          DatePicker::className(), [
@@ -45,12 +43,25 @@ use dosamigos\datepicker\DatePicker;
         ['prompt'=>'Select Category']
     ) ?>
 
+    <?= $form->field($model, 'section_id')->dropDownList(
+        ArrayHelper::map(Section::find()->all(),'id', 'section_name'),
+        [
+        'prompt'=>'Select Section',
+        'onchange'=>'
+            $.post( "index.php?r=document-type/lists&id='.'"+$(this).val(), function( data ) {
+                $( "select#document-document_type_id" ).html( data );
+        });'
+
+        ]
+    ) ?>
+
+
     <?= $form->field($model, 'document_type_id')->dropDownList(
         ArrayHelper::map(DocumentType::find()->all(),'id', 'document_type_name'),
         ['prompt'=>'Select Type']
     ) ?>
     
-    <?= $form->field($model, 'document_comment')->textarea(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'document_comment')->textArea(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'employee_id')->dropDownList(
         ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name'),
@@ -69,19 +80,14 @@ use dosamigos\datepicker\DatePicker;
 
     <?=$form->field($model, 'file')->fileInput(); ?>
 
-    <?= $form->field($model, 'section_id')->dropDownList(
-        ArrayHelper::map(Section::find()->all(),'id', 'section_code'),
-        ['prompt'=>'Select Section']
+    <?= $form->field($model, 'document_priority_id')->dropDownList(
+        ArrayHelper::map(DocumentPriority::find()->all(),'id', 'document_priority_name'),
+        ['prompt'=>'Select Priority']
     ) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
-
-    <?= $form->field($model, 'document_priority_id')->dropDownList(
-        ArrayHelper::map(DocumentPriority::find()->all(),'id', 'document_priority_name'),
-        ['prompt'=>'Select Priority']
-    ) ?>
 
     <?php ActiveForm::end(); ?>
 

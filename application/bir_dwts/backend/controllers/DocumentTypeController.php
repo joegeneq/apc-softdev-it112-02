@@ -26,7 +26,7 @@ class DocumentTypeController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'create','view','update','delete'],
+                        'actions' => ['logout', 'index', 'create','view','update','delete','lists'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -116,6 +116,29 @@ class DocumentTypeController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionLists($id)
+    {
+        $countDocumentType = DocumentType::find()
+                        ->where(['section_id'=>$id])
+                        ->count();
+
+        $documentType = DocumentType::find()
+                        ->where(['section_id'=>$id])
+                        ->all();
+
+        if($documentType > 0)
+        {
+            foreach($documentType as $document_type){
+                echo "<option value='".$document_type->id."'>".$document_type->document_type_name."</option>";
+            }
+
+        }else{
+            echo "<option> - </option>";
+        }
+
+
     }
 
     /**
