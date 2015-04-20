@@ -34,8 +34,10 @@ class DocumentType extends \yii\db\ActiveRecord
     {
         return [
             [['document_type_description'], 'string'],
+            [['section_id'], 'integer'],
             [['create_time', 'update_time'], 'safe'],
-            [['document_type_name'], 'string', 'max' => 45]
+            [['document_type_name','section_id'], 'required'],
+            [['document_type_name'], 'string', 'max' => 255]
         ];
     }
 
@@ -62,6 +64,7 @@ class DocumentType extends \yii\db\ActiveRecord
             'id' => 'ID',
             'document_type_name' => 'Document Type Name',
             'document_type_description' => 'Document Type Description',
+            'section_id' => 'Section Name',
             'create_time' => 'Create Time',
             'update_time' => 'Update Time',
         ];
@@ -73,5 +76,10 @@ class DocumentType extends \yii\db\ActiveRecord
     public function getDocuments()
     {
         return $this->hasMany(Document::className(), ['document_type_id' => 'id']);
+    }
+
+    public function getSection()
+    {
+        return $this->hasOne(Section::className(), ['id' => 'section_id']);
     }
 }

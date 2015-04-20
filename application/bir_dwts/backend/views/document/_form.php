@@ -45,11 +45,6 @@ use dosamigos\datepicker\DatePicker;
         ['prompt'=>'Select Category']
     ) ?>
 
-    <?= $form->field($model, 'document_priority_id')->dropDownList(
-        ArrayHelper::map(DocumentPriority::find()->all(),'id', 'document_priority_name'),
-        ['prompt'=>'Select Priority']
-    ) ?>
-
     <?= $form->field($model, 'document_type_id')->dropDownList(
         ArrayHelper::map(DocumentType::find()->all(),'id', 'document_type_name'),
         ['prompt'=>'Select Type']
@@ -62,14 +57,14 @@ use dosamigos\datepicker\DatePicker;
         ['prompt'=>'Select Employee']
     ) ?>
 
-    <?= $form->field($model, 'customer_id')->dropDownList(
-        ArrayHelper::map(Customer::find()->all(),'id', 'customer_lastname'),
-        ['prompt'=>'Select Customer']
-    ) ?>
-
     <?= $form->field($model, 'company_agency_id')->dropDownList(
         ArrayHelper::map(CompanyAgency::find()->all(),'id', 'company_agency_name'),
         ['prompt'=>'Select Company Agency']
+    ) ?>
+
+    <?= $form->field($model, 'customer_id')->dropDownList(
+        ArrayHelper::map(Customer::find()->all(),'id', 'customer_lastname'),
+        ['prompt'=>'Select Customer']
     ) ?>
 
     <?=$form->field($model, 'file')->fileInput(); ?>
@@ -82,6 +77,11 @@ use dosamigos\datepicker\DatePicker;
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
+
+    <?= $form->field($model, 'document_priority_id')->dropDownList(
+        ArrayHelper::map(DocumentPriority::find()->all(),'id', 'document_priority_name'),
+        ['prompt'=>'Select Priority']
+    ) ?>
 
     <?php ActiveForm::end(); ?>
 

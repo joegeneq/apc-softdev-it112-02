@@ -23,7 +23,7 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'document_name')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'document_description')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'document_description')->textArea(['maxlength' => 45]) ?>
 
             <?= $form->field($model, 'document_target_date')->widget(
          DatePicker::className(), [
@@ -43,26 +43,22 @@ use dosamigos\datepicker\DatePicker;
         ['prompt'=>'Select Category']
     ) ?>
 
-    <?= $form->field($model, 'document_priority_id')->dropDownList(
-        ArrayHelper::map(DocumentPriority::find()->all(),'id', 'document_priority_name'),
-        ['prompt'=>'Select Priority']
+    <?= $form->field($model, 'section_id')->dropDownList(
+        ArrayHelper::map(Section::find()->all(),'id', 'section_name'),
+        ['prompt'=>'Select Section']
     ) ?>
+
 
     <?= $form->field($model, 'document_type_id')->dropDownList(
         ArrayHelper::map(DocumentType::find()->all(),'id', 'document_type_name'),
         ['prompt'=>'Select Type']
     ) ?>
     
-    <?= $form->field($model, 'document_comment')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'document_comment')->textArea(['maxlength' => 45]) ?>
 
     <?= $form->field($model, 'employee_id')->dropDownList(
         ArrayHelper::map(Employee::find()->all(),'id', 'employee_last_name'),
         ['prompt'=>'Select Employee']
-    ) ?>
-
-    <?= $form->field($model, 'customer_id')->dropDownList(
-        ArrayHelper::map(Customer::find()->all(),'id', 'customer_lastname'),
-        ['prompt'=>'Select Customer']
     ) ?>
 
     <?= $form->field($model, 'company_agency_id')->dropDownList(
@@ -70,11 +66,16 @@ use dosamigos\datepicker\DatePicker;
         ['prompt'=>'Select Company Agency']
     ) ?>
 
+    <?= $form->field($model, 'customer_id')->dropDownList(
+        ArrayHelper::map(Customer::find()->all(),'id', 'customer_lastname'),
+        ['prompt'=>'Select Customer']
+    ) ?>
+
     <?=$form->field($model, 'file')->fileInput(); ?>
 
-    <?= $form->field($model, 'section_id')->dropDownList(
-        ArrayHelper::map(Section::find()->all(),'id', 'section_name'),
-        ['prompt'=>'Select Section']
+    <?= $form->field($model, 'document_priority_id')->dropDownList(
+        ArrayHelper::map(DocumentPriority::find()->all(),'id', 'document_priority_name'),
+        ['prompt'=>'Select Priority']
     ) ?>
 
     <div class="form-group">

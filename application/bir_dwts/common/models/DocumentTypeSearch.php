@@ -19,7 +19,7 @@ class DocumentTypeSearch extends DocumentType
     {
         return [
             [['id'], 'integer'],
-            [['document_type_name', 'document_type_description', 'create_time', 'update_time'], 'safe'],
+            [['section_id','document_type_name', 'document_type_description', 'create_time', 'update_time'], 'safe'],
         ];
     }
 

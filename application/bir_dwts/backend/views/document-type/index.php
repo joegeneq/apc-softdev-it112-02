@@ -43,6 +43,10 @@ $this->params['breadcrumbs'][] = $this->title;
 //            'id',
             'document_type_name',
             'document_type_description:ntext',
+            [
+                'attribute' => 'section_id',
+                'value' => 'section.section_name',
+            ],
             'create_time',
             'update_time',
 

@@ -59,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //            'id',
             'document_tracking_number',
             'document_name',
-            'document_description',
+ //           'document_description',
             [
                 'attribute' => 'document_target_date',
                 'value' => 'document_target_date',
@@ -81,34 +81,34 @@ $this->params['breadcrumbs'][] = $this->title;
     //                        ['class'=>'form-control','prompt'=>'Select Category']),
             ],
 
-            [
-                'attribute' => 'document_priority_id',
-                'value' => 'documentPriority.document_priority_name',
-//                'filter' => Html::textInput(['maxlength' => 45]) 
-            ],
+
             [
                 'attribute' => 'document_type_id',
                 'value' => 'documentType.document_type_name',
             ],
-            'document_comment',
+//            'document_comment',
             [
                 'attribute' => 'employee_id',
                 'value' => 'employee.employee_last_name',
+            ],
+            [
+                'attribute' => 'company_agency_id',
+                'value' => 'companyAgency.company_agency_code',
             ],
             [
                 'attribute' => 'customer_id',
                 'value' => 'customer.customer_lastname',
             ],
             [
-                'attribute' => 'company_agency_id',
-                'value' => 'companyAgency.company_agency_code',
-            ],
-
-            [
                 'attribute' => 'section_id',
                 'value' => 'section.section_name',
             ],
           //  'file',
+            [
+                'attribute' => 'document_priority_id',
+                'value' => 'documentPriority.document_priority_name',
+//                'filter' => Html::textInput(['maxlength' => 45]) 
+            ],
 /*            [
 
                 'attribute' => 'create_time',

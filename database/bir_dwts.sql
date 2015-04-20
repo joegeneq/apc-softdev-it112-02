@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2015 at 10:51 AM
+-- Generation Time: Apr 20, 2015 at 10:12 AM
 -- Server version: 5.6.21
--- PHP Version: 5.5.19
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -114,14 +114,26 @@ CREATE TABLE IF NOT EXISTS `company_agency` (
   `company_agency_description` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `company_agency`
 --
 
 INSERT INTO `company_agency` (`id`, `company_agency_code`, `company_agency_name`, `company_agency_description`, `create_time`, `update_time`) VALUES
-(5, 'DTI', 'Department of Trade and Industry', 'In all these, we adhere strictly to the tenets of professionalism, integrity, and transparency. We continue to be the public''s Agency of Choice, an organization where creativity, innovation, professional and personal growth find full expression.', '2015-03-28 11:49:28', '2015-03-28 20:26:03');
+(5, 'DTI', 'Department of Trade and Industry', 'In all these, we adhere strictly to the tenets of professionalism, integrity, and transparency. We continue to be the public''s Agency of Choice, an organization where creativity, innovation, professional and personal growth find full expression.', '2015-03-28 11:49:28', '2015-03-28 20:26:03'),
+(6, 'CSC', 'Civil Service Commission', '', '2015-04-15 23:10:00', '2015-04-16 07:10:00'),
+(7, 'SC', 'Supreme Court', '', '2015-04-15 23:10:38', '2015-04-16 07:10:38'),
+(8, 'NSB', 'National Selection Board', '', '2015-04-15 23:11:57', '2015-04-16 07:11:57'),
+(9, 'CESB', 'Career Executive Service Board', '', '2015-04-15 23:12:18', '2015-04-16 07:12:18'),
+(10, 'NICA', 'National Intelligence Coordinating Agency', '', '2015-04-15 23:13:13', '2015-04-16 07:13:13'),
+(11, 'DBM', 'Department of Budget', '', '2015-04-15 23:13:29', '2015-04-16 07:13:49'),
+(12, 'DOF', 'Department of Finance', '', '2015-04-15 23:14:24', '2015-04-16 07:14:24'),
+(13, 'PMS', 'Pesidential Management Staff', '', '2015-04-15 23:15:45', '2015-04-16 07:15:45'),
+(14, 'PHILHEALTH', 'Philippine Health Insurance Corporation', '', '2015-04-15 23:16:48', '2015-04-16 07:16:48'),
+(15, 'Pag-IBIG', 'Home Development Mutual Fund', '', '2015-04-15 23:18:24', '2015-04-16 07:18:24'),
+(16, 'Ombudsman', 'Office of the Ombudsman', '', '2015-04-15 23:18:58', '2015-04-16 07:18:58'),
+(17, 'NBI', 'National Bureau Invistigations', '', '2015-04-15 23:19:35', '2015-04-16 07:19:35');
 
 -- --------------------------------------------------------
 
@@ -172,14 +184,7 @@ CREATE TABLE IF NOT EXISTS `document` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `section_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `document`
---
-
-INSERT INTO `document` (`id`, `document_tracking_number`, `document_name`, `document_description`, `document_target_date`, `document_category`, `document_priority_id`, `document_type_id`, `document_comment`, `employee_id`, `customer_id`, `company_agency_id`, `document_image_front_page`, `logo`, `create_time`, `update_time`, `section_id`) VALUES
-(107, '20150414-01-0013', 'dadwadwa', 'wdawdwadwadw', '2015-03-26', 2, 3, 2, 'sfesfsfe', 1, 3, 5, NULL, '', '2015-04-14 09:29:36', '2015-04-14 17:29:36', 4);
+) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=latin1;
 
 --
 -- Triggers `document`
@@ -214,15 +219,15 @@ CREATE TABLE IF NOT EXISTS `document_category` (
   `document_category_description` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_category`
 --
 
 INSERT INTO `document_category` (`id`, `document_category_name`, `document_category_description`, `create_time`, `update_time`) VALUES
-(1, 'Paru', 'this category', NULL, NULL),
-(2, 'Category ', 'fgsgdfsdf', '2015-03-28 13:00:05', '2015-03-28 21:00:05');
+(3, 'Organizational Management ', '', '2015-04-16 00:30:01', '2015-04-16 08:30:01'),
+(4, 'Budget Allocation', '', '2015-04-16 00:31:40', '2015-04-16 08:31:40');
 
 -- --------------------------------------------------------
 
@@ -236,16 +241,17 @@ CREATE TABLE IF NOT EXISTS `document_priority` (
   `document_priority_description` text,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_priority`
 --
 
 INSERT INTO `document_priority` (`id`, `document_priority_name`, `document_priority_description`, `create_time`, `update_time`) VALUES
-(1, 'Low', 'blah', '2015-03-28 13:33:09', '2015-03-28 21:33:09'),
-(2, 'Medium', 'blah', NULL, NULL),
-(3, 'High', 'blah', NULL, NULL);
+(1, 'Low', '', '2015-03-28 13:33:09', '2015-04-20 11:28:50'),
+(2, 'Medium', '', NULL, '2015-04-20 11:28:22'),
+(3, 'High', '', NULL, '2015-04-20 11:28:30'),
+(4, 'Urgent', '', '2015-04-20 03:28:16', '2015-04-20 11:28:16');
 
 -- --------------------------------------------------------
 
@@ -255,18 +261,59 @@ INSERT INTO `document_priority` (`id`, `document_priority_name`, `document_prior
 
 CREATE TABLE IF NOT EXISTS `document_type` (
 `id` int(11) NOT NULL,
-  `document_type_name` varchar(45) DEFAULT NULL,
+  `document_type_name` varchar(255) DEFAULT NULL,
   `document_type_description` text,
+  `section_id` int(11) NOT NULL,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document_type`
 --
 
-INSERT INTO `document_type` (`id`, `document_type_name`, `document_type_description`, `create_time`, `update_time`) VALUES
-(2, 'Services', 'docu', '2015-03-28 13:27:24', '2015-03-28 21:27:24');
+INSERT INTO `document_type` (`id`, `document_type_name`, `document_type_description`, `section_id`, `create_time`, `update_time`) VALUES
+(13, 'Service Record', '', 10, '2015-04-20 06:34:46', '2015-04-20 14:34:46'),
+(14, 'Request for Certification of Employment (COE)', '', 10, '2015-04-20 06:37:27', '2015-04-20 14:37:27'),
+(15, 'Subpoena', '', 10, '2015-04-20 06:37:42', '2015-04-20 14:37:42'),
+(16, 'Request for Transfer', '', 10, '2015-04-20 06:38:00', '2015-04-20 14:38:00'),
+(17, 'RTAO/RSO', '', 10, '2015-04-20 06:41:23', '2015-04-20 14:41:23'),
+(18, 'Statement of Asseets, Liabiliteis and Net Wort (SALN)', '', 10, '2015-04-20 06:41:48', '2015-04-20 14:41:48'),
+(19, 'Memorandum', '', 7, '2015-04-20 06:42:36', '2015-04-20 14:42:36'),
+(20, 'Employment Test Results (ETRs)', '', 7, '2015-04-20 06:43:09', '2015-04-20 14:43:09'),
+(21, 'Lineup of Candidates', '', 7, '2015-04-20 06:43:38', '2015-04-20 14:43:38'),
+(22, 'Forced Rank List (FRL)', '', 7, '2015-04-20 06:43:59', '2015-04-20 14:43:59'),
+(24, '1st Checklist ', '', 7, '2015-04-20 06:45:34', '2015-04-20 14:45:34'),
+(25, '2nd Checklist', '', 7, '2015-04-20 06:45:51', '2015-04-20 14:45:51'),
+(26, 'Authority to Report (docket)', '', 7, '2015-04-20 06:46:09', '2015-04-20 14:46:09'),
+(27, 'Payroll Endorsement / Payroll Adjustment', '', 7, '2015-04-20 06:46:35', '2015-04-20 14:46:35'),
+(28, 'Obligation Request / Disbursement Voucher', '', 7, '2015-04-20 06:47:15', '2015-04-20 14:47:15'),
+(29, 'Report on Appointments Issued (RAI)', '', 7, '2015-04-20 06:48:22', '2015-04-20 14:48:22'),
+(30, 'Probationary Report', '', 7, '2015-04-20 06:48:36', '2015-04-20 14:48:36'),
+(31, 'List of Promotables', '', 7, '2015-04-20 06:48:49', '2015-04-20 14:48:49'),
+(32, 'Appointments', '', 7, '2015-04-20 06:49:41', '2015-04-20 14:49:41'),
+(33, 'Report on Signed Appointments', '', 7, '2015-04-20 06:50:02', '2015-04-20 14:50:02'),
+(34, 'Publication', '', 7, '2015-04-20 06:50:12', '2015-04-20 14:50:12'),
+(35, 'Plantilla of Report', '', 7, '2015-04-20 06:50:30', '2015-04-20 14:50:30'),
+(36, 'RAT PLAN Report', '', 7, '2015-04-20 06:50:56', '2015-04-20 14:50:56'),
+(37, 'NOSCA (Notice of Organization, Staffing and Compensation Action)', '', 7, '2015-04-20 06:51:43', '2015-04-20 14:51:43'),
+(38, 'NOSA (Notice of Salary Adjustment)', '', 7, '2015-04-20 06:52:03', '2015-04-20 14:52:03'),
+(39, 'Notice of Accommodation to the same item number, change in item number, reappointment', '', 7, '2015-04-20 06:52:45', '2015-04-20 14:52:45'),
+(40, 'Regret Letters to Applicants', '', 7, '2015-04-20 06:53:30', '2015-04-20 14:53:30'),
+(41, 'Memorandum', '', 11, '2015-04-20 06:54:35', '2015-04-20 14:54:35'),
+(42, 'Indorsement', '', 11, '2015-04-20 06:54:56', '2015-04-20 14:54:56'),
+(43, 'Request Letter', '', 11, '2015-04-20 06:55:12', '2015-04-20 14:55:12'),
+(44, 'BIR E-Card', '', 11, '2015-04-20 06:55:26', '2015-04-20 14:55:26'),
+(45, 'Ref. Slip from CBS', '', 11, '2015-04-20 06:55:41', '2015-04-20 14:55:41'),
+(46, 'LDDAP', '', 11, '2015-04-20 06:55:58', '2015-04-20 14:55:58'),
+(47, 'Hard Copies of Payroll Registers', '', 11, '2015-04-20 06:56:18', '2015-04-20 14:56:18'),
+(48, 'Call-Up Letter', '', 11, '2015-04-20 06:57:06', '2015-04-20 14:57:06'),
+(49, 'Report', '', 11, '2015-04-20 06:57:23', '2015-04-20 14:57:23'),
+(50, 'Request of Funding', '', 11, '2015-04-20 06:57:42', '2015-04-20 14:57:42'),
+(51, 'Certification', '', 11, '2015-04-20 06:58:51', '2015-04-20 14:58:51'),
+(52, 'Payroll Register', '', 11, '2015-04-20 06:59:12', '2015-04-20 14:59:12'),
+(53, 'General Office Payroll', '', 11, '2015-04-20 06:59:36', '2015-04-20 14:59:36'),
+(54, 'Individual Claim', '', 11, '2015-04-20 06:59:52', '2015-04-20 14:59:52');
 
 -- --------------------------------------------------------
 
@@ -281,21 +328,13 @@ CREATE TABLE IF NOT EXISTS `document_workflow` (
   `station_desk_id` int(11) NOT NULL,
   `document_wokflow_comments` text,
   `document_workflow_status_id` int(11) NOT NULL,
-  `time_accepted` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `time_accepted` datetime DEFAULT CURRENT_TIMESTAMP,
   `time_released` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `total_time_spent` varchar(45) DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
-  `employee_id1` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `document_workflow`
---
-
-INSERT INTO `document_workflow` (`id`, `document_id`, `employee_id`, `station_desk_id`, `document_wokflow_comments`, `document_workflow_status_id`, `time_accepted`, `time_released`, `total_time_spent`, `create_time`, `update_time`, `employee_id1`) VALUES
-(1, 107, 1, 1, 'vdvdvxdv', 1, NULL, '2015-04-15 05:41:04', NULL, '2015-04-14 12:49:23', '2015-04-14 20:49:23', 1),
-(9, 107, 1, 1, 'wew', 1, '2015-04-15 08:03:39', '0000-00-00 00:00:00', NULL, '2015-04-15 08:03:39', '2015-04-15 16:03:39', 1);
+  `employee_id1` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Triggers `document_workflow`
@@ -357,14 +396,16 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `employee`
 --
 
 INSERT INTO `employee` (`id`, `employee_id_number`, `employee_last_name`, `employee_first_name`, `current_position`, `section_id`, `create_time`, `update_time`, `user_id`) VALUES
-(1, '4544234', 'Topacio', 'Bernard', 1, 4, '2015-03-28 16:35:59', '2015-04-07 12:05:52', 2);
+(2, '2015-00001', 'Topacio', 'Bernard', 2, 6, '2015-04-15 23:04:34', '2015-04-16 07:04:34', 3),
+(3, '2015-00002', 'Lansigan', 'Paolo', 2, 7, '2015-04-15 23:05:02', '2015-04-16 07:05:02', 4),
+(4, '2015-00003', 'Rianzares', 'Mark', 2, 9, '2015-04-15 23:05:21', '2015-04-16 07:05:21', 2);
 
 -- --------------------------------------------------------
 
@@ -380,7 +421,16 @@ CREATE TABLE IF NOT EXISTS `employee_has_position` (
   `employee_position_end_date` date DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee_has_position`
+--
+
+INSERT INTO `employee_has_position` (`id`, `employee_id`, `position_id`, `employee_position_start_date`, `employee_position_end_date`, `create_time`, `update_time`) VALUES
+(1, 2, 2, '2015-04-06', '2016-06-21', '2015-04-15 23:08:27', '2015-04-16 07:08:27'),
+(2, 3, 2, '2015-04-14', '2016-07-20', '2015-04-15 23:08:43', '2015-04-16 07:08:43'),
+(3, 4, 2, '2015-04-14', '2016-06-29', '2015-04-15 23:08:59', '2015-04-16 07:08:59');
 
 -- --------------------------------------------------------
 
@@ -395,14 +445,7 @@ CREATE TABLE IF NOT EXISTS `employee_has_station_desk` (
   `station_desk_role_id` int(11) NOT NULL,
   `create_time` timestamp NULL DEFAULT NULL,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `employee_has_station_desk`
---
-
-INSERT INTO `employee_has_station_desk` (`id`, `employee_id`, `station_desk_id`, `station_desk_role_id`, `create_time`, `update_time`) VALUES
-(1, 1, 1, 1, '2015-03-29 01:21:37', '2015-03-29 09:21:37');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -418,14 +461,15 @@ CREATE TABLE IF NOT EXISTS `position` (
   `position_notes` text,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `position`
 --
 
 INSERT INTO `position` (`id`, `position_code`, `position_name`, `position_description`, `position_notes`, `create_time`, `update_time`) VALUES
-(1, 'OP', 'Opeaning Position', 'fisnenfens', 'effsfesfsef', '2015-03-28 16:21:15', '2015-03-29 00:21:15');
+(1, 'OP', 'Opeaning Position', 'fisnenfens', 'effsfesfsef', '2015-03-28 16:21:15', '2015-03-29 00:21:15'),
+(2, 'RCV', 'Reciever ', 'Receives Documents ', '', '2015-04-15 23:03:11', '2015-04-16 07:03:11');
 
 -- --------------------------------------------------------
 
@@ -441,15 +485,19 @@ CREATE TABLE IF NOT EXISTS `section` (
   `section_description` text NOT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `section`
 --
 
 INSERT INTO `section` (`id`, `section_number`, `section_code`, `section_name`, `section_description`, `create_time`, `update_time`) VALUES
-(4, '01', 'PSN', 'PeopleSection', 'regregregregreg', '2015-03-28 16:05:53', '2015-03-29 00:05:53'),
-(5, '02', 'SMSGT', 'IAmLegend', 'para sa kinabukasan', '2015-03-28 16:05:53', '2015-03-29 00:05:53');
+(6, '01', 'CM', 'Career Management', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', '2015-04-15 22:54:00', '2015-04-16 06:54:00'),
+(7, '02', 'MM', 'Manpower Management Section', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', '2015-04-15 22:54:17', '2015-04-16 06:54:17'),
+(8, '03', 'PM', 'Performance Evaluation and Management', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', '2015-04-15 22:54:34', '2015-04-16 06:54:34'),
+(9, '04', 'CB', 'Compensation and Benefits', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', '2015-04-15 22:54:55', '2015-04-16 06:54:55'),
+(10, '05', 'IR', 'Information and Records', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', '2015-04-15 22:55:16', '2015-04-16 06:55:16'),
+(11, '06', 'PR', 'Payroll', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', '2015-04-15 22:55:39', '2015-04-16 06:55:39');
 
 -- --------------------------------------------------------
 
@@ -465,14 +513,19 @@ CREATE TABLE IF NOT EXISTS `station_desk` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `section_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `station_desk`
 --
 
 INSERT INTO `station_desk` (`id`, `station_desk_code`, `station_desk_name`, `station_desk_notes`, `create_time`, `update_time`, `section_id`) VALUES
-(1, 'STND', 'station desk 1 ', 'dfsfdgdgwfdgrgfrdh', '2015-03-28 16:41:50', '2015-03-29 00:41:50', 4);
+(2, 'RCV-01', 'Recieving Station', 'Station to receives document  ', '2015-04-15 23:06:27', '2015-04-16 07:06:27', 6),
+(3, 'RCV-02', 'Recieving Station', 'Station to receives document ', '2015-04-15 23:06:52', '2015-04-16 07:06:52', 7),
+(4, 'RCV-03', 'Recieving Station', 'Station to receives document ', '2015-04-15 23:07:02', '2015-04-16 07:07:02', 8),
+(5, 'RCV-04', 'Recieving Station', 'Station to receives document ', '2015-04-15 23:07:23', '2015-04-16 07:07:23', 9),
+(6, 'RCV-05', 'Recieving Station', 'Station to receives document ', '2015-04-15 23:07:35', '2015-04-16 07:07:35', 10),
+(7, 'RCV-06', 'Recieving Station', 'Station to receives document ', '2015-04-15 23:07:46', '2015-04-16 07:07:46', 11);
 
 -- --------------------------------------------------------
 
@@ -505,14 +558,18 @@ INSERT INTO `station_desk_role` (`id`, `station_desk_role_code`, `station_desk_r
 CREATE TABLE IF NOT EXISTS `table_seq` (
 `id` int(11) NOT NULL,
   `time_stamp` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `table_seq`
 --
 
 INSERT INTO `table_seq` (`id`, `time_stamp`) VALUES
-(1, '2015-04-15');
+(1, '2015-04-16'),
+(2, '2015-04-16'),
+(3, '2015-04-17'),
+(4, '2015-04-17'),
+(5, '2015-04-17');
 
 -- --------------------------------------------------------
 
@@ -604,7 +661,7 @@ ALTER TABLE `document_priority`
 -- Indexes for table `document_type`
 --
 ALTER TABLE `document_type`
- ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `section_id` (`section_id`);
 
 --
 -- Indexes for table `document_workflow`
@@ -680,7 +737,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `company_agency`
 --
 ALTER TABLE `company_agency`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `customer`
 --
@@ -690,27 +747,27 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=114;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=118;
 --
 -- AUTO_INCREMENT for table `document_category`
 --
 ALTER TABLE `document_category`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `document_priority`
 --
 ALTER TABLE `document_priority`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `document_type`
 --
 ALTER TABLE `document_type`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=55;
 --
 -- AUTO_INCREMENT for table `document_workflow`
 --
 ALTER TABLE `document_workflow`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `document_workflow_status`
 --
@@ -720,32 +777,32 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `employee_has_position`
 --
 ALTER TABLE `employee_has_position`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `employee_has_station_desk`
 --
 ALTER TABLE `employee_has_station_desk`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `position`
 --
 ALTER TABLE `position`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `station_desk`
 --
 ALTER TABLE `station_desk`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `station_desk_role`
 --
@@ -755,7 +812,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `table_seq`
 --
 ALTER TABLE `table_seq`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `user`
 --
@@ -801,6 +858,12 @@ ADD CONSTRAINT `fk_document_document_priority1` FOREIGN KEY (`document_priority_
 ADD CONSTRAINT `fk_document_document_type1` FOREIGN KEY (`document_type_id`) REFERENCES `document_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 ADD CONSTRAINT `fk_document_employee1` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 ADD CONSTRAINT `fk_document_section1` FOREIGN KEY (`section_id`) REFERENCES `section` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `document_type`
+--
+ALTER TABLE `document_type`
+ADD CONSTRAINT `document_type_ibfk_1` FOREIGN KEY (`section_id`) REFERENCES `section` (`id`);
 
 --
 -- Constraints for table `document_workflow`
