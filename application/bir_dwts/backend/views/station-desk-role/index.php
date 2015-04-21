@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
      <p>
-        <?= Html::button('Create Station Desk Role', ['value'=>Url::to('/bir_dwts/backend/web/index.php?r=station-desk-role%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
+        <?= Html::button('Create Station Desk Role', ['value'=>Url::to('index.php?r=station-desk-role%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
     </p>
 
     <?php

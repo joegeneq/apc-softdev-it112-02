@@ -27,6 +27,7 @@ body {
 .jumbotron {
     text-align: center;
     background-color: transparent;
+    padding-top: 150px;
 }
 
 .jumbotron .btn {
@@ -167,12 +168,17 @@ a.desc:after {
   border-color: #333;
 }
 
-.image{
+.image1{
+    position:absolute;
 	padding-top: 0px;
 	background-size: cover;
 	background-size: 100% 100%
-	background-position: center;
-	background-image: url("/bir_dwts/frontend/web/masthead_bg_1190x120.png");	
+}
+
+.image2{
+    position:absolute;
+    background-size: cover;
+    background-size: 100% 100%
 }
 
 .element {

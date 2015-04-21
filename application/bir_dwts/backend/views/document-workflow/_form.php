@@ -35,7 +35,7 @@ use common\models\DocumentWorkflowStatus;
 
     <?= $form->field($model, 'document_wokflow_comments')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'document_status_id')->dropDownList(
+    <?= $form->field($model, 'document_workflow_status_id')->dropDownList(
         ArrayHelper::map(DocumentWorkflowStatus::find()->all(),'id', 'document_workflow_status_name'),
         ['prompt'=>'Select DocumentStatus']
     ) ?>

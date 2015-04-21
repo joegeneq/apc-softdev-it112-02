@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::button('Create Customer', ['value'=>Url::to('/bir_dwts/frontend/web/index.php?r=customer%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
+        <?= Html::button('Create Customer', ['value'=>Url::to('index.php?r=customer%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
     </p>
 
     <?php

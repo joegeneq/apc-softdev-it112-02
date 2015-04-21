@@ -5,6 +5,10 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
+use common\models\Document;
+use common\models\Employee;
+use common\models\StationDesk;
+use common\models\DocumentWorkflowStatus;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\DocumentWorkflowSearch */

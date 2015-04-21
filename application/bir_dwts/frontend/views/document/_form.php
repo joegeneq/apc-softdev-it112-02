@@ -48,8 +48,8 @@ use dosamigos\datepicker\DatePicker;
         [
         'prompt'=>'Select Section',
         'onchange'=>'
-            $.post( "/bir_dwts/backend/web/index.php?r=document-type/lists&id='.'"+$(this).val(), function( data ) {
-                $( "select#models-contact" ).html( data );
+            $.post( "index.php?r=document-type/lists&id='.'"+$(this).val(), function( data ) {
+                $( "select#document-document_type_id" ).html( data );
         });'
 
         ]

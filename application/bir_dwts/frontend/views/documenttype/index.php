@@ -2,9 +2,6 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use yii\widgets\Pjax;
-use yii\bootstrap\Modal;
-use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\DocumentTypeSearch */
@@ -19,20 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::button('Create Document Type', ['value'=>Url::to('index.php?r=document-type%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
+        <?= Html::a('Create Document Type', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
-    <?php
-        Modal::begin([
-                'header'=>'<h4>Document Type</h4>',
-                'id'=>'modal',
-                'size'=>'modal-lg',
-            ]);
-
-        echo "<div id='modalContent'></div>";
-
-        Modal::end()
-    ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -40,15 +25,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-//            'id',
+            'id',
             'document_type_name',
             'document_type_description:ntext',
-            [
-                'attribute' => 'section_id',
-                'value' => 'section.section_name',
-            ],
+            'section_id',
             'create_time',
-            'update_time',
+            // 'update_time',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
