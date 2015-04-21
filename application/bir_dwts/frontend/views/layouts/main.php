@@ -33,13 +33,14 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => 'Home', 'visible' => !Yii::$app->user->isGuest, 'url' => ['/site/index']],
 //                ['label' => 'About', 'url' => ['/site/about']],
 //                ['label' => 'Contact', 'url' => ['/site/contact']],
 
             ];
 
             $menuItems[]=['label' => 'Document',
+                'visible' => !Yii::$app->user->isGuest,
                 'items' => [
                     ['label' => 'My Document', 'url' => ['/document']],
                     ['label' => 'Document Workflow', 'url' => ['/document-workflow']],
@@ -50,6 +51,7 @@ AppAsset::register($this);
             ];
 
             $menuItems[]=['label' => 'My Account',
+                'visible' => !Yii::$app->user->isGuest,
                 'items' => [
                     ['label' => 'My Information', 'url' => ['/employee']],
                     ['label' => 'My Station', 'url' => ['/employee-has-station-desk']],
@@ -58,7 +60,7 @@ AppAsset::register($this);
             ];
 
             if (Yii::$app->user->isGuest) {
-                $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+                $menuItems[] = ['label' => 'Signup', 'visible' => !Yii::$app->user->isGuest, 'url' => ['/site/signup']];
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
 
             } else {

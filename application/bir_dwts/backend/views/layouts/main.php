@@ -32,10 +32,11 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => 'Home', 'visible' => !Yii::$app->user->isGuest, 'url' => ['/site/index']],
             ];
 
             $menuItems[]=['label' => 'Document',
+               'visible' => !Yii::$app->user->isGuest,
                 'items' => [
                     ['label' => 'My Document', 'url' => ['/document']],
                     ['label' => 'Document Workflow', 'url' => ['/document-workflow']],
@@ -46,6 +47,7 @@ AppAsset::register($this);
             ];
 
             $menuItems[]=['label' => 'Employees',
+                'visible' => !Yii::$app->user->isGuest,
                 'items' => [
                     ['label' => 'Employee', 'url' => ['/employee']],
                     ['label' => 'Employee Has Position', 'url' => ['/employee-has-position']],
@@ -55,6 +57,7 @@ AppAsset::register($this);
             ];
 
             $menuItems[]=['label' => 'Station',
+                'visible' => !Yii::$app->user->isGuest,
                 'items' => [
                     ['label' => 'Station Desk', 'url' => ['/station-desk']],
                     ['label' => 'Station Desk Role', 'url' => ['/station-desk-role']],
@@ -63,6 +66,7 @@ AppAsset::register($this);
             ];
 
             $menuItems[]=['label' => 'Admin',
+                'visible' => !Yii::$app->user->isGuest,
                 'items' => [
                     ['label' => 'Document Category', 'url' => ['/document-category']],
                     ['label' => 'Document Priority', 'url' => ['/document-priority']],
