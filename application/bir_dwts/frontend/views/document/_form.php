@@ -11,6 +11,7 @@ use common\models\Customer;
 use common\models\CompanyAgency;
 use common\models\Section;
 use dosamigos\datepicker\DatePicker;
+use kartik\select2\Select2;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\document */
@@ -55,11 +56,14 @@ use dosamigos\datepicker\DatePicker;
         ]
     ) ?>
 
-
-    <?= $form->field($model, 'document_type_id')->dropDownList(
-        ArrayHelper::map(DocumentType::find()->all(),'id', 'document_type_name'),
-        ['prompt'=>'Select Type']
-    ) ?>
+    <?= $form->field($model, 'document_type_id')->widget(Select2::classname(), [
+        'data' => ArrayHelper::map(DocumentType::find()->all(),'id', 'document_type_name'),
+        'language' => 'en',
+        'options' => ['placeholder' => 'Select a Type ...'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
     
     <?= $form->field($model, 'document_comment')->textArea(['maxlength' => 45]) ?>
 
@@ -92,3 +96,6 @@ use dosamigos\datepicker\DatePicker;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+
+

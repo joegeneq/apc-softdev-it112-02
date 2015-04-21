@@ -23,7 +23,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::button('Create Document', ['value'=>Url::to('index.php?r=document%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
     </p>
-
     <?php
         Modal::begin([
                 'header'=>'<h4>Document</h4>',
@@ -35,11 +34,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
         Modal::end()
     ?>
-
+    <?php Pjax::begin(); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-         'rowOptions' => function($model){
+        'rowOptions' => function($model){
                 if($model->document_priority_id == '1')
                 {
                     return ['class'=>'success'];
@@ -57,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //            'id',
             'document_tracking_number',
             'document_name',
-            'document_description',
+ //           'document_description',
             [
                 'attribute' => 'document_target_date',
                 'value' => 'document_target_date',
@@ -79,34 +78,34 @@ $this->params['breadcrumbs'][] = $this->title;
     //                        ['class'=>'form-control','prompt'=>'Select Category']),
             ],
 
-            [
-                'attribute' => 'document_priority_id',
-                'value' => 'documentPriority.document_priority_name',
-//                'filter' => Html::textInput(['maxlength' => 45]) 
-            ],
+
             [
                 'attribute' => 'document_type_id',
                 'value' => 'documentType.document_type_name',
             ],
-            'document_comment',
+//            'document_comment',
             [
                 'attribute' => 'employee_id',
                 'value' => 'employee.employee_last_name',
+            ],
+            [
+                'attribute' => 'company_agency_id',
+                'value' => 'companyAgency.company_agency_code',
             ],
             [
                 'attribute' => 'customer_id',
                 'value' => 'customer.customer_lastname',
             ],
             [
-                'attribute' => 'company_agency_id',
-                'value' => 'companyAgency.company_agency_code',
-            ],
-
-            [
                 'attribute' => 'section_id',
                 'value' => 'section.section_name',
             ],
-            //'document_image_front_page',
+          //  'file',
+            [
+                'attribute' => 'document_priority_id',
+                'value' => 'documentPriority.document_priority_name',
+//                'filter' => Html::textInput(['maxlength' => 45]) 
+            ],
 /*            [
 
                 'attribute' => 'create_time',
@@ -127,5 +126,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+    <?php Pjax::end(); ?>
 </div>

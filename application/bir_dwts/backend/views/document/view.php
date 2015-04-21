@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->document_tracking_number], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->document_tracking_number], [
+        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -26,9 +26,10 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <?= DetailView::widget([
-        'model' => $model,
+        'model' => $model, 
+
         'attributes' => [
-            //'id',
+//            'id',
             'document_tracking_number',
             'document_name',
             'document_description',
@@ -36,10 +37,6 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'label' => 'Document Category',
                 'value' => $model->documentCategory->document_category_name,
-            ],
-            [
-                'label' => 'Document Priority',
-                'value' => $model->documentPriority->document_priority_name,
             ],
             [
                 'label' => 'Document Type',
@@ -51,18 +48,22 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => $model->employee->employee_last_name,
             ],
             [
-                'label' => 'Customer',
-                'value' => $model->customer->customer_lastname,
-            ],
-            [
                 'label' => 'Company Agency',
                 'value' => $model->companyAgency->company_agency_code,
+            ],
+            [
+                'label' => 'Customer',
+                'value' => $model->customer->customer_lastname,
             ],
             [
                 'label' => 'Section',
                 'value' => $model->section->section_name,
             ],
             'file',
+            [
+                'label' => 'Document Priority',
+                'value' => $model->documentPriority->document_priority_name,
+            ],
             'create_time',
             'update_time',
         ],
