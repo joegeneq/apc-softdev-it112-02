@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
@@ -9,7 +9,7 @@ use common\models\Document;
 use common\models\Employee;
 use common\models\StationDesk;
 use common\models\DocumentWorkflowStatus;
-
+use kartik\export\ExportMenu;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\DocumentWorkflowSearch */
@@ -39,11 +39,9 @@ $this->params['breadcrumbs'][] = $this->title;
         Modal::end()
     ?>
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+    <?php
+    $gridColumns = [
+    ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
             [
@@ -76,7 +74,23 @@ $this->params['breadcrumbs'][] = $this->title;
 //          'update_time',
 
             ['class' => 'yii\grid\ActionColumn'],
-        ],
+    ];
+        echo ExportMenu::widget([
+    'dataProvider' => $dataProvider,
+    'columns' => $gridColumns
+]);
+
+        echo GridView::widget([
+        'dataProvider'=> $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => $gridColumns,
+        'responsive'=>true,
+        'hover'=>true,
+        'toolbar'=>[
+            '{export}',
+            '{toggleData}'
+        ]
+
     ]); ?>
 
 </div>

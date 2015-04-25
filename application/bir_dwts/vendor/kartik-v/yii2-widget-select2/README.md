@@ -1,6 +1,12 @@
 yii2-widget-select2
 ===================
 
+[![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-widget-select2/v/stable)](https://packagist.org/packages/kartik-v/yii2-widget-select2)
+[![License](https://poser.pugx.org/kartik-v/yii2-widget-select2/license)](https://packagist.org/packages/kartik-v/yii2-widget-select2)
+[![Total Downloads](https://poser.pugx.org/kartik-v/yii2-widget-select2/downloads)](https://packagist.org/packages/kartik-v/yii2-widget-select2)
+[![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-widget-select2/d/monthly)](https://packagist.org/packages/kartik-v/yii2-widget-select2)
+[![Daily Downloads](https://poser.pugx.org/kartik-v/yii2-widget-select2/d/daily)](https://packagist.org/packages/kartik-v/yii2-widget-select2)
+
 This is the Select2 widget and a Yii 2 enhanced wrapper for the [Select2 jQuery plugin](http://ivaynberg.github.io/select2). This input widget is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results. The widget is specially styled for Bootstrap 3 and offers a few enhancements not available in the source plugin. The widget allows graceful degradation to a normal HTML select or text input, if the browser does not support JQuery.
 
 > NOTE: This extension is a sub repo split of [yii2-widgets](https://github.com/kartik-v/yii2-widgets). The split has been done since 08-Nov-2014 to allow developers to install this specific widget in isolation if needed. One can also use the extension the previous way with the whole suite of [yii2-widgets](http://demos.krajee.com/widgets).
@@ -25,7 +31,7 @@ to the ```require``` section of your `composer.json` file.
 
 ## Latest Release
 
-> NOTE: The latest version of the module is v1.0.0 released on 08-Nov-2014. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-select2/blob/master/CHANGE.md) for details.
+> NOTE: The latest version of the module is v1.1.0 released on 03-Jan-2015. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-select2/blob/master/CHANGE.md) for details.
 
 ## Demo
 

@@ -13,6 +13,7 @@ use Yii;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\base\InvalidConfigException;
+use kartik\base\Config;
 
 /**
  * Select2 widget is a Yii2 wrapper for the Select2 jQuery plugin. This
@@ -36,6 +37,11 @@ class Select2 extends \kartik\base\InputWidget
      * If this property not set, then the current application language will be used.
      */
     public $language;
+    
+    /**
+     * @var bool whether to hide the search control and render it as a simple select. Defaults to `false`.
+     */
+    public $hideSearch = false;
 
     /**
      * @var array addon to prepend or append to the Select2 widget
@@ -93,6 +99,11 @@ class Select2 extends \kartik\base\InputWidget
             isset($this->pluginOptions['tags']);
         if (!isset($this->data) && !$this->_hidden) {
             throw new InvalidConfigException("No 'data' source found for Select2. Either the 'data' property must be set OR one of 'data', 'query', 'ajax', or 'tags' must be set within 'pluginOptions'.");
+        }
+        if ($this->hideSearch) {
+            $css = ArrayHelper::getValue($this->pluginOptions, 'dropdownCssClass', '');
+            $css .= ' kv-hide';
+            $this->pluginOptions['dropdownCssClass'] = $css;
         }
         if (!empty($this->options['placeholder']) && !$this->_hidden &&
             (empty($this->options['multiple']) || $this->options['multiple'] == false)
@@ -169,24 +180,34 @@ class Select2 extends \kartik\base\InputWidget
         echo $this->_loadIndicator . $this->embedAddon($input);
     }
 
+     /**
+     * Registers the asset bundle and locale
+     */
+    protected function registerAssetBundle() {
+        $view = $this->getView();
+        if (!empty($this->language) && substr($this->language, 0, 2) != 'en') {
+            $path = __DIR__ . '/lib';
+            $file = "select2_locale_{$this->language}.js";
+            if (!Config::fileExists("{$path}/{$file}")) {
+                $file = "select2_locale_{$this->_lang}.js";
+            }
+            if (Config::fileExists("{$path}/{$file}")) {
+                Select2Asset::register($view)->js[] = $file;
+                return;
+            }
+        }
+        Select2Asset::register($view);
+    }
+    
     /**
      * Registers the needed assets
      */
     public function registerAssets()
     {
-        $view = $this->getView();
         $id = $this->options['id'];
-        
-        // set locale and language
-        if (!empty($this->language) && substr($this->language, 0, 2) != 'en') {
-            Select2Asset::register($view)->js[] = 'select2_locale_' . $this->language . '.js';
-        } else {
-            Select2Asset::register($view);
-        }
-        
+        $this->registerAssetBundle();
         // set default width
         $this->pluginOptions['width'] = 'resolve';
-        
         // validate bootstrap has-success & has-error states
         $this->pluginEvents += ['select2-open' => "function(){initSelect2DropStyle('{$id}')}"];
         

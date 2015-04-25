@@ -17,4 +17,10 @@ return [
             'useFileTransport' => true,
         ],
     ],
+        'modules' => [
+        'gridview' =>  [
+        'class' => '\kartik\grid\Module'
+        
+            ]
+        ],
 ];
