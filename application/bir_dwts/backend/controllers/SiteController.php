@@ -6,6 +6,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
+use backend\models\SignupForm;
 
 /**
  * Site controller
@@ -26,7 +27,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'create','view','update','delete'],
+                        'actions' => ['logout', 'index', 'create','view','update','delete','signup'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -58,6 +59,20 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+        public function actionSignup()
+    {
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signup()) {
+            return $this->redirect(['/user/index']);
+            }
+        }
+
+        return $this->renderAjax('signup', [
+            'model' => $model,
+        ]);
+    }
+
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {
@@ -66,9 +81,17 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            if(Yii::$app->user->can('admin'))
+            {
+                //            return $this->goBack();
+                //        Yii::$app->urlManager->createUrl('http://localhost/bir_dwts/backend/web/index.php');
+                return $this->goHome();
+            }
+
         } else {
-            return $this->redirect('/bir_dwts/frontend/web/index.php');
+            return $this->render('login', [
+                'model' => $model,
+            ]);
         }
     }
 
@@ -76,6 +99,6 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->redirect('/bir_dwts/frontend/web/index.php');
+        return $this->goHome();
     }
 }

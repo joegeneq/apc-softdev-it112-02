@@ -12,8 +12,6 @@ $this->title = 'My Yii Application';
         <img src="bir-logo.png"/>
     </div>
 
-
-	
    <div class="jumbotron">
         <h1>Welcome!</h1>
 

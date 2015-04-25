@@ -65,6 +65,8 @@ AppAsset::register($this);
 
             ];
 
+            $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+
             $menuItems[]=['label' => 'Admin',
                 'visible' => !Yii::$app->user->isGuest,
                 'items' => [
@@ -77,6 +79,8 @@ AppAsset::register($this);
                 ],
 
             ];
+
+
 
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

@@ -5,6 +5,14 @@ $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
+    <div class="image2">
+        <img src="masthead_bg_1190x120.png"/>
+    </div>
+
+    <div class="image1">
+        <img src="bir-logo.png"/>
+    </div>
+
     <div class="jumbotron">
         <h1>Congratulations!</h1>
 

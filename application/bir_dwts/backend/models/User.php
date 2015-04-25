@@ -3,6 +3,8 @@
 namespace backend\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "user".
@@ -58,8 +60,8 @@ class User extends \yii\db\ActiveRecord
             'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
             'status' => 'Status',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'created_at' => 'Create Time',
+            'updated_at' => 'Update Time',
         ];
     }
 
@@ -69,5 +71,19 @@ class User extends \yii\db\ActiveRecord
     public function getEmployees()
     {
         return $this->hasMany(Employee::className(), ['user_id' => 'id']);
+    }
+
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+            'class' => 'yii\behaviors\TimestampBehavior',
+            'attributes' => [
+            ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'update_at'],
+            ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
+            ],
+            'value' => new Expression('NOW()'),
+        ],
+        ];
     }
 }
