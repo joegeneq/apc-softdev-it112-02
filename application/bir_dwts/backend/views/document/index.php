@@ -24,17 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::button('Create Document', ['value'=>Url::to('index.php?r=document%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
     </p>
-    <?php
-        Modal::begin([
-                'header'=>'<h4>Document</h4>',
-                'id'=>'modal',
-                'size'=>'modal-lg',
-            ]);
-
-        echo "<div id='modalContent'></div>";
-
-        Modal::end()
-    ?>
+    
     <?php
         Modal::begin([
                 'header'=>'<h4>Document</h4>',
