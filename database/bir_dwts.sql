@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2015 at 10:12 AM
+-- Generation Time: Apr 26, 2015 at 07:25 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -19,20 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `bir_dwts`
 --
-
-DELIMITER $$
---
--- Procedures
---
-CREATE DEFINER=`root`@`localhost` PROCEDURE `TruncateTable`()
-    MODIFIES SQL DATA
-    DETERMINISTIC
-    SQL SECURITY INVOKER
-BEGIN
-    TRUNCATE table_seq;
-END$$
-
-DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -184,7 +170,15 @@ CREATE TABLE IF NOT EXISTS `document` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `section_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `document`
+--
+
+INSERT INTO `document` (`id`, `document_tracking_number`, `document_name`, `document_description`, `document_target_date`, `document_category`, `document_priority_id`, `document_type_id`, `document_comment`, `employee_id`, `customer_id`, `company_agency_id`, `document_image_front_page`, `logo`, `create_time`, `update_time`, `section_id`) VALUES
+(1, '20150421-02-0006', 'Fwfafwa', 'afawfwa', '2015-04-22', 3, 2, 15, 'wfwafwa', 2, 3, 8, NULL, '', '2015-04-21 05:26:50', '2015-04-21 13:26:50', 7),
+(2, '20150424-02-0007', 'dfdsfdsf', 'dfdsfdsf', '2015-04-30', 3, 2, 25, 'dsfdsfdsf', 2, 3, 11, NULL, '', '2015-04-24 00:57:10', '2015-04-24 08:57:10', 7);
 
 --
 -- Triggers `document`
@@ -334,7 +328,14 @@ CREATE TABLE IF NOT EXISTS `document_workflow` (
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime DEFAULT NULL,
   `employee_id1` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `document_workflow`
+--
+
+INSERT INTO `document_workflow` (`id`, `document_id`, `employee_id`, `station_desk_id`, `document_wokflow_comments`, `document_workflow_status_id`, `time_accepted`, `time_released`, `total_time_spent`, `create_time`, `update_time`, `employee_id1`) VALUES
+(1, 1, 2, 2, '', 1, '2015-04-21 13:27:47', '0000-00-00 00:00:00', NULL, '2015-04-21 05:27:47', '2015-04-21 13:27:47', 4);
 
 --
 -- Triggers `document_workflow`
@@ -558,7 +559,7 @@ INSERT INTO `station_desk_role` (`id`, `station_desk_role_code`, `station_desk_r
 CREATE TABLE IF NOT EXISTS `table_seq` (
 `id` int(11) NOT NULL,
   `time_stamp` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `table_seq`
@@ -569,7 +570,9 @@ INSERT INTO `table_seq` (`id`, `time_stamp`) VALUES
 (2, '2015-04-16'),
 (3, '2015-04-17'),
 (4, '2015-04-17'),
-(5, '2015-04-17');
+(5, '2015-04-17'),
+(6, '2015-04-21'),
+(7, '2015-04-24');
 
 -- --------------------------------------------------------
 
@@ -588,7 +591,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `status` smallint(6) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
@@ -597,7 +600,21 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id`, `username`, `password`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
 (2, 'mfrianzares', NULL, 'x8HM9FKRdDBpRwOIaCxM888yZ5LBE2U9', '$2y$13$FfYJcsG4sxF7mFNydxXsSuGPwJo5lwE2.FRiFxVi1LztUELMMRfRy', '', 'mfrianzares@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (3, 'bptopacio', NULL, '6P8JJJPAXnuIFrjFphypqXTMa_tfVZ-f', '$2y$13$IwUALhy5UrzKn/i7ty.GjejfE2MJ.n7XvL8w0Q/uSQbkcmj1JtMg6', '', 'bptopacio@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(4, 'pglansigan', NULL, 'tUwgRE_tqD9aratYXzjg_pmGl_RW7qsY', '$2y$13$oeRPErCETJctvjJSoOlRhui24GFDCYOHL6Hmp5kjAFr4yHqMJU4NK', '', 'pglansigan@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(4, 'pglansigan', NULL, 'tUwgRE_tqD9aratYXzjg_pmGl_RW7qsY', '$2y$13$oeRPErCETJctvjJSoOlRhui24GFDCYOHL6Hmp5kjAFr4yHqMJU4NK', '', 'pglansigan@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 'admin1', NULL, 'FNAHm5H9mnbXX_OjhAGC4-4YcUkzYTSE', '$2y$13$AIBhh0cuIcuHePuQ3BlTkuL.aOC5JvepdRXizflD.SYju9wCLapPO', '', 'admin@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 'admin2', NULL, '0I2jjmgr9mThf4ddT2e6MDY5FUZFpGLZ', '$2y$13$uLVVHdjoOgCSHPBslX2tIey4SPZLgTvxRZ7/agylJTQRbzFqVBuOq', '', 'admin2@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(7, 'admin3', NULL, 'XwKUFs3P7ALqaUiX04uRUCgHY0qCQLbD', '$2y$13$SwobQo9GA.5/LA/k5ShgXOUuyqo/VN9roPOZnepzbIxNqj416XOWy', '', 'admin3@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(8, 'admin4', NULL, 'tBoj7tiF9oerrZTvAe3gykZutdOBh2sT', '$2y$13$XRTGPFFgHw2vx5uxSBahEeyy8RxtmRv/.7wlXs2JRc0tNtnuU4yzu', '', 'admin4@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(9, 'user1', NULL, 'Tj61ToH7G2lTJpeNNvep_kiUcyYd1tIH', '$2y$13$cwMoXm3IMfRJ7NnpFKoy2u9ZdqkqHwERFwdXbgIqMM3J0SUDf1/8G', '', 'user1@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(10, 'user2', NULL, '-CPqbmOS3aQGGYm-zbK3TCdq2VFzf845', '$2y$13$qTaJeg/bmPgZ5SwqM2RmfOFhrAAsXTLQebu0ZhbjWJRufOi0VjN0a', '', 'user2@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(11, 'user3', NULL, 'P8_9JyYUZy9J-pVVOnI4q0kM-T2ED7y9', '$2y$13$Nj5N7TAjWdz4DF8LupiZ2.UKZjZfZeVSlHlTWuC7eOn9rLqQ9/KZG', '', 'user3@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(12, 'user4', NULL, 'z68OSuXkkQKSrhJXhVyi00-wG5rxQ4a_', '$2y$13$RWW8V.Yu9dRZgic50z4v0.w2YgdfMgM9LdHmPXN8KE3vtjrXx7ou.', '', 'user4@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(13, 'user5', NULL, 'dgipiMg512NMWGz0cG9xwOiBUx8_rx1p', '$2y$13$PZ46m2jYdPWCcL29R2O5ge166dgYpjM5MMNnnawP2DwMzOmCM5pzm', '', 'user5@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(14, 'user6', NULL, 'BB6pKACYVn4YW0iZ3Jf7j7qdZj2NGz7e', '$2y$13$20eV0hB3xdCq4FdON8sSCOtER3l3l4o32aanjZFEKqTNXYAM71c.C', '', 'user6@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(15, 'user7', NULL, 'gN8fOB4NpW22yRt1fi_N4QJAo2WlfUrZ', '$2y$13$l8eBkk3T6SUDG373mjGigO6CStTIQkCZRRvtsidlv2mbzmxeHcrvq', '', 'user7@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(16, 'user8', NULL, 'X6b8iGAEWhS3v7i4gpVTWbpO3NDfboR5', '$2y$13$4QpjIELpu2Zqpp4.az1r.Ot7UrwMgbU5qTOPPNytUFJxlDINMMqT2', '', 'user8@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(17, 'user9', NULL, '2AIAahxzo-CJwWrdVrXi85QxRU0iST3C', '$2y$13$W5Lyl25OsdoxLpDYYBB8SOuYEN0.y7b3FkHMEQTvdn/.Eq86VPdX2', '', 'user9@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(18, 'user10', NULL, 'zl18_BPqDF62V7eSTayZVdmoDduVWymK', '$2y$13$BO6KoAKiOmR0/jecHUJm2.AbSZmdsqMZHaxUN2OcaD667.YS4Nnma', '', 'user10@gmail.com', 10, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -747,7 +764,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=118;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `document_category`
 --
@@ -767,7 +784,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=55;
 -- AUTO_INCREMENT for table `document_workflow`
 --
 ALTER TABLE `document_workflow`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `document_workflow_status`
 --
@@ -812,12 +829,12 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `table_seq`
 --
 ALTER TABLE `table_seq`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- Constraints for dumped tables
 --
@@ -908,7 +925,7 @@ DELIMITER $$
 --
 -- Events
 --
-CREATE DEFINER=`root`@`localhost` EVENT `e_daily` ON SCHEDULE EVERY 1 DAY STARTS '2015-04-16 00:00:00' ON COMPLETION NOT PRESERVE ENABLE COMMENT 'Descriptive comment' DO TRUNCATE table_seq$$
+CREATE DEFINER=`root`@`localhost` EVENT `e_daily` ON SCHEDULE EVERY 1 DAY STARTS '2015-04-21 00:00:00' ON COMPLETION NOT PRESERVE ENABLE COMMENT 'Descriptive comment' DO TRUNCATE table_seq$$
 
 DELIMITER ;
 

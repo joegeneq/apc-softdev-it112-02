@@ -49,6 +49,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => 'document.document_tracking_number',
             ],
             [
+                'attribute' => 'document_id',
+                'label' => 'Document Name',
+                'value' => 'document.document_name',
+            ],
+            [
                 'attribute' => 'employee_id',
                 'value' => 'employee.employee_last_name',
             ],
@@ -70,8 +75,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'time_accepted',
             'time_released',
             'total_time_spent',
-            'create_time',
-          'update_time',
+//            'create_time',
+//            'update_time',
 
             ['class' => 'yii\grid\ActionColumn'],
     ];?>

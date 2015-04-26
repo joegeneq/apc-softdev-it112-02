@@ -34,6 +34,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => $model->document->document_tracking_number,
             ],
             [
+                'label' => 'Document Name',
+                'value' => $model->document->document_name,
+            ],
+            [
                 'label' => 'Receiver',
                 'value' => $model->employee->employee_last_name,
             ],

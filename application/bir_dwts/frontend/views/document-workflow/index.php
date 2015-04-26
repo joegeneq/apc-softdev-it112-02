@@ -49,6 +49,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => 'document.document_tracking_number',
             ],
             [
+                'attribute' => 'document_id',
+                'label' => 'Document Name',
+                'value' => 'document.document_name',
+            ],
+            [
                 'attribute' => 'employee_id',
                 'value' => 'employee.employee_last_name',
             ],
