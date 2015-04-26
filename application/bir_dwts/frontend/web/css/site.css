@@ -175,7 +175,7 @@ a.desc:after {
 	background-size: 100% 100%
 }
 
-.image2{
+.image2 {
     position:absolute;
     background-size: cover;
     background-size: 100% 100%
@@ -184,4 +184,8 @@ a.desc:after {
 .element {
     max-height: 3000px;
     height: 3000px;
+}
+
+.export-menu {
+    text-align: right;
 }

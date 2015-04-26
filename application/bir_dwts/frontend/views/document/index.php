@@ -2,14 +2,14 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
 use dosamigos\datepicker\DatePicker;
 use yii\helpers\ArrayHelper;
 use common\models\DocumentCategory;
-
+use kartik\export\ExportMenu;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\DocumentSearch */
@@ -26,6 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::button('Create Document', ['value'=>Url::to('index.php?r=document%2Fcreate'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
     </p>
+    
     <?php
         Modal::begin([
                 'header'=>'<h4>Document</h4>',
@@ -37,24 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
         Modal::end()
     ?>
-    <?php Pjax::begin(); ?>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'rowOptions' => function($model){
-                if($model->document_priority_id == '1')
-                {
-                    return ['class'=>'success'];
-                }else if($model->document_priority_id == '2')
-                {
-                    return ['class'=>'warning'];
-                }else if($model->document_priority_id == '3')
-                {
-                    return ['class'=>'danger'];
-                }
-        },
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+
+
+    <?php
+    $gridColumns = [
+        ['class' => 'yii\grid\SerialColumn'],
 
 //            'id',
             'document_tracking_number',
@@ -126,9 +114,26 @@ $this->params['breadcrumbs'][] = $this->title;
 */
 //            'update_time',
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
+        ['class' => 'yii\grid\ActionColumn'],
+    ];?>
+
+    <div class="export-menu">
+    <?php
+    echo ExportMenu::widget([
+        'dataProvider' => $dataProvider,
+        'columns' => $gridColumns
+    ]);
+    ?>
+    </div>
+
+    <?php
+    echo GridView::widget([
+        'dataProvider'=> $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => $gridColumns,
+        'responsive'=>true,
+        'hover'=>true,
     ]); ?>
-    <?php Pjax::end(); ?>
+
 </div>
 

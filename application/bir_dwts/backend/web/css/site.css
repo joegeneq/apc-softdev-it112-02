@@ -185,3 +185,7 @@ a.desc:after {
     max-height: 3000px;
     height: 3000px;
 }
+
+.export-menu {
+    text-align: right;
+}
