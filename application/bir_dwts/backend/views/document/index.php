@@ -1,13 +1,17 @@
 <?php
 
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 use kartik\grid\GridView;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
 use dosamigos\datepicker\DatePicker;
 use yii\helpers\ArrayHelper;
+use common\models\DocumentCategory;
 use kartik\export\ExportMenu;
+use common\models\DocumentWorkflowSearch;
+use common\models\DocumentWorkflow;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\DocumentSearch */
@@ -39,8 +43,22 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
     $gridColumns = [
-        ['class' => 'yii\grid\SerialColumn'],
+            [
+                'class' => 'kartik\grid\ExpandRowColumn',
+                'value' => function ($model, $key, $index, $column) {
+                    return GridView::ROW_COLLAPSED;
+                },
+                'detail' => function ($model, $key, $index, $column) {
+                    $searchModel = new DocumentWorkflowSearch();
+                    $searchModel->document_id = $model->document_tracking_number;
+                    $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+                    return Yii::$app->controller->renderPartial('_docworkflowPartialView',[
+                            'searchModel' => $searchModel,
+                            'dataProvider' => $dataProvider,
+                        ]);
+                },
+            ],
 //            'id',
             'document_tracking_number',
             'document_name',
