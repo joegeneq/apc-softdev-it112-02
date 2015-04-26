@@ -75,8 +75,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'time_accepted',
             'time_released',
             'total_time_spent',
-            'create_time',
-          'update_time',
+//            'create_time',
+//          'update_time',
 
             ['class' => 'yii\grid\ActionColumn'],
     ];?>

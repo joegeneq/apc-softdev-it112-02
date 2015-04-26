@@ -26,7 +26,7 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'document_description')->textArea(['maxlength' => 45]) ?>
 
-            <?= $form->field($model, 'document_target_date')->widget(
+    <?= $form->field($model, 'document_target_date')->widget(
          DatePicker::className(), [
         // inline too, not bad
         'inline' => false, 

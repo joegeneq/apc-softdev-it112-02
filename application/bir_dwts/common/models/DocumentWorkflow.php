@@ -66,17 +66,18 @@ class DocumentWorkflow extends \yii\db\ActiveRecord
             'value' => new Expression('NOW()'),
         ],
         ];
-        }
+        } else{
         return [
             'timestamp' => [
             'class' => 'yii\behaviors\TimestampBehavior',
             'attributes' => [
-            ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'update_time'],
+            ActiveRecord::EVENT_BEFORE_INSERT => ['create_time', 'update_time','time_accepted'],
             ActiveRecord::EVENT_BEFORE_UPDATE => ['update_time'],
             ],
             'value' => new Expression('NOW()'),
         ],
         ];
+        }
     }
 
     /**
